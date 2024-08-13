@@ -13,9 +13,9 @@ link:00._Course_Material/00._Meta_Course_Material/about_the_course.md[About the 
 
 == Mandatories
 
-link:00._Course_Material/01._Assignments/00._Mandatories/mandatory_I.md[Mandatory I]
+// link:00._Course_Material/01._Assignments/00._Mandatories/mandatory_I.md[Mandatory I]
 
-link:00._Course_Material/01._Assignments/00._Mandatories/mandatory_II.md[Mandatory II]
+// link:00._Course_Material/01._Assignments/00._Mandatories/mandatory_II.md[Mandatory II]
 
 == Semester Plan
 
@@ -106,8 +106,6 @@ link:./00._Course_Material/01._Assignments/02._Conventions_OpenAPI_DotEnv/02._Af
 link:./00._Course_Material/01._Assignments/02._Conventions_OpenAPI_DotEnv/02._After/generate_openapi_postman.md[generate openapi postman]
 
 a|
-Learning Goals
-
 Knows which type of files not to push into version control and why. Will ensure that this is followed-through in the group repositories. 
 
 Can and will create proper commit messages. 
@@ -125,16 +123,16 @@ Can create a `.env` file and import/use the environment variables in the groups 
 
 
 
-| 3
-| Sept. 12th
-a|
-Topics
-a|
-Before class
-a|
-After class
-a|
-Learning Goals
+// | 3
+// | Sept. 12th
+// a|
+// Topics
+// a|
+// Before class
+// a|
+// After class
+// a|
+// Learning Goals
 
 
 
