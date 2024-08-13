@@ -83,27 +83,27 @@ link:00._Course_Material/02._Slides/02._Conventions_OpenAPI_DotEnv/02._conventio
 
 link:00._Course_Material/02._Slides/02._Conventions_OpenAPI_DotEnv/03._openapi.md[OpenAPI]
 
-link:00._Course_Material/02._Slides/02._Conventions_OpenAPI_DotEnv/04._environment_variables.md[Environment Variables]
+link:00._Course_Material/02._Slides/02._Conventions_OpenAPI_DotEnv/04._environment_variables.md[Environment variables]
 
 a|
-link:./00._Course_Material/01._Assignments/02._Conventions_OpenAPI_DotEnv/01._Before/learn_branching.md[learn branching]
+link:./00._Course_Material/01._Assignments/02._Conventions_OpenAPI_DotEnv/01._Before/learn_branching.md[Learn branching]
 
-link:./00._Course_Material/01._Assignments/02._Conventions_OpenAPI_DotEnv/01._Before/terminal_files.md[terminal files]
+link:./00._Course_Material/01._Assignments/02._Conventions_OpenAPI_DotEnv/01._Before/terminal_files.md[Terminal files]
 
-link:./00._Course_Material/01._Assignments/02._Conventions_OpenAPI_DotEnv/01._Before/git_advanced.md[git advanced]
+link:./00._Course_Material/01._Assignments/02._Conventions_OpenAPI_DotEnv/01._Before/git_advanced.md[Git advanced]
 
-link:./00._Course_Material/01._Assignments/02._Conventions_OpenAPI_DotEnv/01._Before/decide_on_a_framework.md[decide on a framework]
+link:./00._Course_Material/01._Assignments/02._Conventions_OpenAPI_DotEnv/01._Before/decide_on_a_framework.md[Decide on a framework]
 
 a|
-link:./00._Course_Material/01._Assignments/02._Conventions_OpenAPI_DotEnv/02._After/branch_protection_rules.md[branch protection rules]
+link:./00._Course_Material/01._Assignments/02._Conventions_OpenAPI_DotEnv/02._After/branch_protection_rules.md[Branch protection rules]
 
 link:./00._Course_Material/01._Assignments/02._Conventions_OpenAPI_DotEnv/02._After/generate_openapi_specification.md[generate openapi specification]
 
-link:./00._Course_Material/01._Assignments/02._Conventions_OpenAPI_DotEnv/02._After/commence_the_rewrite.md[commence the rewrite]
+link:./00._Course_Material/01._Assignments/02._Conventions_OpenAPI_DotEnv/02._After/commence_the_rewrite.md[Commence the rewrite]
 
-link:./00._Course_Material/01._Assignments/02._Conventions_OpenAPI_DotEnv/02._After/kanban_github_project.md[kanban github project]
+link:./00._Course_Material/01._Assignments/02._Conventions_OpenAPI_DotEnv/02._After/kanban_github_project.md[Kanban github project]
 
-link:./00._Course_Material/01._Assignments/02._Conventions_OpenAPI_DotEnv/02._After/generate_openapi_postman.md[generate openapi postman]
+link:./00._Course_Material/01._Assignments/02._Conventions_OpenAPI_DotEnv/02._After/generate_openapi_postman.md[Generate openapi postman]
 
 a|
 Knows which type of files not to push into version control and why. Will ensure that this is followed-through in the group repositories. 
