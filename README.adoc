@@ -1,0 +1,148 @@
+= DevOps Semester Plan
+
+== About the course
+
+link:00._Course_Material/00._Meta_Course_Material/about_the_course.md[About the course]
+
+// link:00._Course_Material/00._Meta_Course_Material/about_the_exam.md[About the exam]
+
+// link:00._Course_Material/00._Meta_Course_Material/exam_requirements.md[Exam Requirements]
+
+// link:00._Course_Material/00._Meta_Course_Material/exam_requirements_report.md[Exam Requirements Report]
+
+
+== Mandatories
+
+link:00._Course_Material/01._Assignments/00._Mandatories/mandatory_I.md[Mandatory I]
+
+link:00._Course_Material/01._Assignments/00._Mandatories/mandatory_II.md[Mandatory II]
+
+== Semester Plan
+
+The semester is subject to future modifications and updates during the semester.
+
+[width="100%",cols="2%,5%,20%,25%,25%,23%",options="header"]
+|===
+| # | Date | Topics | Before Class | After Class | Learning Goals
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------
+
+| 1
+| Aug. 29th
+
+a| 
+link:00._Course_Material/02._Slides/01._Introduction/01._course_introduction.md[Course Introduction]
+
+link:00._Course_Material/02._Slides/01._Introduction/02._the_legacy_project.md[The Legacy Project]
+
+link:00._Course_Material/02._Slides/01._Introduction/03._conclusion.md[Conclusion]
+
+
+a|
+**Take the course survey found on Teams.**
+
+link:00._Course_Material/01._Assignments/01._Introduction/01._Before/install_these.md[Install these]
+
+link:00._Course_Material/01._Assignments/01._Introduction/01._Before/refresh_basic_terminal_commands.md[Refresh Basic Terminal Commands]
+
+link:00._Course_Material/01._Assignments/01._Introduction/01._Before/refresh_yaml_syntax.md[Refresh YAML syntax]
+
+link:00._Course_Material/01._Assignments/01._Introduction/01._Before/refresh_basic_git.md[Refresh git]
+
+
+a| 
+link:00._Course_Material/01._Assignments/01._Introduction/02._After/create_a_pr_to_repositories_py.md[Create a PR to repositories.py]
+
+link:00._Course_Material/01._Assignments/01._Introduction/02._After/github_started.md[Github started]
+
+link:00._Course_Material/01._Assignments/01._Introduction/02._After/git_release.md[Create your first release on Github]
+
+link:00._Course_Material/01._Assignments/01._Introduction/02._After/upgrade_the_application.md[Upgrade the application]
+
+link:00._Course_Material/01._Assignments/01._Introduction/02._After/create_a_dependency_graph.md[Create a dependency graph]
+
+link:00._Course_Material/01._Assignments/01._Introduction/02._After/problems_with_the_codebase.md[Problems with the codebase]
+
+a|
+Can use basic `git` commands to clone, add, commit, push, and pull
+
+Can `ssh` into a server and use basic Linux commands
+
+Can do network troubleshooting.
+
+Can identify problems with an inherited codebase.
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------
+
+| 2
+| Sept. 5th
+a|
+link:00._Course_Material/02._Slides/02._Conventions_OpenAPI_DotEnv/01._introduction.md[Introduction]
+
+link:00._Course_Material/02._Slides/02._Conventions_OpenAPI_DotEnv/02._conventions.md[Conventions]
+
+link:00._Course_Material/02._Slides/02._Conventions_OpenAPI_DotEnv/03._openapi.md[OpenAPI]
+
+link:00._Course_Material/02._Slides/02._Conventions_OpenAPI_DotEnv/04._environment_variables.md[Environment Variables]
+
+a|
+link:./00._Course_Material/01._Assignments/02._Conventions_OpenAPI_DotEnv/01._Before/learn_branching.md[learn branching]
+
+link:./00._Course_Material/01._Assignments/02._Conventions_OpenAPI_DotEnv/01._Before/terminal_files.md[terminal files]
+
+link:./00._Course_Material/01._Assignments/02._Conventions_OpenAPI_DotEnv/01._Before/git_advanced.md[git advanced]
+
+link:./00._Course_Material/01._Assignments/02._Conventions_OpenAPI_DotEnv/01._Before/decide_on_a_framework.md[decide on a framework]
+
+a|
+link:./00._Course_Material/01._Assignments/02._Conventions_OpenAPI_DotEnv/02._After/branch_protection_rules.md[branch protection rules]
+
+link:./00._Course_Material/01._Assignments/02._Conventions_OpenAPI_DotEnv/02._After/generate_openapi_specification.md[generate openapi specification]
+
+link:./00._Course_Material/01._Assignments/02._Conventions_OpenAPI_DotEnv/02._After/commence_the_rewrite.md[commence the rewrite]
+
+link:./00._Course_Material/01._Assignments/02._Conventions_OpenAPI_DotEnv/02._After/kanban_github_project.md[kanban github project]
+
+link:./00._Course_Material/01._Assignments/02._Conventions_OpenAPI_DotEnv/02._After/generate_openapi_postman.md[generate openapi postman]
+
+a|
+Learning Goals
+
+Knows which type of files not to push into version control and why. Will ensure that this is followed-through in the group repositories. 
+
+Can and will create proper commit messages. 
+
+Knows proper casing and naming conventions. 
+
+Understand the OpenAPI specification, why it exist and knows different ways to work it.
+
+Can generate an OpenAPI specification from the groups application.
+
+Can create a `.env` file and import/use the environment variables in the groups chosen programming language.
+
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+| 3
+| Sept. 12th
+a|
+Topics
+a|
+Before class
+a|
+After class
+a|
+Learning Goals
+
+
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+|===

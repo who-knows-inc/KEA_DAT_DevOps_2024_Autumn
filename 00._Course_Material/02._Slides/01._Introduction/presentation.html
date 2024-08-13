@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #1e1e1e; /* Dark background for the body */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Full-Width Slideshow Container */
+#slideshow {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+/* Full-Width and Dark Mode Slide Styles */
+.remark-slide-content {
+    color: #ddd; /* Light text color for readability */
+    background-color: #13151a; /* Dark background for slides */
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    padding-top: 0px;
+    box-sizing: border-box;
+}
+
+/* Headers */
+.remark-slide-content h1, .remark-slide-content h2 {
+    color: rgb(8, 107, 194); /* Bright color for headers */
+    margin-top: 5px;
+}
+
+.remark-slide-content h1 {
+    font-size: 2em;
+}
+
+.remark-slide-content h2 {
+    font-size: 1.2em;
+}
+
+/* Paragraphs */
+.remark-slide-content p {
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+/* Lists */
+.remark-slide-content ul, .remark-slide-content ol {
+    margin-left: 20px;
+    font-size: 1.2em;
+}
+
+/* Images */
+.remark-slide-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Code */
+.remark-slide-content pre {
+    background: #333; /* Dark background for code blocks */
+    border: 1px solid #444;
+    color: #eee; /* Light text for code */
+    padding: 8px;
+    overflow: auto;
+}
+
+.remark-slide-content code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #333;
+    padding: 2px 5px;
+    color: #eee;
+}
+
+
+table {
+    /* center */
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse; /* This ensures that the border styles are applied uniformly */
+}
+
+th {
+    color: darkgrey;
+}
+
+table, th, td {
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+}
+
+.title-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+}
+
+.title-card h1 {
+    color: cyan;
+}
+
+.exercise-card h1 {
+    color: green;
+}
+
+.fullscreen-video {
+    width: 40vw; 
+    height: 50vh;
+    border: none;
+}
+
+    </style>
+
+    <title>01._course_introduction || 02._the_legacy_project || 03._conclusion</title>
+</head>
+<body>
+    <!-- The Remark.js container -->
+<textarea id="source" style="display:none;">
+<div class="title-card" style="color: cyan;">
+    <h1>Welcome to DevOps</h1>
+</div>
+ 
+
+---
+
+# Meta-course introductions
+
+This week: About the course
+
+Next week: About the exam
+
+---
+
+# Course platforms
+
+### Teams 
+
+- Communication
+- Hand-ins
+
+### GitHub
+
+- Assignments
+- Slides
+- Code 
+- Tutorials
+
+The course repository is pinned in the General Teams channel!
+
+
+---
+
+# The course repository
+
+About the course.
+
+<!-- todo link to the repository and go through  -->
+
+
+---
+
+# Motivation - Why you would want to work hard at this course
+
+Good preperation for your internship next semester. 
+
+Closest to real life. Most lessons learned will prove useful in your professional career. 
+
+---
+
+# Group work
+
+Let's form groups!
+
+
+---
+
+<div class="title-card" style="color: cyan;">
+    <h1>A small rant</h1>
+</div>
+
+---
+
+# What is DevOps?
+
+We aim to be able to answer this by the end of the course. It won't be the focus until a couple of weeks in.
+
+But let it be know, that you have not done DevOps at KEA yet. 
+
+DevOps is not a protected title and the understanding of it has changed through the years.
+
+---
+
+# Is it DevOps?
+
+DevOps is **not** just technology. It's **culture**. But...
+
+<img src="./assets/devops_technologies.png" alt="devops 8" style="height: 35vh;">
+
+[Source](https://shalb.com/blog/what-is-devops-and-where-is-it-applied/)
+
+Just like how being 10% agile doesn't make you agile at all. 
+
+A good gauge is to ask, "How do you monitor?" 
+
+---
+
+# The exam question - Are we DevOps?
+
+At the exam you will be expected to reflect as a team and answer these two questions:
+
+1. What made you DevOps?
+
+2. In what ways were you not DevOps?
+
+
+
+---
+
+
+# This is how it all started
+
+
+---
+
+# The story 
+
+A group of students tried to develop a search engine in 2009 with the latest technology at its time. 
+
+They called it: `¿Who Knows?`. 
+
+<img src="./assets/monkgroup.png" alt="monk group legacy team" style="height: 45vh;">
+
+
+---
+
+# What they managed to create
+
+ - a backend
+
+ - a frontend
+
+ - an SQLite database (containing scraped Wikipedia articles about programming)
+
+---
+
+# Website screenshot
+
+<img src="./assets/whoknows_website.png" alt="whoknows website screenshot">
+
+
+---
+
+# But it was abandoned
+
+After they presented their main thesis in January 2010, the project was abandoned.
+
+The stack is outdated and the code is not maintained.
+
+The code is in many ways flawed. 
+
+The database contains outdated content from that date or prior. 
+
+Your group will inherit their legacy code. But it's too much to rewrite it in one go. We need CI/CD pipelines to help us rewrite in increments. 
+
+---
+
+# It will be your job to:
+
+  - Analyze the code for flaws
+
+  - Modernize the stack
+
+  - Update the database content
+
+
+But as a starting point, we need to the code. 
+
+---
+
+<div class="title-card">
+    <h1><a href="https://en.wikipedia.org/wiki/Software_archaeology">Source code Archeology</a></h1>
+</div>
+
+---
+
+# The only thing we managed to dig up
+
+<!-- todo  update the IP Address -->
+ - An IP address. 
+
+ - Username
+
+ - Password
+
+Question: *Now what?*
+
+---
+
+# SSH
+
+```bash
+ssh -o PreferredAuthentications=password <username>@<ip_address>
+```
+
+Note: The `-o` flag might be optional for you. 
+
+Username: `monkgroup`
+
+Password: `blackmonktime!`
+
+
+---
+
+# How do we check if anything is running? And on which port?
+
+There are multiple ways to do it. 
+
+*Can you think of one?*
+
+---
+
+# **P**rocess **s**tatus with `ps`
+
+List all processes:
+
+```bash
+$ sudo ps aux
+```
+
+Too much output. Let's filter with `grep` (Global Regular Expression Print):
+
+```bash
+$ sudo ps aux | grep python
+```
+
+Maybe not so useful. 
+
+
+---
+
+# List open files
+
+The `-i` flag specifies network files. 
+
+```bash
+$ sudo lsof -i
+```
+
+The port is listed as: `*:http-alt`
+
+<details> 
+  <summary>Question: What port is that?</summary>
+    Port 8080
+</details>
+
+Or use the network ports flag (`-nP`) to see the port number. 
+
+```bash
+$ lsof -i -nP
+```
+
+---
+
+# Doing it again with `netstat`
+
+```bash
+$ sudo netstat -tuln
+```
+
+`t`: TCP
+
+`u`: UDP
+
+`l`: listening to ports
+
+`n`: numeric output (no DNS lookup)
+
+---
+
+# Where is the code?
+
+---
+
+# We found some code
+
+How do we get it locally?
+
+---
+
+# Secure copy
+
+```bash
+$ scp -r <username>@<ip_address>:/path/to/file /path/to/destination
+```
+
+The `-r` flag is required because we are retrieving a directory.
+
+---
+
+# Let's run it
+
+Problems?
+
+---
+
+# Python version
+
+Write Python in your terminal and hit `tab` to see suggestions. What do you see?
+
+In my tutorials I might write `python` instead of `python3`.
+
+That's because, I have an alias that runs the latest version of Python 3 when I type `python`.
+
+You can consider setting that up too. 
+
+
+---
+
+# `Make`
+
+A build automation tool. Allows us to run commands. 
+
+https://en.wikipedia.org/wiki/Make_(software)
+
+Actions are defined in a `Makefile`.
+
+Can you find it?
+
+---
+
+# Install `make`
+
+Comes with *nix. The following is only needed for Windows users: 
+
+```powershell
+$ choco install make
+```
+
+---
+
+# Run using `make`
+
+Execute the command where the makefile is located. 
+
+```bash
+$ make run
+```
+
+---
+
+# We didn't get the database
+
+Where is the database?
+
+---
+
+# Getting the database 
+
+```bash
+$ scp monkgroup@<ip_address>:/tmp/whoknows.db .
+```
+
+---
+
+# Any more snooping suggestions? 
+
+
+
+
+
+
+---
+
+# We now enter start-up mode
+
+The most exciting times with lots of small tasks to do!
+
+---
+
+# What now?
+
+If time permits, this is how we aim to finish every week.
+
+  1. Q+A session based on previous week's work (prepare questions ahead of class)
+
+  2. Go through all the course work + Q+A session
+
+  3. Coordinate with your groups (if time allows)
+
+</textarea>
+
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>
+    const slideshow = remark.create({
+        source: document.getElementById('source').value
+    });
+</script>
+</body>
+</html>
