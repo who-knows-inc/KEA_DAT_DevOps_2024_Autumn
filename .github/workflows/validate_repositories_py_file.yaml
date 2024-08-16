@@ -1,0 +1,17 @@
+name: Validate the repositories.py file as valid python
+
+on:
+  pull_request:
+    paths:
+      - repositories.py
+
+jobs:
+  validate-python:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Validate Python file
+      run: python -m py_compile repositories.py
