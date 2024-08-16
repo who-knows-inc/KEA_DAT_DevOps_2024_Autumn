@@ -1,4 +1,3 @@
-
 # [Optional] Advanced git
 
 Try out some fun git commands, but only if you have the time. This is very optional. 
