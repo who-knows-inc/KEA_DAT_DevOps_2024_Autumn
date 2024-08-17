@@ -55,6 +55,8 @@ Summary / tagline
 
 **Soft Deadline/Hard Deadline/No Deadline**: 
 
+[**Motivation**: Why you want to complete this task.]
+
 [**Part of mandatory I/II**]
 [**Part of the exam report**]
 
