@@ -83,7 +83,9 @@ link:00._Course_Material/02._Slides/02._Conventions_OpenAPI_DotEnv/02._conventio
 
 link:00._Course_Material/02._Slides/02._Conventions_OpenAPI_DotEnv/03._openapi.md[OpenAPI]
 
-link:00._Course_Material/02._Slides/02._Conventions_OpenAPI_DotEnv/04._environment_variables.md[Environment variables]
+link:00._Course_Material/02._Slides/02._Conventions_OpenAPI_DotEnv/04._monolith_vs_multirepo.md[Monolith vs. Multirepo]
+
+link:00._Course_Material/02._Slides/02._Conventions_OpenAPI_DotEnv/05._environment_variables.md[Environment variables]
 
 a|
 link:./00._Course_Material/01._Assignments/02._Conventions_OpenAPI_DotEnv/01._Before/learn_branching.md[Learn branching]
@@ -95,8 +97,6 @@ link:./00._Course_Material/01._Assignments/02._Conventions_OpenAPI_DotEnv/01._Be
 link:./00._Course_Material/01._Assignments/02._Conventions_OpenAPI_DotEnv/01._Before/decide_on_a_framework.md[Decide on a framework]
 
 a|
-link:./00._Course_Material/01._Assignments/02._Conventions_OpenAPI_DotEnv/02._After/branch_protection_rules.md[Branch protection rules]
-
 link:./00._Course_Material/01._Assignments/02._Conventions_OpenAPI_DotEnv/02._After/generate_openapi_specification.md[generate openapi specification]
 
 link:./00._Course_Material/01._Assignments/02._Conventions_OpenAPI_DotEnv/02._After/commence_the_rewrite.md[Commence the rewrite]
