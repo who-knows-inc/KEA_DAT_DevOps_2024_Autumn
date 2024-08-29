@@ -8,7 +8,7 @@
 
 **The simulation**: The simulation will simulate real-world web traffic to your website. 
 
-**The project**: Throughout the semester you will work on a single project and this is also what you defend at the exam. Scale down your expectations significantly regarding implementing a search engin.
+**The project**: Throughout the semester you will work on a single project and this is also what you defend at the exam. Scale down your expectations significantly regarding implementing a search engine.
 
 
 ## Reading
