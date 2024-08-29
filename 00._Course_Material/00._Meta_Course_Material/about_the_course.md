@@ -93,7 +93,7 @@ Thhis is a preliminary plan that definitely will change. Do **NOT** rely on this
 | 4    | CI (Linting)                                 |
 | 5    | Docker, The Simulation, Postman Monitors     |
 | 6    | CD, Agile, DevOps                            |
-| 7    | Eficode Sofus                                |
+| 7    | Eficode Sofus (External lecturer)            |
 | 8    | Testing, Security                            |
 | 9    | Databases, Datascraping / Webcrawling        |
 | 10   | Searching, Logging, Monitoring               |
