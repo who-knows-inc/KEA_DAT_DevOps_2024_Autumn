@@ -12,6 +12,15 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+    - name: Merge PR into target branch
+      run: git merge origin/${{ github.event.pull_request.base.ref }}
 
     - name: Validate Python file
       run: python -m py_compile repositories.py
