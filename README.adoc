@@ -97,7 +97,7 @@ link:./00._Course_Material/01._Assignments/02._Conventions_OpenAPI_DotEnv/01._Be
 link:./00._Course_Material/01._Assignments/02._Conventions_OpenAPI_DotEnv/01._Before/decide_on_a_framework.md[Decide on a framework]
 
 a|
-link:./00._Course_Material/01._Assignments/02._Conventions_OpenAPI_DotEnv/02._After/generate_openapi_specification.md[generate openapi specification]
+link:./00._Course_Material/01._Assignments/02._Conventions_OpenAPI_DotEnv/02._After/generate_openapi_specification.md[Generate openapi specification]
 
 link:./00._Course_Material/01._Assignments/02._Conventions_OpenAPI_DotEnv/02._After/commence_the_rewrite.md[Commence the rewrite]
 

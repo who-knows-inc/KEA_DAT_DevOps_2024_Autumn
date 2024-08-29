@@ -47,7 +47,7 @@ Therefore, feel free to deviate from the tutorials if you found a better way. Yo
 Assignments aim to follow this structure:
 
 ```markdown
-# [Optional] Assignment title
+# [[Optional]] Assignment title
 
 Summary / tagline
 

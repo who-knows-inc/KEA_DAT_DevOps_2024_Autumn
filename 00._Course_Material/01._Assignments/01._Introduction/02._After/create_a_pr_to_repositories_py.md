@@ -6,7 +6,7 @@ Add your group to [repositories.py](/repositories.py) which is in the root of th
 
 **Deadline**: 1 day before the next lecture
 
-***Hard Deadline**: By week 2 lecture
+**Hard Deadline**: By week 2 lecture
 
 
 ## `repositories.py`
@@ -78,9 +78,11 @@ If you do not do this then merge conflicts will occur.
 
 Here are some resources to help you get started:
 
-* [![How to make a PR](http://img.youtube.com/vi/8lGpZkjnkt4/0.jpg)](https://www.youtube.com/watch?v=8lGpZkjnkt4)
-* https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests
-* https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project
+[![How to make a PR](http://img.youtube.com/vi/8lGpZkjnkt4/0.jpg)](https://www.youtube.com/watch?v=8lGpZkjnkt4)
+
+https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests
+
+https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project
 
 
 4. Make sure to update this file with the correct information throughout the course. Let me know if you've made a pull request later on and I miss it.

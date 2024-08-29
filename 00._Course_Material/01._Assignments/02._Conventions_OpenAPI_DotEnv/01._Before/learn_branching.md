@@ -1,6 +1,6 @@
 # Learn branching
 
-**Type**: Group / Individual
+**Type**: Individual
 
 **Deadline**: No fixed deadline but it might become useful this week already. 
 
