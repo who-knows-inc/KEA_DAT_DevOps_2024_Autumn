@@ -18,5 +18,15 @@ GROUP_REPOS = [
             "stack": [],
             "documentation": [],
             "sla": "",
-        }
+        },
+        {
+            "name": "CEM",
+            "gitLinks": ["https://github.com/CEM-KEA/whoknows"],
+            "backend": "",
+            "frontend": "",
+            "monitoring": "",
+            "stack": [],
+            "documentation": [],
+            "sla": "",
+        },
 ]
