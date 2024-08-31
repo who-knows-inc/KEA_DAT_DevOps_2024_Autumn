@@ -29,7 +29,7 @@ GROUP_REPOS = [
             "documentation": [],
             "sla": "",
         },
-               {
+        {
             "name": "Team-DooD",
             "gitLinks": ["https://github.com/Team-DooD/Whoknows"],
             "backend": "",
