@@ -29,4 +29,14 @@ GROUP_REPOS = [
             "documentation": [],
             "sla": "",
         },
+        {
+            "name": "OBS",
+            "gitLinks": ["https://github.com/OBS-DevOps24/whoknows-legacy"],
+            "backend": "",
+            "frontend": "",
+            "monitoring": "",
+            "stack": [],
+            "documentation": [],
+            "sla": "",
+        },
 ]
