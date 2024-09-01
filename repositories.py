@@ -29,4 +29,14 @@ GROUP_REPOS = [
             "documentation": [],
             "sla": "",
         },
+        {
+            "name": "LAWNE-KEA",
+            "gitLinks": ["https://github.com/LAWNE-KEA/WhoKnows-Backend", "https://github.com/LAWNE-KEA/WhoKnows-Frontend"],
+            "backend": "",
+            "frontend": "",
+            "monitoring": "",
+            "stack": [],
+            "documentation": [],
+            "sla": "",
+        },
 ]
