@@ -20,6 +20,16 @@ GROUP_REPOS = [
             "sla": "",
         },
         {
+            "name": "Ukendt Gruppe",
+            "gitLinks": ["https://github.com/ukendt-gruppe/whoKnows"],
+            "backend": "",
+            "frontend": "",
+            "monitoring": "",
+            "stack": [],
+            "documentation": [],
+            "sla": "",
+        },
+        {
             "name": "LAWNE-KEA",
             "gitLinks": ["https://github.com/LAWNE-KEA/WhoKnows-Backend", "https://github.com/LAWNE-KEA/WhoKnows-Frontend"],
             "backend": "",
