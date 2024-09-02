@@ -39,4 +39,14 @@ GROUP_REPOS = [
             "documentation": [],
             "sla": "",
         },
+        
+        "name": "ITA",
+            "gitLinks": ["https://github.com/orgs/IT-Arkitektur/repositories"],
+            "backend": "",
+            "frontend": "",
+            "monitoring": "",
+            "stack": [],
+            "documentation": [],
+            "sla": "",
+        },
 ]
