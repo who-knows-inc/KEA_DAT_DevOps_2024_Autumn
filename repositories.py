@@ -39,4 +39,14 @@ GROUP_REPOS = [
             "documentation": [],
             "sla": "",
         },
+        {
+            "name": "MadeInChina-DevOps",
+            "gitLinks": ["https://github.com/orgs/MadeInChina-DevOps/repositories"],
+            "backend": "",
+            "frontend": "",
+            "monitoring": "",
+            "stack": [],
+            "documentation": [],
+            "sla": "",
+        },
 ]
