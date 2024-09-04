@@ -15,6 +15,11 @@ jobs:
       with:
         fetch-depth: 0
 
+    - name: Set up Git user
+      run: |
+        git config --global user.email "github-actions@github.com"
+        git config --global user.name "GitHub Actions"
+
     - name: Merge PR into target branch
       run: git merge origin/${{ github.event.pull_request.base.ref }}
   
