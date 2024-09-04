@@ -79,4 +79,14 @@ GROUP_REPOS = [
             "documentation": [],
             "sla": "",
         },
+              {
+            "name": "Integration Nation",
+            "gitLinks": ["https://github.com/Integration-Nation"],
+            "backend": "",
+            "frontend": "",
+            "monitoring": "",
+            "stack": [],
+            "documentation": [],
+            "sla": "",
+        },
 ]
