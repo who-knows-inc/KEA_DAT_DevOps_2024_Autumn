@@ -66,11 +66,8 @@ $ python -m py_compile repositories.py
 
 4. **IMPORTANT** Get the latest changes. 
 
-Just before you push your changes, make sure you have the latest changes from the repository. 
+Just before you push your changes, make sure you have the latest changes from the repository. See [Pulling from the Original Repository into your fork](#pulling-from-the-original-repository-into-your-fork) for more information.
 
-```bash
-$ git pull
-```
 
 If you do not do this then merge conflicts will occur. 
 
@@ -86,3 +83,33 @@ https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project
 
 
 4. Make sure to update this file with the correct information throughout the course. Let me know if you've made a pull request later on and I miss it.
+
+
+## Pulling from the original repository into your fork
+
+It is **crucial** that you do this before you push changes and make a PR. Otherwise, you might encounter merge conflicts with other groups. 
+
+1. Add the original repository as a remote:
+
+```bash
+$ git remote add upstream <original-repo-url>
+```
+
+2. Fetch the latest changes from the original repository:
+
+```bash
+$ git fetch upstream
+```
+
+3. Merge the changes into your local branch:
+
+```bash
+$ git merge upstream/main
+```
+
+4. Push the merged changes to your forked repository (Adding origin and branch name is optional):
+
+```bash
+$ git push <origin main>
+```
+
