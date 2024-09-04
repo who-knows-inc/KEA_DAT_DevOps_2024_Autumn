@@ -2,6 +2,7 @@
 
 **Type**: Group work
 
+---
 
 ## Alternatives to GitHub
 
@@ -9,6 +10,7 @@ Using GitHub is not mandatory in this course. Both Gitlab and Bitbucket offer se
 
 The course resources will assume that your group went with GitHub and tutorials will all focus on GitHub.
 
+---
 
 ## [Group] GitHub organisations
 
@@ -30,11 +32,21 @@ Now that you are collaborators you can work on the same repository.
 
 6. Create (a) joint repositor(y/ies) as you see fit. 
 
+---
+
+## Naming 
+
+You are free to name the repositories and the search engine whatever your like. 
+
+You are not required to go with the WhoKnows branding.
+
+---
 
 ## Make the main code repositories public
 
 The course aims to teach you techniques on how to never push sensitive information 
 
+---
 
 ## License
 
