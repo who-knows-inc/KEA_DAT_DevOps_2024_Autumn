@@ -4,18 +4,18 @@
 
 link:00._Course_Material/00._Meta_Course_Material/about_the_course.md[About the course]
 
-// link:00._Course_Material/00._Meta_Course_Material/about_the_exam.md[About the exam]
+link:00._Course_Material/00._Meta_Course_Material/about_the_exam.md[About the exam]
 
-// link:00._Course_Material/00._Meta_Course_Material/exam_requirements.md[Exam Requirements]
+link:00._Course_Material/00._Meta_Course_Material/exam_requirements.md[Exam Requirements]
 
-// link:00._Course_Material/00._Meta_Course_Material/exam_requirements_report.md[Exam Requirements Report]
+link:00._Course_Material/00._Meta_Course_Material/exam_requirements_report.md[Exam Requirements Report]
 
 
 == Mandatories
 
-// link:00._Course_Material/01._Assignments/00._Mandatories/mandatory_I.md[Mandatory I]
+link:00._Course_Material/01._Assignments/00._Mandatories/mandatory_I.md[Mandatory I]
 
-// link:00._Course_Material/01._Assignments/00._Mandatories/mandatory_II.md[Mandatory II]
+link:00._Course_Material/01._Assignments/00._Mandatories/mandatory_II.md[Mandatory II]
 
 == Semester Plan
 
@@ -140,7 +140,47 @@ Can create a `.env` file and import/use the environment variables in the groups 
 
 
 
+| 3
+| Sept. 12th
+a|
+link:00._Course_Material/02._Slides/03._Github_Actions_Cloud_Azure_Deploy/01._introduction.md[Introduction]
 
+link:00._Course_Material/02._Slides/03._Github_Actions_Cloud_Azure_Deploy/02._github_actions.md[Github Actions]
+
+link:00._Course_Material/02._Slides/03._Github_Actions_Cloud_Azure_Deploy/03._cloud_and_azure.md[Cloud and Azure]
+
+link:00._Course_Material/02._Slides/03._Github_Actions_Cloud_Azure_Deploy/04._ssh.md[SSH]
+
+link:00._Course_Material/02._Slides/03._Github_Actions_Cloud_Azure_Deploy/06._deployment_considerations.md[Deployment considerations]
+
+a|
+link:00._Course_Material/01._Assignments/03._Github_Actions_Cloud_Azure_Deploy/01._Before/read_about_github_actions.md[Read about github actions]
+
+link:00._Course_Material/01._Assignments/03._Github_Actions_Cloud_Azure_Deploy/01._Before/github_pr_template.md[Github PR template]
+
+link:00._Course_Material/01._Assignments/03._Github_Actions_Cloud_Azure_Deploy/01._Before/azure_cost_managment.md[Azure cost managment]
+
+link:00._Course_Material/01._Assignments/03._Github_Actions_Cloud_Azure_Deploy/01._Before/cloud_virtual_tour.md[Cloud virtual tour]
+
+a|
+link:00._Course_Material/01._Assignments/03._Github_Actions_Cloud_Azure_Deploy/02._After/keep_rewriting.md[Keep rewriting]
+
+link:00._Course_Material/01._Assignments/03._Github_Actions_Cloud_Azure_Deploy/02._After/deploy.md[Deploy]
+
+a|
+Understands the terminology surrounding Github Actions such as workflows, runners, jobs, steps, and actions.
+
+Can create a basic Github Action workflow that is triggered by a push and pull request. 
+
+Understands basic cloud concepts. 
+
+Can create a virtual machine in Azure and SSH into it. Can open ports and set the IP address to static.
+
+Understands the difference between public and private ssh keys.
+
+Can suggest various deployment strategies and knows the pros and cons of each.
+
+Understands the difference between pull-based and push-based deployment.
 
 
 |===
