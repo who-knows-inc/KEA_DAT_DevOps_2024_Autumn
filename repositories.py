@@ -51,7 +51,7 @@ GROUP_REPOS = [
         },
         {
             "name": "MadeInChina-DevOps",
-            "gitLinks": ["https://github.com/orgs/MadeInChina-DevOps/repositories"],
+            "gitLinks": ["https://github.com/MadeInChina-DevOps/whoknows_variations"],
             "backend": "",
             "frontend": "",
             "monitoring": "",
@@ -62,6 +62,16 @@ GROUP_REPOS = [
         {
             "name": "UpsDev42069",
             "gitLinks": ["https://github.com/orgs/UpsDev42069/repositories"],
+            "backend": "",
+            "frontend": "",
+            "monitoring": "",
+            "stack": [],
+            "documentation": [],
+            "sla": "",
+        },
+        {
+            "name": "ITA",
+            "gitLinks": ["https://github.com/orgs/IT-Arkitektur/repositories"],
             "backend": "",
             "frontend": "",
             "monitoring": "",
