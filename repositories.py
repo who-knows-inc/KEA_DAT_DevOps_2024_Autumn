@@ -59,4 +59,14 @@ GROUP_REPOS = [
             "documentation": [],
             "sla": "",
         },
+        {
+            "name": "UpsDev42069",
+            "gitLinks": ["https://github.com/orgs/UpsDev42069/repositories"],
+            "backend": "",
+            "frontend": "",
+            "monitoring": "",
+            "stack": [],
+            "documentation": [],
+            "sla": "",
+        },
 ]
