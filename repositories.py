@@ -20,8 +20,8 @@ GROUP_REPOS = [
             "sla": "",
         },
         {
-            "name": "Team-DooD",
-            "gitLinks": ["https://github.com/Team-DooD/Whoknows"],
+            "name": "Ukendt Gruppe",
+            "gitLinks": ["https://github.com/ukendt-gruppe/whoKnows"],
             "backend": "",
             "frontend": "",
             "monitoring": "",
@@ -52,6 +52,16 @@ GROUP_REPOS = [
         {
             "name": "MadeInChina-DevOps",
             "gitLinks": ["https://github.com/orgs/MadeInChina-DevOps/repositories"],
+            "backend": "",
+            "frontend": "",
+            "monitoring": "",
+            "stack": [],
+            "documentation": [],
+            "sla": "",
+        },
+        {
+            "name": "Team-Dood",
+            "gitLinks": ["https://github.com/NikoDood/KEA_DAT_DevOps_2024_Autumn"],
             "backend": "",
             "frontend": "",
             "monitoring": "",
