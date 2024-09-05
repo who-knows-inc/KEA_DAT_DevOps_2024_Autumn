@@ -71,7 +71,7 @@ GROUP_REPOS = [
         },
         {
             "name": "ITA",
-            "gitLinks": ["https://github.com/orgs/IT-Arkitektur/repositories"],
+            "gitLinks": ["https://github.com/IT-Arkitektur/whoknows_variations"],
             "backend": "",
             "frontend": "",
             "monitoring": "",
