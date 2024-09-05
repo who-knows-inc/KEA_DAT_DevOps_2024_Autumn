@@ -2,6 +2,8 @@
 
 The exam report is written by the group and will be read by me and the censor. 
 
+---
+
 ## Requirements
 
 **Deadline**: Since hand-in is over Wiseflow, check there to see when the deadline has been set. I do not control this.
@@ -25,6 +27,8 @@ https://www.youtube.com/watch?v=cGExqD1PIFE
 https://www.youtube.com/watch?v=5CUF3bgazCE&themeRefresh=1
 
 Justifying text helps readability and gives the report a professional look. 
+
+---
 
 ## Sections to include
 

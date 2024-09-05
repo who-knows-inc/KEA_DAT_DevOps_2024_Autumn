@@ -4,17 +4,15 @@ Read more about the official [course requirements](https://katalog.kea.dk/course
 
 Everything in the link above holds true, but additional information can be found below. 
 
+---
 
 ## Collaboration
 
 While it's a group exam you will be graded individually. 
 
-I will run a script to assert that everyone has contributed and will bring up the stats during the exam if I discover an anomaly.
-
-If your group is dysfunctional then please reach out. Bringing this information to me at the exam is too late.
-
 An important part of this course is to learn to work together. It's not just about technologies. Culture is one of the keystones of what it means to be DevOps.
 
+---
 
 ## The deployment
 
@@ -26,6 +24,7 @@ The system must be deployed during the exam. This might mean that you will run o
 
 Don't worry about this part yet. You will learn how to make your life easier the second time around. 
 
+---
 
 ## Solution agnostic
 
@@ -37,13 +36,15 @@ Don’t want to use Terraform and want to use Vagrant or Serverless Framework et
 
 That's why I have provided the requirements mentioned below. 
 
+---
+
 ## Requirements
 
 I have provided some documents containing the minimum requirements for the exam. Your grade will depend on how much work you put into the project.
 
 I also provide suggestions and guides on how to implement certain things. You can consider them as a fallback if you are stuck. 
 
-What will elevate you is if your group makes choices reflecting an understanding of the different approaches, the pros and cons of each, and why you chose the one you did.
+What will elevate you is if your group either makes great choices based on research or gain a fresh understanding of the different approaches, the pros and cons of each. Basically, reflecting on your choices. 
 
 The requirement documents are:
 
