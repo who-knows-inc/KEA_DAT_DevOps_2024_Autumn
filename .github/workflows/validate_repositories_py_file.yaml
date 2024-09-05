@@ -35,6 +35,7 @@ jobs:
       run: |
         python -c "
         import json
+        import os
 
         with open('repositories.py', 'r') as file:
             content = file.read()
