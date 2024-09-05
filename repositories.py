@@ -39,4 +39,15 @@ GROUP_REPOS = [
             "documentation": [],
             "sla": "",
         },
+        {
+            "name": "ITA",
+            "gitLinks": ["https://github.com/IT-Arkitektur/whoknows_variations"],
+            "backend": "",
+            "frontend": "",
+            "monitoring": "",
+            "stack": [],
+            "documentation": [],
+            "sla": "",
+        },
+
 ]
