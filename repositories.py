@@ -79,4 +79,14 @@ GROUP_REPOS = [
             "documentation": [],
             "sla": "",
         },
+        {
+            "name": "Team-Dood",
+            "gitLinks": ["https://github.com/NikoDood/KEA_DAT_DevOps_2024_Autumn"],
+            "backend": "",
+            "frontend": "",
+            "monitoring": "",
+            "stack": [],
+            "documentation": [],
+            "sla": "",
+        },
 ]
