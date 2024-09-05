@@ -81,7 +81,7 @@ GROUP_REPOS = [
         },
         {
             "name": "Team-Dood",
-            "gitLinks": ["https://github.com/NikoDood/KEA_DAT_DevOps_2024_Autumn"],
+            "gitLinks": ["https://github.com/Team-DooD/Whoknows"],
             "backend": "",
             "frontend": "",
             "monitoring": "",
