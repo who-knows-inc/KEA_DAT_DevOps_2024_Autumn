@@ -23,11 +23,14 @@ Once you have deployed, create a PR to [repositories.py](/repositories.py). The 
 ```python
             "backend": "http(s)://<IP_DOMAIN>/<APIURL>",
             "frontend": "http(s)://<IP_DOMAIN>/<FrontEndURL>",
+            "stack": ["Flask", "Svelte", "CouchDB", "Redis"],
 ```
 
 Backend and frontend could be the same IP address. 
 
 The `<APIURL>` and `<FrontEndURL>` parts are optional. For instance, if you prepend all your API with `v1`. The endpoints should be accessible given the values + the endpoints as defined in the OpenAPI specification.
+
+Updating the stack is a great idea, since it allows you to connect with other groups using the same technology if you are stuck. You are encouraged to do so. 
 
 Remember to make sure that your forked repository's state is up to date with the original repository before making your pull request.
 
