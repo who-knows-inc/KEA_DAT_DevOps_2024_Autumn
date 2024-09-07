@@ -89,4 +89,14 @@ GROUP_REPOS = [
             "documentation": [],
             "sla": "",
         },
+        {
+            "name": "Team2-NM",
+            "gitLinks": ["https://github.com/Team2-MN/whoknows_variations.git"],
+            "backend": "",
+            "frontend": "",
+            "monitoring": "",
+            "stack": [],
+            "documentation": [],
+            "sla": "",
+}
 ]
