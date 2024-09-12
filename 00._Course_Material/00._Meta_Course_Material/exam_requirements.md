@@ -62,6 +62,12 @@ Your system should be deployed for the exam.
 
 ---
 
+## Monitoring
+
+You must have monitoring.
+
+---
+
 ## Documentation
 
 To your best ability, create thorough documentation.

@@ -183,4 +183,105 @@ Can suggest various deployment strategies and knows the pros and cons of each.
 Understands the difference between pull-based and push-based deployment.
 
 
+
+| 3
+| Sept. 12th
+a|
+link:00._Course_Material/02._Slides/03._Github_Actions_Cloud_Azure_Deploy/01._introduction.md[Introduction]
+
+link:00._Course_Material/02._Slides/03._Github_Actions_Cloud_Azure_Deploy/02._github_actions.md[Github Actions]
+
+link:00._Course_Material/02._Slides/03._Github_Actions_Cloud_Azure_Deploy/03._cloud_and_azure.md[Cloud and Azure]
+
+link:00._Course_Material/02._Slides/03._Github_Actions_Cloud_Azure_Deploy/04._ssh.md[SSH]
+
+link:00._Course_Material/02._Slides/03._Github_Actions_Cloud_Azure_Deploy/06._deployment_considerations.md[Deployment considerations]
+
+a|
+link:00._Course_Material/01._Assignments/03._Github_Actions_Cloud_Azure_Deploy/01._Before/read_about_github_actions.md[Read about github actions]
+
+link:00._Course_Material/01._Assignments/03._Github_Actions_Cloud_Azure_Deploy/01._Before/github_pr_template.md[Github PR template]
+
+link:00._Course_Material/01._Assignments/03._Github_Actions_Cloud_Azure_Deploy/01._Before/azure_cost_managment.md[Azure cost managment]
+
+link:00._Course_Material/01._Assignments/03._Github_Actions_Cloud_Azure_Deploy/01._Before/cloud_virtual_tour.md[Cloud virtual tour]
+
+a|
+link:00._Course_Material/01._Assignments/03._Github_Actions_Cloud_Azure_Deploy/02._After/keep_rewriting.md[Keep rewriting]
+
+link:00._Course_Material/01._Assignments/03._Github_Actions_Cloud_Azure_Deploy/02._After/deploy.md[Deploy]
+
+a|
+Understands the terminology surrounding Github Actions such as workflows, runners, jobs, steps, and actions.
+
+Can create a basic Github Action workflow that is triggered by a push and pull request. 
+
+Understands basic cloud concepts. 
+
+Can create a virtual machine in Azure and SSH into it. Can open ports and set the IP address to static.
+
+Understands the difference between public and private ssh keys.
+
+Can suggest various deployment strategies and knows the pros and cons of each.
+
+Understands the difference between pull-based and push-based deployment.
+
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+| 4
+| Sept. 19th
+a|
+link:00._Course_Material/02._Slides/04._Sofware_Quality_Linting_CI/01._introduction.md[Introduction]
+
+link:00._Course_Material/02._Slides/04._Sofware_Quality_Linting_CI/02._software_quality.md[Software quality]
+
+link:00._Course_Material/02._Slides/04._Sofware_Quality_Linting_CI/03._ci_cd.md[CI/CD]
+
+link:00._Course_Material/02._Slides/04._Sofware_Quality_Linting_CI/04._linting.md[Linting]
+
+link:00._Course_Material/02._Slides/04._Sofware_Quality_Linting_CI/05._jq.md[jq]
+
+link:00._Course_Material/02._Slides/04._Sofware_Quality_Linting_CI/06._branching_strategies.md[Branching strategies]
+
+a|
+link:00._Course_Material/01._Assignments/04._Sofware_Quality_Linting_CI/01._Before/research_git_branching_strategies.md[Research git branching strategies]
+
+link:00._Course_Material/01._Assignments/04._Sofware_Quality_Linting_CI/01._Before/github_issue_template.md[Github Issue template]
+
+link:00._Course_Material/01._Assignments/04._Sofware_Quality_Linting_CI/01._Before/create_a_merge_conflict.md[Create a merge conflict]
+
+link:00._Course_Material/01._Assignments/04._Sofware_Quality_Linting_CI/01._Before/define_github_secrets.md[Define github secrets]
+
+
+a|
+link:00._Course_Material/01._Assignments/04._Sofware_Quality_Linting_CI/02._After/consumer_report.md[Consumer Report!]
+
+link:00._Course_Material/01._Assignments/04._Sofware_Quality_Linting_CI/02._After/choose_a_git_branching_strategy.md[Choose git branching strategy]
+
+link:./00._Course_Material/01._Assignments/04._Sofware_Quality_Linting_CI/02._After/branch_protection_rules.md[Branch protection rules]
+
+link:00._Course_Material/01._Assignments/04._Sofware_Quality_Linting_CI/02._After/software_quality.md[Software Quality]
+
+link:00._Course_Material/01._Assignments/04._Sofware_Quality_Linting_CI/02._After/linting.md[Linting]
+
+link:00._Course_Material/01._Assignments/04._Sofware_Quality_Linting_CI/02._After/whoknows_variations_continuous_integration.md[Whoknows_variations - Continuous Integration]
+
+link:00._Course_Material/01._Assignments/04._Sofware_Quality_Linting_CI/02._After/readme_badges.md[Readme badges]
+
+a|
+Understands the importance of software quality and tools to measure it. 
+
+Understands why technical debt occurs and why it's important to avoid. 
+
+Can argue for the importance of linting. 
+
+Knows the difference between linting in a Git Hook vs. a CI/CD pipeline. Can argue for the pros and cons of each. 
+
+Is familiar with different branching strategies.
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 |===
