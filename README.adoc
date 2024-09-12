@@ -122,24 +122,6 @@ Can create a `.env` file and import/use the environment variables in the groups 
 // ------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-
-// | 3
-// | Sept. 12th
-// a|
-// Topics
-// a|
-// Before class
-// a|
-// After class
-// a|
-// Learning Goals
-
-
-
-// ------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-
 | 3
 | Sept. 12th
 a|
@@ -147,55 +129,18 @@ link:00._Course_Material/02._Slides/03._Github_Actions_Cloud_Azure_Deploy/01._in
 
 link:00._Course_Material/02._Slides/03._Github_Actions_Cloud_Azure_Deploy/02._github_actions.md[Github Actions]
 
-link:00._Course_Material/02._Slides/03._Github_Actions_Cloud_Azure_Deploy/03._cloud_and_azure.md[Cloud and Azure]
+link:00._Course_Material/02._Slides/03._Github_Actions_Cloud_Azure_Deploy/03._github_issues_workflow.md[Github Issues Workflow]
 
-link:00._Course_Material/02._Slides/03._Github_Actions_Cloud_Azure_Deploy/04._ssh.md[SSH]
+link:00._Course_Material/02._Slides/03._Github_Actions_Cloud_Azure_Deploy/04._github_secrets.md[Github Secrets]
 
-link:00._Course_Material/02._Slides/03._Github_Actions_Cloud_Azure_Deploy/06._deployment_considerations.md[Deployment considerations]
+link:00._Course_Material/02._Slides/03._Github_Actions_Cloud_Azure_Deploy/05._cloud_and_azure.md[Cloud and Azure]
 
-a|
-link:00._Course_Material/01._Assignments/03._Github_Actions_Cloud_Azure_Deploy/01._Before/read_about_github_actions.md[Read about github actions]
+link:00._Course_Material/02._Slides/03._Github_Actions_Cloud_Azure_Deploy/06._ssh.md[SSH]
 
-link:00._Course_Material/01._Assignments/03._Github_Actions_Cloud_Azure_Deploy/01._Before/github_pr_template.md[Github PR template]
+link:00._Course_Material/02._Slides/03._Github_Actions_Cloud_Azure_Deploy/07._running_in_production.md[Running in Production]
 
-link:00._Course_Material/01._Assignments/03._Github_Actions_Cloud_Azure_Deploy/01._Before/azure_cost_managment.md[Azure cost managment]
+link:00._Course_Material/02._Slides/03._Github_Actions_Cloud_Azure_Deploy/08._deployment_considerations.md[Deployment Considerations]
 
-link:00._Course_Material/01._Assignments/03._Github_Actions_Cloud_Azure_Deploy/01._Before/cloud_virtual_tour.md[Cloud virtual tour]
-
-a|
-link:00._Course_Material/01._Assignments/03._Github_Actions_Cloud_Azure_Deploy/02._After/keep_rewriting.md[Keep rewriting]
-
-link:00._Course_Material/01._Assignments/03._Github_Actions_Cloud_Azure_Deploy/02._After/deploy.md[Deploy]
-
-a|
-Understands the terminology surrounding Github Actions such as workflows, runners, jobs, steps, and actions.
-
-Can create a basic Github Action workflow that is triggered by a push and pull request. 
-
-Understands basic cloud concepts. 
-
-Can create a virtual machine in Azure and SSH into it. Can open ports and set the IP address to static.
-
-Understands the difference between public and private ssh keys.
-
-Can suggest various deployment strategies and knows the pros and cons of each.
-
-Understands the difference between pull-based and push-based deployment.
-
-
-
-| 3
-| Sept. 12th
-a|
-link:00._Course_Material/02._Slides/03._Github_Actions_Cloud_Azure_Deploy/01._introduction.md[Introduction]
-
-link:00._Course_Material/02._Slides/03._Github_Actions_Cloud_Azure_Deploy/02._github_actions.md[Github Actions]
-
-link:00._Course_Material/02._Slides/03._Github_Actions_Cloud_Azure_Deploy/03._cloud_and_azure.md[Cloud and Azure]
-
-link:00._Course_Material/02._Slides/03._Github_Actions_Cloud_Azure_Deploy/04._ssh.md[SSH]
-
-link:00._Course_Material/02._Slides/03._Github_Actions_Cloud_Azure_Deploy/06._deployment_considerations.md[Deployment considerations]
 
 a|
 link:00._Course_Material/01._Assignments/03._Github_Actions_Cloud_Azure_Deploy/01._Before/read_about_github_actions.md[Read about github actions]
@@ -241,9 +186,7 @@ link:00._Course_Material/02._Slides/04._Sofware_Quality_Linting_CI/03._ci_cd.md[
 
 link:00._Course_Material/02._Slides/04._Sofware_Quality_Linting_CI/04._linting.md[Linting]
 
-link:00._Course_Material/02._Slides/04._Sofware_Quality_Linting_CI/05._jq.md[jq]
-
-link:00._Course_Material/02._Slides/04._Sofware_Quality_Linting_CI/06._branching_strategies.md[Branching strategies]
+link:00._Course_Material/02._Slides/04._Sofware_Quality_Linting_CI/05._branching_strategies.md[Branching strategies]
 
 a|
 link:00._Course_Material/01._Assignments/04._Sofware_Quality_Linting_CI/01._Before/research_git_branching_strategies.md[Research git branching strategies]
@@ -280,6 +223,7 @@ Can argue for the importance of linting.
 Knows the difference between linting in a Git Hook vs. a CI/CD pipeline. Can argue for the pros and cons of each. 
 
 Is familiar with different branching strategies.
+
 
 // ------------------------------------------------------------------------------------------------------------------------------------------------
 
