@@ -61,7 +61,7 @@ GROUP_REPOS = [
         },
         {
             "name": "UpsDev42069",
-            "gitLinks": ["https://github.com/UpsDev42069/whoknows_legacy"],
+            "gitLinks": ["https://github.com/UpsDev42069/BM_Search_Engine"],
             "backend": "",
             "frontend": "",
             "monitoring": "",
