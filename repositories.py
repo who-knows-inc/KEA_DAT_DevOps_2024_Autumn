@@ -51,7 +51,7 @@ GROUP_REPOS = [
         },
         {
             "name": "MadeInChina-DevOps",
-            "gitLinks": ["https://github.com/MadeInChina-DevOps/whoknows_noOneKnows"],
+            "gitLinks": ["https://github.com/MadeInChina-DevOps/whoknows_nooneknows"],
             "backend": "",
             "frontend": "",
             "monitoring": "",
