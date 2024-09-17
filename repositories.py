@@ -79,13 +79,13 @@ GROUP_REPOS = [
             "documentation": [],
             "sla": "",
         },
-              {
+        {
             "name": "Integration Nation",
             "gitLinks": ["https://github.com/Integration-Nation"],
-            "backend": "",
+            "backend": "http://40.85.136.203:9090/api/search",
             "frontend": "",
             "monitoring": "",
-            "stack": [],
+            "stack": ["Go Fiber,Gorm, Docker, AzureVM, sqlite"],
             "documentation": [],
             "sla": "",
         },
