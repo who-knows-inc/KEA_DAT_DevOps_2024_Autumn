@@ -14,7 +14,7 @@ You should have agreed on a programming language and server framework by now.
 
 Agree with your group how to organize the code in folders and the overall structure of the new project. 
 
-Consider if you want to have a monolithic repo or a multi-repo setup.
+Consider if you want to have a monorepo or a multi-repo setup.
 
 ---
 

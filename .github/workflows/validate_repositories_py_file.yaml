@@ -1,4 +1,4 @@
-name: Validate the repositories.py file as valid python
+name: Validate the repositories.py file
 
 on:
   pull_request:
@@ -30,3 +30,24 @@ jobs:
 
     - name: Validate Python file
       run: python -m py_compile repositories.py
+
+    - name: Check GitHub links validity
+      run: |
+        python -c "
+        import json
+        import os
+
+        with open('repositories.py', 'r') as file:
+            content = file.read()
+            exec(content)
+
+        for group in GROUP_REPOS:
+            for link in group.get('gitLinks', []):
+                if '/orgs/' not in link and '/repositories' not in link:
+                    print(f'Checking {link}')
+                    exit_code = os.system(f'curl -o /dev/null --silent --head --fail {link}')
+                    if exit_code != 0:
+                        raise Exception(f'Invalid link: {link}')
+                else:
+                    raise Exception(f'Links to /repositories instead of a specific repository: {link}')
+              "
