@@ -42,10 +42,10 @@ GROUP_REPOS = [
         {
             "name": "OBS",
             "gitLinks": ["https://github.com/OBS-DevOps24/whoknows-legacy"],
-            "backend": "",
-            "frontend": "",
+            "backend": "http://52.164.251.63",
+            "frontend": "http://52.164.251.63",
             "monitoring": "",
-            "stack": [],
+            "stack": ["React, typescript", "C# .NET"],
             "documentation": [],
             "sla": "",
         },
