@@ -81,7 +81,7 @@ GROUP_REPOS = [
         },
         {
             "name": "Integration Nation",
-            "gitLinks": ["https://github.com/Integration-Nation"],
+            "gitLinks": ["https://github.com/Integration-Nation/DevOps-Project", "https://github.com/Integration-Nation/DevOps-Project-Frontend"],
             "backend": "http://40.85.136.203:9090/api/search",
             "frontend": "http://40.85.136.203/",
             "monitoring": "",
