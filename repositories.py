@@ -83,7 +83,7 @@ GROUP_REPOS = [
             "name": "Integration Nation",
             "gitLinks": ["https://github.com/Integration-Nation"],
             "backend": "http://40.85.136.203:9090/api/search",
-            "frontend": "",
+            "frontend": "http://40.85.136.203/",
             "monitoring": "",
             "stack": ["Go Fiber,Gorm, Docker, AzureVM, sqlite"],
             "documentation": [],
