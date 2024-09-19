@@ -228,4 +228,51 @@ Is familiar with different branching strategies.
 // ------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+| 5
+| Sept. 19th
+a|
+link:00._Course_Material/02._Slides/05._Docker_The_Simulation/01._introduction.md[Introduction]
+
+link:00._Course_Material/02._Slides/05._Docker_The_Simulation/02._build_tools.md[Build tools]
+
+link:00._Course_Material/02._Slides/05._Docker_The_Simulation/03._packaging.md[Packaging]
+
+link:00._Course_Material/02._Slides/05._Docker_The_Simulation/04._virtualization_containerization.md[Virtualization / Containerization]
+
+link:00._Course_Material/02._Slides/05._Docker_The_Simulation/05._docker.md[Docker]
+
+link:00._Course_Material/02._Slides/05._Docker_The_Simulation/06._dockerfile.md[Dockerfile]
+
+link:00._Course_Material/02._Slides/05._Docker_The_Simulation/assets_build_tools/python_build_tools.md[Python build tools]
+a|
+link:00._Course_Material/01._Assignments/05._Docker_The_Simulation/01._Before/refresh_docker_knowledge.md[Refresh Docker knowledge]
+
+link:00._Course_Material/01._Assignments/05._Docker_The_Simulation/01._Before/the_simulation.md[The Simulation]
+a|
+link:00._Course_Material/01._Assignments/05._Docker_The_Simulation/02._After/setup_postman_monitoring.md[Setup Postman Monitoring]
+
+link:00._Course_Material/01._Assignments/05._Docker_The_Simulation/02._After/docker_from_scratch.md[Docker from scratch]
+a|
+Understands different levels of build tools from OS to language-specific ones.
+
+Understands the difference between packaging and virtualization/containerization.
+
+Understands how Docker differs from its predecessors and modern alternatives.
+
+Can understand simple Dockerfiles for different languages.
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------
+
+// | 6
+// | Sept. 26th
+// a|
+// Topics
+// a|
+// Before class
+// a|
+// After class
+// a|
+// Learning Goals
+
+
 |===
