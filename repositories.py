@@ -55,7 +55,7 @@ GROUP_REPOS = [
             "backend": "http://49.13.163.245/",
             "frontend": "http://49.13.163.245/",
             "monitoring": "",
-            "stack": [],
+            "stack": ["Rust", "Rocket", "PostgreSQL"],
             "documentation": [],
             "sla": "",
         },
