@@ -8,6 +8,7 @@ Idenfity all the problematic parts of the legacy code.
 
 **Motivation**: This task is an excellent opportunity for everyone to study the code base and become familiar with the functionality, components and Flask which is likely new for you.
 
+---
 
 ## What to do
 

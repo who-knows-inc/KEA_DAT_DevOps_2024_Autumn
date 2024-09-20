@@ -2,6 +2,8 @@
 
 **Type**: Group work
 
+**Part of mandatory I.**
+
 ---
 
 ## Exam requirement

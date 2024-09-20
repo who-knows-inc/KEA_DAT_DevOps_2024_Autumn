@@ -2,7 +2,7 @@
 
 **Type**: Group work
 
-**Deadline**: Same as Mandatory I
+**Part of mandatory I.**
 
 **Motivation**: Learn how to generate OpenAPI Specification for your framework and programming language of choice. 
 
