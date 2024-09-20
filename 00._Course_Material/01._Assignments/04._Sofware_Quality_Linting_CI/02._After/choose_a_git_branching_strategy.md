@@ -10,7 +10,7 @@
 
 For the exam your group will be expected to have picked a workflow and branching strategies.
 
-Every group member should be able to talk about the chosen version control stragegy and reflect on the pros and cons.
+Every group member should be able to talk about the chosen version control strategy and reflect on the pros and cons.
 
 --- 
 
