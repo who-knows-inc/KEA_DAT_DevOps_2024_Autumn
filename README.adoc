@@ -112,11 +112,11 @@ Can and will create proper commit messages.
 
 Knows proper casing and naming conventions. 
 
-Understand the OpenAPI specification, why it exist and knows different ways to work it.
+Understands the OpenAPI specification, why it exists and knows different ways to work it.
 
-Can generate an OpenAPI specification from the groups application.
+Can generate an OpenAPI specification from the group's application.
 
-Can create a `.env` file and import/use the environment variables in the groups chosen programming language.
+Can create a `.env` file and import/use the environment variables in the group's chosen programming language.
 
 
 // ------------------------------------------------------------------------------------------------------------------------------------------------
