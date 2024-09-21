@@ -20,7 +20,7 @@ Create a document for the mandatory that answers the following questions:
 
 - What version control strategy did you choose and how did you actually do it / enforce it?
 
-- Why did your group chose the one you did? Why did you not choose others?
+- Why did your group choose the one you did? Why did you not choose others?
 
 - What advantages and disadvantages did you run into during the course?
 
