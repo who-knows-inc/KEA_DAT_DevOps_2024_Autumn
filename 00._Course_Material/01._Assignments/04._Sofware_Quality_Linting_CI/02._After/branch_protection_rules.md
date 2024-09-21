@@ -21,7 +21,7 @@ https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-
 
 ## How to setup a branch protection rule
 
-In this example, the rule requires at least 2 to review a pull request before being able to merge with main.
+In this example, the rule requires at least two people to review a pull request before being able to merge with main.
 
 1. **⚙️ Settings**: Navigate to your repository on GitHub. Click on the "Settings" tab at the top.
 2. **🌿 Branches**: In the settings menu, find and click on the "Branches" menu located on the left side.
