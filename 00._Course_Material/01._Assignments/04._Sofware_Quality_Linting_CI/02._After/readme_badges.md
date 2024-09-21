@@ -32,7 +32,7 @@ Replace:
 
 ---
 
-# Genereate a workflow status badge through the Github UI
+# Generate a workflow status badge through the Github UI
 
 You can also select a specific workflow execution in the actions tab and click on the three dots and `Create status badge` to generate a badge.
 
@@ -54,6 +54,6 @@ Shields.io is a service that lets you create advanced custom badges:
 
 https://shields.io/
 
-For instance, you could use it to showcase the stack you are using. Check out the repistory if you are interested:
+For instance, you could use it to showcase the stack you are using. Check out the repository if you are interested:
 
 https://github.com/badges/shields
