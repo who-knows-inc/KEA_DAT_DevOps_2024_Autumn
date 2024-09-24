@@ -22,8 +22,8 @@ GROUP_REPOS = [
     {
         "name": "Ukendt Gruppe",
         "gitLinks": ["https://github.com/ukendt-gruppe/whoKnows"],
-        "backend": "52.169.19.77:8080",
-        "frontend": "52.169.19.77:8080",
+        "backend": "http://52.169.19.77:8080",
+        "frontend": "http://52.169.19.77:8080",
         "monitoring": "",
         "stack": ["Go w. Gorilla"],
         "documentation": [],
