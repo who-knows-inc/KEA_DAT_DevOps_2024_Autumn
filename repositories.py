@@ -62,10 +62,10 @@ GROUP_REPOS = [
     {
         "name": "UpsDev42069",
         "gitLinks": ["https://github.com/UpsDev42069/BM_Search_Engine"],
-        "backend": "",
+        "backend": "http://13.79.97.206:8080/",
         "frontend": "",
         "monitoring": "",
-        "stack": [],
+        "stack": ["Go", "Gorilla/mux", "SQLite3"],
         "documentation": [],
         "sla": "",
     },
