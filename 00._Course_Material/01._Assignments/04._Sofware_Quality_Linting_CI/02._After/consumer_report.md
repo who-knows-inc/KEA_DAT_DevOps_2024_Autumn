@@ -10,7 +10,7 @@ A consumer report has revealed a change in the market!
 
 ## Description
 
-Consumers have become highly interested in the weather recently. Create a weather page that shows the forecast. 
+Consumers have become highly interested in the weather recently. Create a weather page that displays the forecast. 
 
 ---
 
@@ -20,7 +20,7 @@ This is an excellent opportunity to:
 
 1. Integrate with a 3rd party service. 
 
-2. Test the integration as part of your pipelines later onUser feedback survey.
+2. Test the integration as part of your pipelines later on.
 
 ---
 
