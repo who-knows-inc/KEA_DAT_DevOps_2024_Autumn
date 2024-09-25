@@ -12,15 +12,15 @@ The course resources will assume that your group went with GitHub and tutorials 
 
 ---
 
-## [Group] GitHub organisations
+## [Group] GitHub organizations
 
-With your designated semester groups create a new [organisation](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch). 
+With your designated semester groups create a new [organization](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch). 
 
-1. Create an organisation.
+1. Create an organization.
 
-2. Add each other as collaborators on the organisation level. Give everyone admin rights. 
+2. Add each other as collaborators on the organization level. Give everyone admin rights. 
 
-3. [Optional] Create a `test` repository in the organisation.
+3. [Optional] Create a `test` repository in the organization.
 
 4. [Optional]  Clone the repository and push a change on the main branch. 
 

@@ -1,6 +1,6 @@
 # Linting
 
-Enhance your CI pipleines with a static analysis tools.
+Enhance your CI pipelines with a static analysis tools.
 
 **Type**: Group work
 
