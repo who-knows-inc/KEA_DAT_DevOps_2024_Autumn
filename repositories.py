@@ -92,8 +92,8 @@ GROUP_REPOS = [
     {
         "name": "Team-Dood",
         "gitLinks": ["https://github.com/Team-DooD/Whoknows"],
-        "backend": "",
-        "frontend": "",
+        "backend": "https://40.87.131.145",
+        "frontend": "https://40.87.131.145",
         "monitoring": "",
         "stack": [],
         "documentation": [],
