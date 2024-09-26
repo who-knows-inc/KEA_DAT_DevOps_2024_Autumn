@@ -82,8 +82,8 @@ GROUP_REPOS = [
     {
         "name": "Integration Nation",
         "gitLinks": ["https://github.com/Integration-Nation/DevOps-Project", "https://github.com/Integration-Nation/DevOps-Project-Frontend"],
-        "backend": "http://40.85.136.203:9090/api/search",
-        "frontend": "http://40.85.136.203/",
+        "backend": "https://40-85-136-203.nip.io:9090",
+        "frontend": "https://40-85-136-203.nip.io",
         "monitoring": "",
         "stack": ["Go Fiber,Gorm, Docker, AzureVM, sqlite"],
         "documentation": [],
