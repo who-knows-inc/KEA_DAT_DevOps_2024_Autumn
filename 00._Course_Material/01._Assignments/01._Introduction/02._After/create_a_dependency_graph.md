@@ -6,13 +6,15 @@
 
 **Motivation**: Helps you understand the dependencies between different parts of the application. Seeing how everything is coupled could help you understand how it could be deocoupled later on for easier maintance and fault tolerance. 
 
-Part of mandatory I. 
+**Part of mandatory I.** 
 
+---
 
 ## What is a dependency graph?
 
 A [Dependency Graph](https://en.wikipedia.org/wiki/Dependency_graph) is part of [Graph Theory](https://en.wikipedia.org/wiki/Graph_theory) and consists of [Nodes/Vertices and Edges](https://en.wikipedia.org/wiki/Vertex_(graph_theory)#/media/File:Small_Network.png).
 
+---
 
 ## How to create a dependency graph?
 

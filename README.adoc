@@ -4,18 +4,18 @@
 
 link:00._Course_Material/00._Meta_Course_Material/about_the_course.md[About the course]
 
-// link:00._Course_Material/00._Meta_Course_Material/about_the_exam.md[About the exam]
+link:00._Course_Material/00._Meta_Course_Material/about_the_exam.md[About the exam]
 
-// link:00._Course_Material/00._Meta_Course_Material/exam_requirements.md[Exam Requirements]
+link:00._Course_Material/00._Meta_Course_Material/exam_requirements.md[Exam Requirements]
 
-// link:00._Course_Material/00._Meta_Course_Material/exam_requirements_report.md[Exam Requirements Report]
+link:00._Course_Material/00._Meta_Course_Material/exam_requirements_report.md[Exam Requirements Report]
 
 
 == Mandatories
 
-// link:00._Course_Material/01._Assignments/00._Mandatories/mandatory_I.md[Mandatory I]
+link:00._Course_Material/01._Assignments/00._Mandatories/mandatory_I.md[Mandatory I]
 
-// link:00._Course_Material/01._Assignments/00._Mandatories/mandatory_II.md[Mandatory II]
+link:00._Course_Material/01._Assignments/00._Mandatories/mandatory_II.md[Mandatory II]
 
 == Semester Plan
 
@@ -112,19 +112,271 @@ Can and will create proper commit messages.
 
 Knows proper casing and naming conventions. 
 
-Understand the OpenAPI specification, why it exist and knows different ways to work it.
+Understands the OpenAPI specification, why it exists and knows different ways to work it.
 
-Can generate an OpenAPI specification from the groups application.
+Can generate an OpenAPI specification from the group's application.
 
-Can create a `.env` file and import/use the environment variables in the groups chosen programming language.
+Can create a `.env` file and import/use the environment variables in the group's chosen programming language.
 
 
 // ------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+| 3
+| Sept. 12th
+a|
+link:00._Course_Material/02._Slides/03._Github_Actions_Cloud_Azure_Deploy/01._introduction.md[Introduction]
 
-// | 3
-// | Sept. 12th
+link:00._Course_Material/02._Slides/03._Github_Actions_Cloud_Azure_Deploy/02._github_actions.md[Github Actions]
+
+link:00._Course_Material/02._Slides/03._Github_Actions_Cloud_Azure_Deploy/03._github_issues_workflow.md[Github Issues Workflow]
+
+link:00._Course_Material/02._Slides/03._Github_Actions_Cloud_Azure_Deploy/04._github_secrets.md[Github Secrets]
+
+link:00._Course_Material/02._Slides/03._Github_Actions_Cloud_Azure_Deploy/05._cloud_and_azure.md[Cloud and Azure]
+
+link:00._Course_Material/02._Slides/03._Github_Actions_Cloud_Azure_Deploy/06._ssh.md[SSH]
+
+link:00._Course_Material/02._Slides/03._Github_Actions_Cloud_Azure_Deploy/07._running_in_production.md[Running in Production]
+
+link:00._Course_Material/02._Slides/03._Github_Actions_Cloud_Azure_Deploy/08._deployment_considerations.md[Deployment Considerations]
+
+
+a|
+link:00._Course_Material/01._Assignments/03._Github_Actions_Cloud_Azure_Deploy/01._Before/read_about_github_actions.md[Read about github actions]
+
+link:00._Course_Material/01._Assignments/03._Github_Actions_Cloud_Azure_Deploy/01._Before/github_pr_template.md[Github PR template]
+
+link:00._Course_Material/01._Assignments/03._Github_Actions_Cloud_Azure_Deploy/01._Before/azure_cost_managment.md[Azure cost managment]
+
+link:00._Course_Material/01._Assignments/03._Github_Actions_Cloud_Azure_Deploy/01._Before/cloud_virtual_tour.md[Cloud virtual tour]
+
+a|
+link:00._Course_Material/01._Assignments/03._Github_Actions_Cloud_Azure_Deploy/02._After/keep_rewriting.md[Keep rewriting]
+
+link:00._Course_Material/01._Assignments/03._Github_Actions_Cloud_Azure_Deploy/02._After/deploy.md[Deploy]
+
+a|
+Understands the terminology surrounding Github Actions such as workflows, runners, jobs, steps, and actions.
+
+Can create a basic Github Action workflow that is triggered by a push and pull request. 
+
+Understands basic cloud concepts. 
+
+Can create a virtual machine in Azure and SSH into it. Can open ports and set the IP address to static.
+
+Understands the difference between public and private ssh keys.
+
+Can suggest various deployment strategies and knows the pros and cons of each.
+
+Understands the difference between pull-based and push-based deployment.
+
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+| 4
+| Sept. 19th
+a|
+link:00._Course_Material/02._Slides/04._Sofware_Quality_Linting_CI/01._introduction.md[Introduction]
+
+link:00._Course_Material/02._Slides/04._Sofware_Quality_Linting_CI/02._software_quality.md[Software quality]
+
+link:00._Course_Material/02._Slides/04._Sofware_Quality_Linting_CI/03._ci_cd.md[CI/CD]
+
+link:00._Course_Material/02._Slides/04._Sofware_Quality_Linting_CI/04._linting.md[Linting]
+
+link:00._Course_Material/02._Slides/04._Sofware_Quality_Linting_CI/05._branching_strategies.md[Branching strategies]
+
+a|
+link:00._Course_Material/01._Assignments/04._Sofware_Quality_Linting_CI/01._Before/research_git_branching_strategies.md[Research git branching strategies]
+
+link:00._Course_Material/01._Assignments/04._Sofware_Quality_Linting_CI/01._Before/github_issue_template.md[Github Issue template]
+
+link:00._Course_Material/01._Assignments/04._Sofware_Quality_Linting_CI/01._Before/create_a_merge_conflict.md[Create a merge conflict]
+
+link:00._Course_Material/01._Assignments/04._Sofware_Quality_Linting_CI/01._Before/define_github_secrets.md[Define github secrets]
+
+
+a|
+link:00._Course_Material/01._Assignments/04._Sofware_Quality_Linting_CI/02._After/consumer_report.md[Consumer Report!]
+
+link:00._Course_Material/01._Assignments/04._Sofware_Quality_Linting_CI/02._After/choose_a_git_branching_strategy.md[Choose git branching strategy]
+
+link:./00._Course_Material/01._Assignments/04._Sofware_Quality_Linting_CI/02._After/branch_protection_rules.md[Branch protection rules]
+
+link:00._Course_Material/01._Assignments/04._Sofware_Quality_Linting_CI/02._After/software_quality.md[Software Quality]
+
+link:00._Course_Material/01._Assignments/04._Sofware_Quality_Linting_CI/02._After/linting.md[Linting]
+
+link:00._Course_Material/01._Assignments/04._Sofware_Quality_Linting_CI/02._After/whoknows_variations_continuous_integration.md[Whoknows_variations - Continuous Integration]
+
+link:00._Course_Material/01._Assignments/04._Sofware_Quality_Linting_CI/02._After/readme_badges.md[Readme badges]
+
+a|
+Understands the importance of software quality and tools to measure it. 
+
+Understands why technical debt occurs and why it's important to avoid. 
+
+Can argue for the importance of linting. 
+
+Knows the difference between linting in a Git Hook vs. a CI/CD pipeline. Can argue for the pros and cons of each. 
+
+Is familiar with different branching strategies.
+
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+| 5
+| Sept. 26th
+a|
+link:00._Course_Material/02._Slides/05._Docker_The_Simulation/01._introduction.md[Introduction]
+
+link:00._Course_Material/02._Slides/05._Docker_The_Simulation/02._build_tools.md[Build tools]
+
+link:00._Course_Material/02._Slides/05._Docker_The_Simulation/03._packaging.md[Packaging]
+
+link:00._Course_Material/02._Slides/05._Docker_The_Simulation/04._virtualization_containerization.md[Virtualization / Containerization]
+
+link:00._Course_Material/02._Slides/05._Docker_The_Simulation/05._docker.md[Docker]
+
+link:00._Course_Material/02._Slides/05._Docker_The_Simulation/06._dockerfile.md[Dockerfile]
+
+link:00._Course_Material/02._Slides/05._Docker_The_Simulation/assets_build_tools/python_build_tools.md[Python build tools]
+a|
+link:00._Course_Material/01._Assignments/05._Docker_The_Simulation/01._Before/refresh_docker_knowledge.md[Refresh Docker knowledge]
+
+link:00._Course_Material/01._Assignments/05._Docker_The_Simulation/01._Before/the_simulation.md[The Simulation]
+a|
+link:00._Course_Material/01._Assignments/05._Docker_The_Simulation/02._After/setup_postman_monitoring.md[Setup Postman Monitoring]
+
+link:00._Course_Material/01._Assignments/05._Docker_The_Simulation/02._After/docker_from_scratch.md[Docker from scratch]
+a|
+Understands different levels of build tools from OS to language-specific ones.
+
+Understands the difference between packaging and virtualization/containerization.
+
+Understands how Docker differs from its predecessors and modern alternatives.
+
+Can understand simple Dockerfiles for different languages.
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------
+
+| 6
+| Oct. 3rd
+a|
+link:00._Course_Material/02._Slides/06._Docker-compose_Continuous_Delivery_DevOps/01._introduction.md[Introduction]
+
+link:00._Course_Material/02._Slides/06._Docker-compose_Continuous_Delivery_DevOps/02._docker-compose.md[Docker-compose]
+
+link:00._Course_Material/02._Slides/06._Docker-compose_Continuous_Delivery_DevOps/03._hot_reload_in_docker.md[Hot reload in docker]
+
+link:00._Course_Material/02._Slides/06._Docker-compose_Continuous_Delivery_DevOps/04._debug_docker-compose.md[Debug docker-compose]
+
+link:00._Course_Material/02._Slides/06._Docker-compose_Continuous_Delivery_DevOps/05._agile.md[Agile]
+
+link:00._Course_Material/02._Slides/06._Docker-compose_Continuous_Delivery_DevOps/06._devops.md[DevOps]
+
+link:00._Course_Material/02._Slides/06._Docker-compose_Continuous_Delivery_DevOps/07._continuous_delivery.md[Continuous Delivery]
+a|
+link:00._Course_Material/01._Assignments/06._Docker-compose_Continuous_Delivery_DevOps/01._Before/100+_docker_concepts_you_need_to_know.md[100+ docker concepts you need to know]
+
+link:00._Course_Material/01._Assignments/06._Docker-compose_Continuous_Delivery_DevOps/01._Before/generate_cr_pat.md[Generate CR_PAT]
+
+link:00._Course_Material/01._Assignments/06._Docker-compose_Continuous_Delivery_DevOps/01._Before/read_devops_literature_I.md[Read DevOps Literature I]
+
+link:00._Course_Material/01._Assignments/06._Docker-compose_Continuous_Delivery_DevOps/01._Before/refresh_docker-compose.md[Refresh docker-compose]
+a|
+link:00._Course_Material/01._Assignments/06._Docker-compose_Continuous_Delivery_DevOps/02._After/whoknows_variations_continuous_delivery.md[whoknows_variations Continuous Delivery]
+
+link:00._Course_Material/01._Assignments/06._Docker-compose_Continuous_Delivery_DevOps/02._After/workflow_strategies.md[Workflow strategies]
+a|
+Can argue for the benefit of using Docker-compose over Dockerfiles.
+
+Understands various basic docker-compose.yml files.
+
+Can argue for the pros and cons of hot reload in Docker.
+
+Understands Continuous Delivery as we define it in this course and has a general idea of how it works.
+
+Can explain what agile is, why it was created. 
+
+Understands the history of DevOps and different ways to understand it. 
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+| 7
+| Oct. 10th
+a|
+Guest Lecture by Sofus from [Eficode](https://www.eficode.com/)
+a|
+link:00._Course_Material/01._Assignments/07._Guest_Lecture/01._Before/read_devops_literature_II.md[Read DevOps Literature II]
+
+link:00._Course_Material/01._Assignments/07._Guest_Lecture/01._Before/detecting_agile_bs.md[Detecting Agile BS]
+a|
+link:00._Course_Material/01._Assignments/07._Guest_Lecture/02._After/create_an_issue_template.md[Create an Issue Template]
+
+link:00._Course_Material/01._Assignments/07._Guest_Lecture/02._After/how_are_you_devops.md[How are you DevOps?]
+a|
+Understands the importance of DevOps in a modern organization.
+
+Understands the concept of psychological safety and why it matters. 
+
+Understands how crucial it is for business competitiveness to bring down pipeline execution time.
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------
+
+| 
+| Oct. 17th
+a|
+**Holiday**
+a|
+a|
+a|
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+| 8
+| Oct. 24th
+a|
+link:00._Course_Material/02._Slides/08._Continuous_Deployment/01._introduction.md[Introduction]
+
+link:00._Course_Material/02._Slides/08._Continuous_Deployment/02._devops.md[DevOps]
+
+link:00._Course_Material/02._Slides/08._Continuous_Deployment/02._postmortem.md[Postmortem]
+
+link:00._Course_Material/02._Slides/08._Continuous_Deployment/03._continuous_deployment.md[Continuous Deployment]
+
+link:00._Course_Material/02._Slides/08._Continuous_Deployment/04._concluding_ci_cd.md[Concluding CI/CD]
+a|
+link:00._Course_Material/01._Assignments/08._Continuous_Deployment/01._Before/deploy_to_github_pages.md[Deploy to GitHub Pages]
+
+link:00._Course_Material/01._Assignments/08._Continuous_Deployment/01._Before/read_about_gitops.md[Read about GitOps]
+a|
+link:00._Course_Material/01._Assignments/08._Continuous_Deployment/02._After/fts5.md[FTS5]
+
+link:00._Course_Material/01._Assignments/08._Continuous_Deployment/02._After/postmortem.md[Postmortem]
+
+link:00._Course_Material/01._Assignments/08._Continuous_Deployment/02._After/smoke_testing.md[Smoke Testing]
+
+link:00._Course_Material/01._Assignments/08._Continuous_Deployment/02._After/user_feedback_survey.md[User Feedback Survey!]
+a|
+Has a clear view of different definitions of DevOps.
+
+Understands the concepts of the principles of *Flow*, *Feedback*, and *Continual Learning and Experimentation*.
+
+Can argue for the importance of carrying out a postmortem and knows how to approach conducting one.
+
+Can recall various ways to achieve continuous deployment.
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+// | 9
+// | Oct. 31st
 // a|
 // Topics
 // a|
@@ -133,12 +385,6 @@ Can create a `.env` file and import/use the environment variables in the groups 
 // After class
 // a|
 // Learning Goals
-
-
-
-// ------------------------------------------------------------------------------------------------------------------------------------------------
-
-
 
 
 
