@@ -62,10 +62,10 @@ GROUP_REPOS = [
     {
         "name": "UpsDev42069",
         "gitLinks": ["https://github.com/UpsDev42069/BM_Search_Engine"],
-        "backend": "",
+        "backend": "http://13.79.97.206:8080/",
         "frontend": "",
         "monitoring": "",
-        "stack": [],
+        "stack": ["Go", "Gorilla/mux", "SQLite3"],
         "documentation": [],
         "sla": "",
     },
@@ -82,8 +82,8 @@ GROUP_REPOS = [
     {
         "name": "Integration Nation",
         "gitLinks": ["https://github.com/Integration-Nation/DevOps-Project", "https://github.com/Integration-Nation/DevOps-Project-Frontend"],
-        "backend": "http://40.85.136.203:9090/api/search",
-        "frontend": "http://40.85.136.203/",
+        "backend": "https://40-85-136-203.nip.io:9090",
+        "frontend": "https://40-85-136-203.nip.io",
         "monitoring": "",
         "stack": ["Go Fiber,Gorm, Docker, AzureVM, sqlite"],
         "documentation": [],
