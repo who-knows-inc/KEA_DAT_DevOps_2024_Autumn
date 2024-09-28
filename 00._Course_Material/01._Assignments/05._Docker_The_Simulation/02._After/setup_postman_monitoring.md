@@ -101,7 +101,7 @@ pm.test("Response body is present", function () {
 });
 ```
 
----
+<!-- ---
 
 <div class="title-card">
     <h1>Runners</h1>
@@ -166,7 +166,7 @@ Or you could immediately role back in production in case of a failed test.
 
 Click on `Configure command` and you will be able to get a snippet and instruction on how to add the code to your CI/CD pipeline. 
 
-<img src="./assets_postman_monitoring/copy_CICD_code.png">
+<img src="./assets_postman_monitoring/copy_CICD_code.png"> -->
 
 ---
 
@@ -174,7 +174,7 @@ Click on `Configure command` and you will be able to get a snippet and instructi
 
 ---
 
-# Enable Monitors
+## Enable Monitors
 
 Click on the icon below `history` in the left side and enable Monitors. 
 
