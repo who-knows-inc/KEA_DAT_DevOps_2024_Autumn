@@ -1,0 +1,12 @@
+services:
+  backend:
+    build:
+      context: ./node_project
+      dockerfile: Dockerfile.dev
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./node_project:/usr/src/app
+      - backend_node_modules:/usr/src/app/node_modules
+volumes:
+  backend_node_modules:
