@@ -2,8 +2,8 @@ GROUP_REPOS = [
     {
         "name": "Team AB",
         "gitLinks": ["https://github.com/Team-AB-DevOps/ab-dev-ops"],
-        "backend": "http://40.127.181.51:8081",
-        "frontend": "http://40.127.181.51:8080",
+        "backend": "http://67.207.73.30:8081",
+        "frontend": "http://67.207.73.30:8080",
         "monitoring": "",
         "stack": ["React TSX", "C# .NET"],
         "documentation": [],
@@ -92,8 +92,8 @@ GROUP_REPOS = [
     {
         "name": "Team-Dood",
         "gitLinks": ["https://github.com/Team-DooD/Whoknows"],
-        "backend": "https://40.87.131.145",
-        "frontend": "https://40.87.131.145",
+        "backend": "https://teamdood.dk",
+        "frontend": "https://teamdood.dk",
         "monitoring": "",
         "stack": [],
         "documentation": [],
