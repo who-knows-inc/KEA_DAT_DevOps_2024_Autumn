@@ -85,7 +85,7 @@ Some days you might get some time to coordinate group work.
 
 Thhis is a preliminary plan that definitely will change. Do **NOT** rely on this plan. The idea is that you can look at the topics and get a sense of where the course is heading.
 
-| Week | Topics                                          | Milestones (complete by end of week)                         |
+| Week | Topics                                         | Milestones (complete after the lecture)                       |
 |------|------------------------------------------------|---------------------------------------------------------------|
 | 1    | Intro + Tools                                  | Understand the legacy code + system                           |
 | 2    | REST API, OpenAPI, GitHub Actions              | Start rewriting the project                                   |
@@ -95,15 +95,15 @@ Thhis is a preliminary plan that definitely will change. Do **NOT** rely on this
 | 6    | CD, Agile, DevOps                              | Implement Continuous Delivery, reflect on DevOps              |
 | 7    | Eficode Sofus (External lecturer)              |                                                               |
 | 8    | Continuous Deployment                          | Implement Continuous Deployment                               |
-| 8    | Testing, Security                              | Create tests, integrate security in pipelines, start using TLS|
-| 9    | Databases, ORM, Data Scraping / Web Crawling   | Explore databases beyond SQLite, consider ORM, start scraping |
-| 10   | Searching, Logging, Monitoring                 | Set up monitoring                                             |
-| 11   | Infrastructure as Code (IaC)                   | Consider IaC                                                  |
-| 12   | Orchestration, Deployment Strategies           | Evaluate deployment strategies                                |
-| 13   | Buffer                                         |                                                               |
-| 14   | Finalize Project, Take Down Simulation         |                                                               |
-| 15   | Report                                         |                                                               |
-| 16   | Report + Exam Preparation                      |                                                               |
+| 9    | Testing, Security                              | Create tests, integrate security in pipelines, start using TLS|
+| 10   | Databases, ORM, Data Scraping / Web Crawling   | Explore databases beyond SQLite, consider ORM, start scraping |
+| 11   | Searching, Logging, Monitoring                 | Set up monitoring                                             |
+| 12   | Infrastructure as Code (IaC)                   | Consider IaC                                                  |
+| 13   | Orchestration, Deployment Strategies           | Evaluate deployment strategies                                |
+| 14   | Buffer                                         |                                                               |
+| 15   | Finalize Project, Take Down Simulation         |                                                               |
+| 16   | Report                                         |                                                               |
+| 17   | Report + Exam Preparation                      |                                                               |
 
 
 If you feel like something isn't being covered which is blocking you or it should be covered earlier then please let me know.
