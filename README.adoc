@@ -320,11 +320,13 @@ link:00._Course_Material/01._Assignments/07._Guest_Lecture/02._After/create_an_i
 
 link:00._Course_Material/01._Assignments/07._Guest_Lecture/02._After/how_are_you_devops.md[How are you DevOps?]
 a|
-Understands the importance of DevOps in a modern organization.
+Knows the historical angel of DevOps and how it has evolved.
+
+Understands the problems that DevOps aims to solve in modern organizations.
 
 Understands the concept of psychological safety and why it matters. 
 
-Understands how crucial it is for business competitiveness to bring down pipeline execution time.
+Understands how crucial it is for business competitiveness to bring down pipeline execution time. Can implement simultanously running pipelines to cut time whenever it is possible.
 
 // ------------------------------------------------------------------------------------------------------------------------------------------------
 
