@@ -108,5 +108,16 @@ GROUP_REPOS = [
         "stack": [],
         "documentation": [],
         "sla": "",
-    }
+    },
+    {
+    "name": "AN-devOps",
+    "gitLinks": ["https://github.com/Team-AN-devOps/whoknows_variations"],
+    "backend": "http://167.99.41.21:4567",
+    "frontend": "http://167.99.41.21:4567",
+    "monitoring": "",
+    "stack": ["Ruby Sinatra", "html"],
+    "documentation": [],
+    "sla": "",
+}
+
 ]
