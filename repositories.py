@@ -32,8 +32,8 @@ GROUP_REPOS = [
     {
         "name": "LAWNE-KEA",
         "gitLinks": ["https://github.com/LAWNE-KEA/WhoKnows-Backend", "https://github.com/LAWNE-KEA/WhoKnows-Frontend"],
-        "backend": "",
-        "frontend": "",
+        "backend": "http://100.25.126.145:8080",
+        "frontend": "http://100.25.126.145:8080",
         "monitoring": "",
         "stack": [],
         "documentation": [],
@@ -108,5 +108,16 @@ GROUP_REPOS = [
         "stack": [],
         "documentation": [],
         "sla": "",
-    }
+    },
+    {
+    "name": "AN-devOps",
+    "gitLinks": ["https://github.com/Team-AN-devOps/whoknows_variations"],
+    "backend": "http://167.99.41.21:4567",
+    "frontend": "http://167.99.41.21:4567",
+    "monitoring": "",
+    "stack": ["Ruby Sinatra", "html"],
+    "documentation": [],
+    "sla": "",
+}
+
 ]
