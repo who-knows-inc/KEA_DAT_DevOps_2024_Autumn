@@ -1,0 +1,40 @@
+name: publish
+
+on:
+  workflow_run:
+    workflows: ["continuous_delivery"]
+    types:
+      - completed
+    branches:
+      - continuous_deployment
+  workflow_dispatch:
+
+env:
+  REGISTRY: ghcr.io
+  # change github.actor if the image is owned by an organization
+  IMAGE_NAME: ${{ github.actor }}/full-pipeline:latest
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Add SSH key to runner
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/ssh_key
+          chmod 600 ~/.ssh/ssh_key
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Deploy to server
+        run: |
+          ssh -i ~/.ssh/ssh_key -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST << 'EOF'
+          docker pull nginx
+          docker rm -f hello-nginx || true
+          docker run -d -p 80:80 --name hello-nginx nginx
+          EOF
+        env:
+          # Make sure that the SSH_USER has permission to run docker
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}

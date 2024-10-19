@@ -310,7 +310,7 @@ Understands the history of DevOps and different ways to understand it.
 | 7
 | Oct. 10th
 a|
-Guest Lecture by Sofus from [Eficode](https://www.eficode.com/)
+Guest Lecture by Sofus from link:https://www.eficode.com/[Eficode]​
 a|
 link:00._Course_Material/01._Assignments/07._Guest_Lecture/01._Before/read_devops_literature_II.md[Read DevOps Literature II]
 
@@ -352,7 +352,7 @@ link:00._Course_Material/02._Slides/08._Continuous_Deployment/02._postmortem.md[
 
 link:00._Course_Material/02._Slides/08._Continuous_Deployment/03._continuous_deployment.md[Continuous Deployment]
 
-link:00._Course_Material/02._Slides/08._Continuous_Deployment/04._concluding_ci_cd.md[Concluding CI/CD]
+link:00._Course_Material/02._Slides/08._Continuous_Deployment/04._dev_containers.md[Dev Containers]
 a|
 link:00._Course_Material/01._Assignments/08._Continuous_Deployment/01._Before/deploy_to_github_pages.md[Deploy to GitHub Pages]
 
@@ -365,6 +365,8 @@ link:00._Course_Material/01._Assignments/08._Continuous_Deployment/02._After/pos
 link:00._Course_Material/01._Assignments/08._Continuous_Deployment/02._After/smoke_testing.md[Smoke Testing]
 
 link:00._Course_Material/01._Assignments/08._Continuous_Deployment/02._After/user_feedback_survey.md[User Feedback Survey!]
+
+link:00._Course_Material/01._Assignments/08._Continuous_Deployment/02._After/hadolint.md[Hadolint]
 a|
 Has a clear view of different definitions of DevOps.
 
@@ -377,18 +379,145 @@ Can recall various ways to achieve continuous deployment.
 // ------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-// | 9
-// | Oct. 31st
-// a|
-// Topics
-// a|
-// Before class
-// a|
-// After class
-// a|
-// Learning Goals
+| 9
+| Oct. 31st
+a|
+link:00._Course_Material/02._Slides/09._Testing_Security/01._introduction.md[Introduction]
+
+link:00._Course_Material/02._Slides/09._Testing_Security/02._devsecops.md[DevSecOps]
+
+link:00._Course_Material/02._Slides/09._Testing_Security/03._docker_firewalls.md[Docker / Firewalls]
+
+link:00._Course_Material/02._Slides/09._Testing_Security/04._security_in_github.md[Security in GitHub]
+
+link:00._Course_Material/02._Slides/09._Testing_Security/05._security_in_cloud.md[Security in Cloud]
+
+link:00._Course_Material/02._Slides/09._Testing_Security/06_continuous_testing.md[Continuous Testing]
+a|
+link:00._Course_Material/01._Assignments/09._Testing_Security/01._Before/6_layers_deep_google_data_center_security.md[6 Layers Deep Google Data Center Security]
+
+link:00._Course_Material/01._Assignments/09._Testing_Security/01._Before/registering_domain_onecom.md[Registering Domain: one.com]
+
+link:00._Course_Material/01._Assignments/09._Testing_Security/01._Before/security_hardening_github_actions.md[Security Hardening: Github Actions]
+
+link:00._Course_Material/01._Assignments/09._Testing_Security/01._Before/whoknows_variations_security_testing.md[Whoknows Variations: Security Testing]
+a|
+link:00._Course_Material/01._Assignments/09._Testing_Security/02._After/fail2ban.md[fail2ban]
+
+link:00._Course_Material/01._Assignments/09._Testing_Security/02._After/harden_yourself.md[Harden Yourself]
+
+link:00._Course_Material/01._Assignments/09._Testing_Security/02._After/security_breach.md[Security Breach]
+
+link:00._Course_Material/01._Assignments/09._Testing_Security/02._After/setup_https.md[Setup HTTPS]
+a|
+Can explain the DevSecOps mentality and different ways to ensure security in various steps of the DevOps 8.
+
+Can bring up different types of security testing. Can explain SAST vs. DAST. 
+
+Knows how to security scan a Docker image. Knows how to set the least privileges for the user.
+
+Understands the IP tables problem of Docker and can suggest a solution. 
+
+Understands the mentality of continuous testing. Can mention different types of testing and where they fit in the DevOps 8.
+
+Can explain shift-left vs. shift-right testing. Can bring up examples of tests in each category and the benefit that they provide.
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------
+
+| 10
+| Nov. 7th
+a|
+Databases
+
+ORM
+
+Data scraping / Web Crawling
+a|
+Before class
+a|
+After class
+a|
+Learning Goals
 
 
+// ------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+| 11
+| Nov. 14th
+a|
+Searching
+
+Logging
+
+Monitoring
+a|
+Before class
+a|
+After class
+a|
+Learning Goals
+
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+| 12
+| Nov. 21st
+a|
+Infrastructure As Code
+a|
+Before class
+a|
+After class
+a|
+Learning Goals
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------
+
+| 13
+| Nov. 28th
+a|
+Orchestration
+
+Deployment Strategies
+
+Maintenance
+a|
+Before class
+a|
+After class
+
+**The simulation is taken down**
+a|
+Learning Goals
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------
+
+| 14
+| Dec. 5th
+a|
+Write the report. 
+a|
+No lecture.
+a|
+No lecture.
+a|
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+| 15
+| Dec. 12th
+a|
+Finish the report. 
+
+Prepare the exam presentation.
+a|
+No lecture.
+a|
+No lecture.
+a|
 
 
 |===
