@@ -110,7 +110,7 @@ Worst case scenario (happens too often):
 
 # Great quote regarding fixing things at Google
 
-> **We prioritize  the  team  goals  over  individual  goals — whenever we help someone move their work forward, we  help  the  entire  team.  This  applies  whether  we’re helping someone fix the build or an automated test, or even performing a code review for them**. And of course, we know that they’ll do the same for us, when we need help. This system worked without a lot of formality or policy—everyone knew that our job was not just “write code,”  but  it  was  to  “run  a  service.”  This  is  why  we prioritized all quality issues, especially those related to reliability and scaling, at the highest level, treating them as Priority 0 “show-stopper” problems. From a systems perspective,  these  practices  keep  us  from  slipping backwards.
+> **We prioritize the team goals over individual goals — whenever we help someone move their work forward, we help the entire team. This applies whether we’re helping someone fix the build or an automated test, or even performing a code review for them**. And of course, we know that they’ll do the same for us, when we need help. This system worked without a lot of formality or policy—everyone knew that **our job was not just “write code,” but it  was to “run a service.”**  This is why we prioritized all quality issues, especially those related to reliability and scaling, at the highest level, treating them as Priority 0 “show-stopper” problems. From a systems perspective, these practices keep us from slipping backwards.
 
 \- Randy Shoup, former engineering director for Google App Engine
 
@@ -128,7 +128,7 @@ Worst case scenario (happens too often):
 
 > * A controlled environment such as a single isolated process
 
-T. Winters et al. _Software Engineering at Google_
+\- [T. Winters et al. Software Engineering at Google](https://research.google/pubs/software-engineering-at-google/)
 
 ---
 
@@ -247,6 +247,18 @@ Let's follow the tutorial.
 
 https://playwright.dev/docs/intro
 
+Install:
+
+```bash
+$ npm init playwright@latest
+```
+
+Run tests:
+
+```bash
+$ npx playwright test
+```
+
 ---
 
 # Make it work for your project
@@ -270,6 +282,39 @@ export default defineConfig({
 
 ```bash
 $ npx playwright codegen
+```
+
+---
+
+# Example of a search test
+
+```javascript
+const { test, expect } = require('@playwright/test');
+
+test('can search', async ({ page }) => {
+    await page.goto('http://localhost:8080/');
+    
+    await page.getByPlaceholder('Search...').fill('this is a search test');
+    await page.getByRole('button', { name: 'Search' }).click();
+    
+    expect(page.url()).toBe('http://localhost:8080/?q=this+is+a+search+test');
+});
+```
+
+---
+
+# Headed mode = browser visible
+
+Play the text in headed mode:
+
+```bash
+$ npx playwright test --headed --project=chromium
+```
+
+Play the test in `inspector` mode:
+
+```bash
+$ PWDEBUG=1 npx playwright test --project=chromium
 ```
 
 ---
