@@ -12,5 +12,6 @@ Since it's important that all developers are aware of the security risks and bes
 
 https://docs.github.com/en/actions/security-for-github-actions/security-guides/security-hardening-for-github-actions
 
-If you make any changes after reading the documentation, then make a note of it or tell your group members about it.
+You are **not** expected to read the link thoroughly. Just skim the page and see if anything applies to your project.
 
+If you make any changes after reading the documentation, then make a note of it or tell your group members about it.
