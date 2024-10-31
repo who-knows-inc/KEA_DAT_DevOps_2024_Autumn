@@ -142,9 +142,13 @@ Special characters: especially in Denmark where we have letters like æ, ø, å.
 
 ---
 
-# Happy paths vs bad paths
+# Happy paths vs sad paths
 
 https://en.wikipedia.org/wiki/Happy_path
+
+Remember to test for both.
+
+Security testing, for example, is often about testing the sad paths.
 
 ---
 
@@ -170,6 +174,12 @@ https://en.wikipedia.org/wiki/Happy_path
 
 ---
 
+# Unit testing example: Whoknows Variations
+
+https://github.com/who-knows-inc/whoknows_variations/blob/main/src/backend/app_tests.py
+
+---
+
 # Integration tests
 
 <img src="https://twilio-cms-prod.s3.amazonaws.com/images/MyR86UeunZJcErQJmlEoEwWpAt56uIH2k2mHFqfsA95S2R.width-500_NbXJ1BV.png" style="height: 30vh;">
@@ -186,7 +196,6 @@ https://en.wikipedia.org/wiki/Happy_path
 ---
 
 # End-to-end testing
-
 
 We will do it hands-on with Playwright in a bit. 
 

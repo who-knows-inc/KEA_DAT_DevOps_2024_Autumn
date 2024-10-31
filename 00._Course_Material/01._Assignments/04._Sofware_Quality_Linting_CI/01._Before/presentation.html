@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #1e1e1e; /* Dark background for the body */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Full-Width Slideshow Container */
+#slideshow {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+/* Full-Width and Dark Mode Slide Styles */
+.remark-slide-content {
+    color: #ddd; /* Light text color for readability */
+    background-color: #13151a; /* Dark background for slides */
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    padding-top: 0px;
+    box-sizing: border-box;
+}
+
+/* Headers */
+.remark-slide-content h1, .remark-slide-content h2 {
+    color: rgb(8, 107, 194); /* Bright color for headers */
+    margin-top: 5px;
+}
+
+.remark-slide-content h1 {
+    font-size: 2em;
+}
+
+.remark-slide-content h2 {
+    font-size: 1.2em;
+}
+
+/* Paragraphs */
+.remark-slide-content p {
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+/* Lists */
+.remark-slide-content ul, .remark-slide-content ol {
+    margin-left: 20px;
+    font-size: 1.2em;
+}
+
+/* Images */
+.remark-slide-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Links */
+a:link, a:visited {
+    color: green;
+}
+
+/* Code */
+.remark-slide-content pre {
+    background: #333; /* Dark background for code blocks */
+    border: 1px solid #444;
+    color: #eee; /* Light text for code */
+    padding: 8px;
+    overflow: auto;
+}
+
+.remark-slide-content code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #333;
+    padding: 2px 5px;
+    color: #eee;
+}
+
+
+table {
+    /* center */
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse; /* This ensures that the border styles are applied uniformly */
+}
+
+th {
+    color: darkgrey;
+}
+
+table, th, td {
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+}
+
+.title-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+}
+
+.title-card h1 {
+    color: cyan;
+}
+
+.exercise-card h1 {
+    color: green;
+}
+
+.fullscreen-video {
+    width: 40vw; 
+    height: 50vh;
+    border: none;
+}
+
+    </style>
+
+    <title>create_a_merge_conflict || define_github_secrets || github_issue_template || research_git_branching_strategies</title>
+</head>
+<body>
+    <!-- The Remark.js container -->
+<textarea id="source" style="display:none;"># [Optional] Create a merge conflict
+
+Try to create a merge conflict on purpose and learn how to resolve it. 
+
+**Type**: Individual
+
+**Motivation**: By learning how to create a merge conflict, you will understand why they happen and what situation causes them.
+
+---
+
+# Create a merge conflict - Step 1
+
+Create a new folder and initialize it as a repository:
+
+```bash 
+$ git init
+```
+
+Create a new file with content:
+
+```bash 
+$ echo "Hello world" > example.txt
+```
+
+Add and commit the file:
+
+```bash 
+$ git add example.txt
+$ git commit -m "Initial commit"
+```
+
+---
+
+# Create a merge conflict - Step 2
+
+Create a new branch:
+
+```bash 
+$ git checkout -b merge-conflict-branch
+```
+
+The new branch will have the file and content of the main branch.
+
+Make changes in the new branch to the same file, same line:
+
+```bash 
+$ echo "Hello from feature branch" > example.txt 
+$ git commit -am "Update message in feature branch"
+```
+
+---
+
+# Create a merge conflict - Step 3
+
+Checkout the main branch:
+
+```bash 
+$ git checkout main
+```
+
+**Status check**: So we have a file with different content in the main branch and the feature branch.
+
+We want to have different content in the same line of the same file.
+
+This is what will cause a merge conflict because git does not have a strategy for resolving this.
+
+
+```bash 
+$ echo "Main is changing the first line of example.txt" > example.txt 
+$ git commit -am "Changed first line of example.txt"
+```
+
+---
+
+# Create a merge conflict - Step 4
+
+We are now going to merge the feature branch into the main branch.
+    
+```bash 
+$ git merge merge-conflict-branch
+```
+
+This is the message:
+
+```
+Auto-merging example.txt
+CONFLICT (content): Merge conflict in example.txt
+Automatic merge failed; fix conflicts and then commit the result.
+```
+
+---
+
+# Create a merge conflict - Step 5
+
+There are many smart graphical tools for resolving merge conflicts.
+
+Doing it manually is also an option. This is what the file looks like:
+
+```
+<<<<<<< HEAD
+Main is changing the first line of example.txt
+=======
+Hello from feature branch
+>>>>>>> merge-conflict-branch
+```
+
+Delete everything until there is only one line left (the one you want to keep or the combination of the two you want).
+
+That's it! Now you can commit the changes.
+
+---
+
+
+---
+
+# [Optional] Define GitHub Secrets
+
+Learn various ways to define GitHub secrets and how to invoke them in your workflow file.
+
+**Type**: Individual
+
+---
+
+## Prerequisites
+
+This assumes that you have gh installed and configured from the lecture. 
+
+Installation from here: https://cli.github.com/
+
+Log in with:
+
+```bash
+$ gh auth login
+```
+
+---
+
+## Create a test repository
+
+For convenience `gh` will be used to create and later on delete the repository. 
+
+```bash
+$ gh repo create
+```
+
+Go through the steps and choose what makes sense to you. 
+
+---
+
+## Define secrets in the GitHub UI
+
+
+1. **🖥️ Go to Your Repository**: First, navigate to your GitHub repository where you want to add the secret.
+
+2. **⚙️ Settings**: Look for the "Settings" tab at the top of your repository page and click on it.
+
+3. **🔐 Secrets**: On the left-hand side menu, you'll see a list of options. Find and click on "Secrets".
+
+4. **➕ New Secret**: You will see a button labeled "New repository secret". Click on it to add a new secret.
+
+5. **🏷️ Name Your Secret**: In the "Name" field, type **`MY_NOT_SO_SECRET`**. This will be the reference name for your secret.
+
+6. **🔑 Add Secret Value**: In the "Value" field, enter the secret content you want to store. Usually this would be things to keep private, like API keys, tokens, etc. For this exercise just write a short message that isn't secret. 
+
+7. **💾 Save**: After you've entered the secret, click the "Add secret" button to save it.
+
+8. **🎉 Done!**: Your secret is now saved and can be used in your GitHub Actions workflows.
+
+---
+
+## Using the secret in the workflow
+
+In `github/workflows` create a new file called `echo_secret.yml` and add the following content:
+
+
+```yaml
+name: Echo Secret
+
+on: [push]
+
+jobs:
+  echo_secret:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo Secret
+        run: echo "Secret is ${{ secrets.MY_NOT_SO_SECRET }}"
+        env:
+          YOUR_SECRET: ${{ secrets.MY_NOT_SO_SECRET }}
+```
+
+This accesses the secret `MY_NOT_SO_SECRET` and echos it. By echoing it, you can see the secret in the logs.
+
+Once you define a secret you can never read them in the UI. If you forget, you will have to rotate them. 
+
+And you should never expose the secret like the example above. This is a toy example to show how it works. 
+
+---
+
+# Define secrets with `gh`
+
+Running `gh` in the relevant repository, you can always do the following:
+
+```bash
+$ gh secret list
+```
+
+And you can set a new secret. 
+
+```bash
+$ gh secret set <MY_NOT_SO_SECRET>
+```
+
+For automation, you could consider doing the following:
+
+```bash
+$ gh secret set <MY_SECRET_NAME> < <path_to_secret_file>
+```
+
+---
+
+## Clean up
+
+To delete the repository, run:
+
+```bash
+$ gh repo delete
+```
+
+That's it. You have now learned how to define GitHub secrets and use them in your workflow.
+
+
+
+---
+
+## Create an issue template
+
+Create an issues template. This mirrors the `github_pr_template` assignment. 
+
+**Type**: Group work
+
+**Motivation**: If you have a standardized way to create issues, you will have better defined tasks in your Github Project. 
+
+---
+
+# How to create an issue template
+
+Create a file named `ISSUE_TEMPLATE.md` inside of the `.github` folder. 
+
+Define a template for issues and try to create a new issue. 
+
+This will provide a template for people looking to create issues (bugs, feature requests etc.).
+
+https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-an-issue
+
+
+
+---
+
+# Research Branching strategies
+
+**Type**: Individual
+
+**Deadline**: Will be useful to have a good overview ahead of the lecture and be ready to discuss it with your group and implement one after. 
+
+**Motivation**: This assignment will help you with the task that follows the lecture, which is to choose a branching strategy.
+
+---
+
+## General Research
+
+This is a daunting task. Everyone is required to research the topic so that the group can make an informed decision. I have tried to mark things as required / not required to make time management easier. 
+
+Here is a long course on Git. You are not required to watch this video but do jump around and see if there are any interesting concepts and terminology you can gain from it:
+
+[![Git for Professionals Tutorial](http://img.youtube.com/vi/Uszj_k0DGsg/0.jpg)](https://www.youtube.com/watch?v=Uszj_k0DGsg)
+---
+
+## Branching strategies resources
+
+Good overview with pros and cons for each strategy:
+
+https://www.geeksforgeeks.org/branching-strategies-in-git/
+
+Look at these pages:
+
+https://www.atlassian.com/git/tutorials/comparing-workflows
+https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow
+https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
+
+**Recommendation**: poke around in the Atlassian documentation and read what catches your eye and seems useful. 
+
+Github Flow:
+
+https://docs.github.com/en/get-started/using-github/github-flow
+
+
+Trunk Based Development:
+
+https://trunkbaseddevelopment.com/
+
+
+---
+
+## Merging vs. Rebasing
+
+Really nice visuals to explain Git Merge vs. Rebase:
+
+[![Git Merge vs. Rebase: Everything you need to know](http://img.youtube.com/vi/0chZFIZLR_0/0.jpg)](https://www.youtube.com/watch?v=0chZFIZLR_0)
+
+From the video:
+
+<div>
+    <img src="./assets_research_git_branching_strategies/git_merge_vs_rebase_vs_squash_commit_pros_cons.png" alt="Git merging vs. rebasing the great debate"/>
+</div>
+
+
+Try out rebasing! You could follow this guide (the video has really nice visuals):
+
+https://www.themoderncoder.com/a-better-git-workflow-with-rebase/
+
+
+Another nice video with great hands-on explanations (you are not required to watch it):
+
+[![Git Merge vs. Rebase](http://img.youtube.com/vi/CRlGDDprdOQ/0.jpg)](https://www.youtube.com/watch?v=CRlGDDprdOQ)
+
+---
+
+## Additional links
+
+If you find a nice resource that you found enlightening then make a PR. 
+</textarea>
+
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>
+    const slideshow = remark.create({
+        source: document.getElementById('source').value
+    });
+</script>
+</body>
+</html>

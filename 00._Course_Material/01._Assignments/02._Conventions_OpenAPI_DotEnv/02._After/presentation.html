@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #1e1e1e; /* Dark background for the body */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Full-Width Slideshow Container */
+#slideshow {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+/* Full-Width and Dark Mode Slide Styles */
+.remark-slide-content {
+    color: #ddd; /* Light text color for readability */
+    background-color: #13151a; /* Dark background for slides */
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    padding-top: 0px;
+    box-sizing: border-box;
+}
+
+/* Headers */
+.remark-slide-content h1, .remark-slide-content h2 {
+    color: rgb(8, 107, 194); /* Bright color for headers */
+    margin-top: 5px;
+}
+
+.remark-slide-content h1 {
+    font-size: 2em;
+}
+
+.remark-slide-content h2 {
+    font-size: 1.2em;
+}
+
+/* Paragraphs */
+.remark-slide-content p {
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+/* Lists */
+.remark-slide-content ul, .remark-slide-content ol {
+    margin-left: 20px;
+    font-size: 1.2em;
+}
+
+/* Images */
+.remark-slide-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Links */
+a:link, a:visited {
+    color: green;
+}
+
+/* Code */
+.remark-slide-content pre {
+    background: #333; /* Dark background for code blocks */
+    border: 1px solid #444;
+    color: #eee; /* Light text for code */
+    padding: 8px;
+    overflow: auto;
+}
+
+.remark-slide-content code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #333;
+    padding: 2px 5px;
+    color: #eee;
+}
+
+
+table {
+    /* center */
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse; /* This ensures that the border styles are applied uniformly */
+}
+
+th {
+    color: darkgrey;
+}
+
+table, th, td {
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+}
+
+.title-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+}
+
+.title-card h1 {
+    color: cyan;
+}
+
+.exercise-card h1 {
+    color: green;
+}
+
+.fullscreen-video {
+    width: 40vw; 
+    height: 50vh;
+    border: none;
+}
+
+    </style>
+
+    <title>commence_the_rewrite || generate_openapi_spec_in_postman || generate_openapi_specification || kanban_github_project</title>
+</head>
+<body>
+    <!-- The Remark.js container -->
+<textarea id="source" style="display:none;"># Commence the rewrite
+
+Start converting the legacy code to your own stack. 
+
+**Type**: Group
+
+**Motivation**: [This is how dandy you will look if you do it with a structured way](https://www.oreilly.com/library/view/re-engineering-legacy-software/9781617292507/)
+
+---
+
+## How to get started
+
+You should have agreed on a programming language and server framework by now. 
+
+Agree with your group how to organize the code in folders and the overall structure of the new project. 
+
+Consider if you want to have a monorepo or a multi-repo setup.
+
+---
+
+## Gradual rewrite
+
+Keep the legacy code in your repository and slowly build up a new code base alongside with it. Consider, if this was a much larger project, how you would dismantle the legacy project and phase in the new.
+
+The goal is not to have a ground up working version for the application. It’s to realize that a rewrite requires a different approach than when you build projects up from scratch in other courses. Solving this task linearly from top of the app.py file to the bottom is not a good approach. Instead, flesh out the server (in your language of choice) in stages. Deligate the tasks so that everyone can work on their own part independently. You are not definitely not expected to have all features by next week. Next week we will look into deployment and you should have something in a language that can be deployed.
+
+---
+
+### Gall's Law
+
+Do not do the big rewrite! In real-world software development, follow Gall's Law. Here is an abridged version:
+
+> if you want a complex system to work, build a simpler system first, then improve over time.
+
+[Full version](http://principles-wiki.net/principles:gall_s_law)
+
+I suggest that you keep the legacy code alongside with the new codebase as you slowly phase it out. 
+
+---
+
+## The OpenAPI specification
+
+You must adhere to the provided [OpenAPI specification](./openapi.json) exactly.
+
+As you can see the `/about` page is optional. 
+
+
+
+
+
+
+
+
+
+---
+
+# [Optional] Generate an OpenAPI spec in Postman
+
+**Type**: Individual
+
+
+Only if you are interested in seeing how you can use Postman to generate an OpenAPI spec. It is possible to do either based on your collection definition (**Option 2**) but in this example since we have none, we will make Postman generate an example spec for us (**Option 1**).
+
+---
+
+### Create collection
+
+You must create a collection in Postman first. A collection is a group of requests. 
+
+<img src="./assets_openapi/01._create_collection.png">
+
+<!-- ---
+
+#### Enable Monitors
+
+Click on the icon below `history` in the left side and enable Monitors. 
+
+<img src="./assets_openapi/02._enable_monitors.png"> -->
+
+---
+
+# Option 1: Create a new API
+
+Click on the `API` button in the top-left side below `Collections` and in the pane that opens, click on `Create an API`.
+
+<img src="./assets_openapi/03._create_an_API.png">
+
+---
+
+### Author from scratch
+
+Click the `+` button next to `Definition` and choose `Author from scratch`.
+
+<img src="./assets_openapi/04._author_from_scratch.png">
+
+---
+
+### Select `Use a boilerplate`
+
+And OpenAPI version 3.1.
+
+<img src="./assets_openapi/05._use_a_boilerplate.png">
+
+---
+
+### Exercise: Try to understand the YAML file
+
+---
+
+# Option 2: Import OpenAPI spec (Paste)
+
+This was done during class. Check the lecture notes. 
+
+
+---
+
+# Create OpenAPI Specification
+
+**Type**: Group work
+
+**Part of mandatory I.**
+
+**Motivation**: Learn how to generate OpenAPI Specification for your framework and programming language of choice. 
+
+---
+
+## The provided OpenAPI Specification
+
+You have been provided with the following OpenAPI Specification file [`openapi.json`](./openapi.json). 
+
+It's a must that you should adhere to this specification. You are free to add more routes, though. 
+
+**But this task is about creating your own specification based on your own code.**
+
+Yes, it's a weird assignment because your result should match the provided OpenAPI Specification. The purpose of this assignment is to learn how to generate OpenAPI Specification for your server.
+
+
+## How to genereate OpenAPI Specification for your server
+
+This step differs vastly depending on the framework and multiple approaches exist within the same framework.
+
+---
+
+
+---
+
+# Kanban
+
+Create a kanban / issue tracker for the project. 
+
+**Type**: Group work
+
+**Motivation**: This will aid you in structuring the many tasks you have ahead of you with the rewrite.
+
+---
+
+## GitHub Project
+
+One way is to create a project in GitHub. 
+
+Learn about projects:
+
+https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects
+
+Quickstart:
+
+https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/quickstart-for-projects
+
+It's up to which view you prefer:
+
+https://docs.github.com/en/issues/planning-and-tracking-with-projects/customizing-views-in-your-project/changing-the-layout-of-a-view
+
+---
+
+## Alternatives
+
+It's perfectly fine if you prefer Trello or similiar kanban solutions but try to create a board in GitHub for the sake of this assignment at least. Then you can weigh the pros and cons of your choice better. 
+
+</textarea>
+
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>
+    const slideshow = remark.create({
+        source: document.getElementById('source').value
+    });
+</script>
+</body>
+</html>

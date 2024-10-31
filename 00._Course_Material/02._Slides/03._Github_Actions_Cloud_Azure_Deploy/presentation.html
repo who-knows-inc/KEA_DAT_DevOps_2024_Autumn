@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #1e1e1e; /* Dark background for the body */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Full-Width Slideshow Container */
+#slideshow {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+/* Full-Width and Dark Mode Slide Styles */
+.remark-slide-content {
+    color: #ddd; /* Light text color for readability */
+    background-color: #13151a; /* Dark background for slides */
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    padding-top: 0px;
+    box-sizing: border-box;
+}
+
+/* Headers */
+.remark-slide-content h1, .remark-slide-content h2 {
+    color: rgb(8, 107, 194); /* Bright color for headers */
+    margin-top: 5px;
+}
+
+.remark-slide-content h1 {
+    font-size: 2em;
+}
+
+.remark-slide-content h2 {
+    font-size: 1.2em;
+}
+
+/* Paragraphs */
+.remark-slide-content p {
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+/* Lists */
+.remark-slide-content ul, .remark-slide-content ol {
+    margin-left: 20px;
+    font-size: 1.2em;
+}
+
+/* Images */
+.remark-slide-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Links */
+a:link, a:visited {
+    color: green;
+}
+
+/* Code */
+.remark-slide-content pre {
+    background: #333; /* Dark background for code blocks */
+    border: 1px solid #444;
+    color: #eee; /* Light text for code */
+    padding: 8px;
+    overflow: auto;
+}
+
+.remark-slide-content code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #333;
+    padding: 2px 5px;
+    color: #eee;
+}
+
+
+table {
+    /* center */
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse; /* This ensures that the border styles are applied uniformly */
+}
+
+th {
+    color: darkgrey;
+}
+
+table, th, td {
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+}
+
+.title-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+}
+
+.title-card h1 {
+    color: cyan;
+}
+
+.exercise-card h1 {
+    color: green;
+}
+
+.fullscreen-video {
+    width: 40vw; 
+    height: 50vh;
+    border: none;
+}
+
+    </style>
+
+    <title>01._introduction || 02._github_actions || 03._github_issues_workflow || 04._github_secrets || 05._cloud_and_azure || 06._ssh || 07._running_in_production || 08._deployment_considerations</title>
+</head>
+<body>
+    <!-- The Remark.js container -->
+<textarea id="source" style="display:none;">
+<div class="title-card" style="color: cyan;">
+    <h1>Github Actions, Cloud, Azure, Deploy</h1>
+</div>
+
+---
+
+# Weekly commit activity
+
+<iframe src="./assets_introduction/commit_activity_weekly.svg" style="height: 50vh; width: 100%;" frameborder="0"></iframe>
+
+---
+
+# Daily commit activity
+
+<iframe src="./assets_introduction/commit_activity_daily.svg" style="height: 50vh; width: 100%;" frameborder="0"></iframe>
+
+
+---
+
+# DevOps or not?
+
+DevOps is not always the answer.
+
+Projects and products are not DevOps, teams are.
+
+---
+
+# Weekly DevOps pep-talk!
+
+DevOps principle:
+
+Reduce WIP (Work In Progress).
+
+Limit active branches. Merge branches to trunk at least daily.
+
+Avoid long-lived branches.
+
+
+---
+
+# Simple is always best
+
+Let's circle back to React. Given how simple the frontend is, is it the right choice?
+
+How does the frontend benefit from a component based web framework?
+
+It's also on me for not properly explaining that the website will not grow in complexity much.
+
+I do not grade higher if you chose a more complex solution than what is needed, even if you spent more time on it. 
+
+Only if it comes with additional benefits such as scalability, maintainability, etc.
+
+Remember, during the exam everything should pass the "why" test. 
+
+If you want to put in an extra effort right away, then use that energy on creating tests. Unfortunately, we won't cover that until much later.
+
+
+---
+
+<div class="title-card">
+    <h1>GitHub Actions</h1>
+</div>
+
+---
+
+# Do you know the difference?
+
+<div style="display: flex; align-items: center;">
+    <img src="./assets_introduction/git_logo.png" alt="Git Logo" style="width:20vw; background: white;"/>
+    <img src="./assets_introduction/github_logo.png" alt="GitHub Logo" style="width:20vw; background: white;"/>
+</div>
+
+*Discuss in pairs*
+
+---
+
+# Let's install GitHub CLI (`gh`)
+
+https://cli.github.com/
+
+
+This is required only once:
+
+```bash
+$ gh auth login
+```
+
+Then we can run commands like:
+
+```bash
+$ gh repo create
+$ gh repo delete
+$ gh issue create
+$ gh pr create
+$ gh workflow run
+```
+
+...and many more.
+
+
+---
+
+<div class="title-card">
+    <h1>GitHub Actions</h1>
+</div>
+
+---
+
+# How to create a workflow
+
+Create any YAML file in the .github/workflows directory.
+
+---
+
+# YAML indentation should be 2 spaces
+
+The problem is that VSCode defaults to 4 spaces (in the workflows folder). Here is how to change it:
+
+<img src="./assets_github_actions/01._change_tab_size.png" alt="vscode change tab size yaml" style="height: 12vh;">
+
+<img src="./assets_github_actions/02._change_tab_size.png" alt="vscode change tab size yaml" style="height: 15vh;">
+
+<img src="./assets_github_actions/03._change_tab_size.png" alt="vscode change tab size yaml" style="height: 15vh;">
+
+---
+
+# GitHub Actions
+
+An Action creates an automation for code in repositories.
+
+Run common tasks in repeatable fashion.
+
+<img src="./assets_github_actions/ci_cd_platform_github_actions.png" alt="GitHub Actions logo" style="height: 30vh;">
+
+---
+
+# Alternatives offered by other Git platforms
+
+
+- **BitBucket**: Atlassian Bamboo:
+
+<img src="./assets_github_actions/ci_cd_platform_atlassian_bamboo.png" alt="Atlassian Bamboo logo" width="200" height="100">
+
+- **Gitlab**: Gitlab CI/CD:
+
+<img src="./assets_github_actions/ci_cd_platform_gitlab_ci_cd.png" alt="Gitlab CI/CD logo" width="100" height="100">
+
+---
+
+# Why use GitHub Actions?
+
+<ul style="list-style-type: '+ '"><li>You are already using GitHub</li></ul>
+
+<ul style="list-style-type: '+ '"><li>It’s free with some limitations (but the alternatives have the same limitation)</li></ul>
+
+https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions#included-storage-and-minutes
+
+<ul style="list-style-type: '- '"><li>The free version is slow</li></ul>
+
+
+---
+
+# GitHub Actions Marketplace
+
+Contains useful templates for Actions
+
+Community Actions
+
+Create custom actions and upload them to the marketplace
+
+
+---
+
+# GitHub Actions (terminology) - I
+
+**Event**: Triggers that start a workflow
+
+**Workflows**: Defines an automation from start to finish
+
+**Jobs**: A workflow contains one or more jobs. A job is one or more steps.
+
+**Steps**: Simple commands, shell scripts or actions. Steps can’t run in parallel. Runs in sequence from top to bottom.
+
+
+---
+
+# GitHub Actions (terminology) - II
+
+**Runner**: Compute layer where jobs are executed. Each job has its own runner.
+
+Runners can run in parallel.
+
+GitHub provides 3 types of runners: Ubuntu, Windows and MacOS.
+
+Using a self-hosted runner is also possible.
+
+GitHub runners comes with pre-installed tools, runtimes and compilers that require minimal configuration.
+
+---
+
+# Single Workflow - Overview I
+
+<img src="./assets_github_actions/github_actions_overview_II.png" alt="GitHub Actions Overview" width="1000" height="500">
+
+---
+
+# Overview II
+
+<img src="./assets_github_actions/github_actions_overview_III.png" alt="GitHub Actions Overview" width="1000" height="500">
+
+---
+
+# Great Video!
+
+I really recommend this video. 
+
+[![Video Link](https://img.youtube.com/vi/-hVG9z0fCac/0.jpg)](https://youtu.be/-hVG9z0fCac?list=PLArH6NjfKsUhvGHrpag7SuPumMzQRhUKY&t=138)
+
+His others videos in the series are unfortunately not as useful. (I mention this so you can better invest your time).
+
+---
+
+# Overview from the video
+
+<img src="./assets_github_actions/github_actions_overview_I.png" alt="GitHub Actions Overview" width="1000" height="500">
+
+---
+
+
+# Technical requirements:
+
+Workflows must be stored in the `.github/workflows` folder.
+
+Workflows are defined with YAML.
+
+Workflows must define:
+
+* Trigger and branches 
+* Permissions
+* Job and runner 
+* Steps
+
+---
+
+
+
+# Workflows from templates
+
+Check out the actions tab in the repository to discover preset workflow templates. 
+
+<div>
+    <img src="./assets_github_actions/workflow_template.png" alt="Preset workflow from template" style="height: 45vh;" />
+</div>
+
+---
+
+# Choose an action from the marketplace
+
+In the actions tab choose this workflow:
+
+<img src="./assets_github_actions/node_github_action_marketplace.png" alt="Node GitHub Actions Marketplace" style="height: 30vh;">
+
+---
+
+# The checkout action (actions/checkout@v3)
+
+Allows one to clone the repository code to the runner. 
+
+Made by GitHub: https://github.com/actions/checkout
+
+The following can be spicied: 
+
+`@<tag>`, `@<branch>`, `@<commit_sha>`
+
+---
+
+# Let's do it ourselves from scratch!
+
+But this time manually (this is how we will be doing it from now on).
+
+```bash
+$ gh repo create
+
+$ mkdir .github
+
+$ cd .github
+
+$ mkdir workflow
+
+$ cd workflows
+```
+
+Create hello_world.yaml
+
+
+---
+
+# Hello World workflow
+
+Let's manually create a workflow that echoes (logs) "Hello World" on every push and PR.
+
+1. Create a new repository. 
+
+2. Create .github/workflows
+
+3. In it, create a file called hello_world.yaml
+
+---
+
+# In hello_world.yaml 
+
+
+```yaml
+name: Hello world workflow
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run hello world
+        run: echo "Hello world"
+        shell: bash
+```
+
+---
+
+# Let's study the above snippet - Can you spot the uneccessary part?
+
+---
+
+# workflow_dispatch
+
+workflow_dispatch provides a UI button so that a workflow can be triggered in the GitHub UI without the above event triggers.
+
+Under the `on` key add the following: 
+
+```yaml
+on: 
+    workflow_dispatch:
+```
+
+
+
+---
+
+<div class="title-card">
+    <h1>jq</h1>
+</div>
+
+---
+
+# What is the relevance of `jq`?
+
+`jq` (JSON query) comes pre-installed in Github Action Ubuntu runners. 
+
+We can use it to parse dense (no-space) JSON output into a readable format.
+
+---
+
+# jq
+
+#### Using `jq` locally. 
+
+```bash
+$ brew install jq
+```
+
+```powershell
+$ choco install jq -y
+```
+
+Then try to run this:
+
+```bash
+$ echo '{"hello":123}' | jq
+```
+
+**Note**: The difference between `“` and `‘` matters!
+
+---
+
+<div class="title-card">
+    <h1>GitHub Issues Workflow</h1>
+</div>
+
+
+--- 
+
+# Let's try to automate publishing a comment every time an issue is created
+
+What is a GitHub Issue? Why is auto-commenting useful?
+
+---
+
+# GitHub Actions - Context
+
+Contexts inject useful information into the server environment. 
+
+Can be accessed via `${{ <context> }}`.
+
+https://docs.github.com/en/actions/learn-github-actions/contexts
+
+For example, we can access repository meta information through `${{ github }} `. 
+
+*Let's look for where the issue number is defined.*
+
+---
+
+# Dump the context to examine it
+
+```yaml
+name: Create a comment on new issues
+permissions:
+  issues: write
+on:
+  issues:
+    types: [opened]
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Dump GitHub context"
+        run: echo '${{ toJson(github) }}' | jq
+```
+
+*Where is the issue number?*
+
+---
+
+# Found it?
+
+Under issue it is called "number". 
+
+Note: toJson is a utility provided by GitHub Actions.
+
+---
+
+# Use the following package
+
+https://github.com/marketplace/actions/create-or-update-comment
+
+But replace issue-number: 1 with: ${{ github.event.issue.number }}
+
+```yaml
+      - name: Create comment
+        uses: peter-evans/create-or-update-comment@v3
+        with:
+          issue-number: 1
+          body: |
+            This is a multi-line test comment
+            - With GitHub **Markdown** :sparkles:
+            - Created by [create-or-update-comment][1]
+            
+            [1]: https://github.com/peter-evans/create-or-update-comment
+          reactions: '+1'
+
+```
+
+---
+
+
+
+
+
+<!-- Using the GitHub API in workflows -->
+
+<div class="title-card">
+    <h1>Using the GitHub API in workflows</h1>
+</div>
+
+---
+
+# Using the GitHub API in workflows
+
+```yaml
+comment-with-api:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Create comment with API
+            run: |
+            gh api -X POST \
+                /repos/${{ env.ORGANIZATION }}/${{ env.REPOSITORY }}/issues/${{ env.ISSUE_NUMBER }}/comments \
+                -f body='This is a multi-line test comment from the API'
+            env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            ORGANIZATION: ${{ github.repository_owner }}
+            REPOSITORY: ${{ github.event.repository.name }}
+            ISSUE_NUMBER: ${{ github.event.issue.number }}
+```
+
+
+---
+
+<div class="title-card">
+    <h1>GitHub Secrets</h1>
+</div>
+
+---
+
+# Define the secret in the GUI
+
+1. Go to the repository
+2. Click on `Settings`
+3. On the left side choose `Secrets and Variables`
+4. Click on `Actions`
+5. Click on `New repository secret`
+6. Add the secret `GREETING` and value `Hello`
+
+---
+
+# What are the keys that a Github workflow must have?
+
+---
+
+# Required keys: Answer
+
+1. `name`
+2. `on`
+3. `jobs`
+
+
+
+---
+
+# The workflow file
+
+```yaml
+name: Working with secrets in GitHub Actions
+
+on:
+    push:
+        branches:
+        - main
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+        - name: Print the secret
+          run: echo ${{ secrets.GREETING }}
+```
+
+---
+
+# GitHub Actions Secrets are secret
+
+As a security measure Github Action prevents us from logging the secrets.
+
+---
+
+# Let's set secrets through the `gh` CLI
+
+```bash
+$ gh secret set <secret_name>
+```
+
+1. Run `gh secret delete GREETING` in the terminal.
+
+2. Check the secrets browser page.
+
+2. Run `gh secret set GREETING` in the terminal.
+
+3. Refresh the browser page.
+
+---
+
+# Clean up time - Delete the repository 
+
+While in the repository run:
+
+```bash
+$ gh repo delete
+```
+
+---
+
+<div class="title-card">
+    <h1>Cloud</h1>
+</div>
+
+
+---
+
+# Cloud Providers
+
+<div>
+    <img src="./assets_cloud_and_azure/top_cloud_providers.png" alt="Top Cloud Providers" style="height: 40vh;"/>
+</div>
+
+
+---
+
+# Deployment models
+
+- Public
+
+- Private (on-premise)
+
+- Hybrid
+
+---
+
+# Cloud service model
+
+<div>
+    <img src="./assets_cloud_and_azure/cloud_services_model.png" alt="Cloud service model" style="height: 40vh;"/>
+</div>
+
+
+Source: imelgrat.me
+
+---
+
+# Cloud Service Model - Part I
+
+- **SaaS (Software as a Service)**
+    - Delivers applications over the internet.
+    - Users access software from web browsers.
+    - Examples: Google Workspace, Salesforce.
+
+- **FaaS (Function as a Service)**
+    - Enables running code in response to events.
+    - Serverless execution; no need to manage servers.
+    - Examples: AWS Lambda, Azure Functions.
+
+
+---
+
+# Cloud Service Model - Part II
+
+- **DaaS (Desktop as a Service)**
+    - Provides virtual desktop environments.
+    - Hosted and managed by a third party.
+    - Examples: Amazon WorkSpaces, VMware Horizon Cloud, Azure Virtual Desktop.
+
+- **PaaS (Platform as a Service)**
+    - Offers hardware and software tools over the internet.
+    - Typically used for applications development.
+    - Examples: Google App Engine, Heroku, Vercel.
+
+---
+    
+# Cloud Service Model - Part III
+
+- **STaaS (Storage as a Service)**
+    - Provides data storage as a service.
+    - Accessible through a network (commonly the internet).
+    - Examples: Google Cloud Storage, Dropbox.
+
+- **IaaS (Infrastructure as a Service)**
+    - Offers fundamental computing resources.
+    - Includes virtual machines, storage, and networks.
+    - Examples: Amazon EC2, Microsoft Azure.
+
+---
+
+# From now on the focus is Azure
+
+---
+
+# Azure data centers
+
+<div>
+    <img src="./assets_cloud_and_azure/azure_data_centers.png" alt="Azure data centers" style="height: 50vh;"/>
+</div>
+
+
+---
+
+# Cost management - Resource Groups I
+
+
+Please beware that even if no services are running, if a resource group exists it can still use a lot of money. Delete resource groups when not in use. 
+
+Exception: Network Watcher:
+
+https://learn.microsoft.com/en-us/azure/network-watcher/network-watcher-overview
+
+---
+
+# Cost management
+
+Recommendation: When possible use free services. 
+
+<div>
+    <img src="./assets_cloud_and_azure/azure_free_services.png" alt="Azure free services" style="height: 30vh;"/>
+</div>
+
+I have provided a guide with the course material on how to setup limitations on Pay-As-You-Go accounts (not Azure for students).
+
+---
+
+
+<div class="title-card">
+    <h1>Virtual Machines</h1>
+</div>
+
+---
+
+# Virtual machines 
+
+Virtual machine is the generic term for servers in the cloud.
+
+In AWS they are called **EC2**. In Azure, **Azure Virtual Machines**.
+
+Let's manually create a virtual machine (through Azure Free Services). 
+
+But first, let's generate an SSH key locally which we will use to login.
+
+---
+
+# Generating a SSH-key
+
+Generate a 4096-bit RSA SSH-key pair. 
+
+*nix (tldr ssh-keygen):
+
+```bash
+$ ssh-keygen -t rsa -b 4096
+```
+
+Windows (2048-bit RSA key is the default): 
+
+```powershell
+$ ssh-keygen -m PEM -t rsa -b 4096
+```
+
+Just press enter 3 times and go with the defaults. No need to enter a passphrase.
+
+https://learn.microsoft.com/en-us/azure/virtual-machines/linux/create-ssh-keys-detailed
+
+---
+
+# Let's create a virtual machine
+
+Various OS to choose from. We will use the latest version of Ubuntu.
+
+Allow port 22 so we can ssh into it. 
+
+<div>
+    <img src="./assets_cloud_and_azure/allow_port_22.png" alt="Port 22 ssh inbound rule allow"/>
+</div>
+
+---
+
+# SSH into the virtual machine
+
+In case of permission issues:
+
+```bash
+$ chmod 600 /path/to/your/file.pem
+```
+
+---
+
+# The `apt` package manager
+
+Since we setup an Ubuntu server we can use the default package manager for Debian. 
+
+Ubuntu is a flavor within the broader Debian ecosystem.
+
+If a package exists in the default repository we can run:
+
+```bash
+$ sudo apt install <package_name>
+```
+
+---
+
+# Upgrade the Ubuntu server
+
+When you provision a new server it's a good idea to upgrade it. Here is how: 
+
+```bash
+$ sudo do-release-upgrade
+```
+
+Alternative way:
+
+```bash
+$ sudo apt update
+$ sudo apt full-upgrade
+```
+
+
+---
+
+# Network management: Ports I
+
+There are two type of rules:
+
+1. Inbound: Traffic going **TO** the VM.
+
+2. Outbund: Traffic going **OUT** from the VM. 
+
+Define an inbound rule to whitelist the port that the application is running on so we can access it from the internet.
+
+---
+ 
+# Network management: Ports II
+
+<img src="./assets_cloud_and_azure/vm_network_port.png" alt="network vm port">
+
+
+---
+
+# Create a static IP address
+
+https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/virtual-networks-static-private-ip-arm-pportal
+
+---
+
+# Let's tear it down!
+
+Delete it and **REMEMBER** to also delete the resource group!
+
+Repetition: In Azure, a resource group will still cost money, even if there is no service associated with. 
+
+---
+
+
+<div class="title-card">
+    <h1>Other cloud services</h1>
+</div>
+
+
+---
+
+# Cloud storage
+
+AWS: S3 (Simple Storage Service)
+
+<img src="./assets_cloud_and_azure/aws_s3_logo.png" alt="AWS S3" width="200" height="100">
+
+Azure: Azure Blob Storage
+
+<img src="./assets_cloud_and_azure/azure_blob_storage_logo.png" alt="AWS S3" width="200" height="100">
+
+---
+
+# Azure Blob Storage - I
+
+Use the one under Free Services. 
+
+<img src="./assets_cloud_and_azure/azure_blob_storage_free_service.png" alt="Azure blob storage free service" width="200" height="100">
+
+A Blob Storage can contain multiple contains. Try to upload a file but create a container first. 
+
+Anonymous access level (No other access level is allowed on Azure For Students):
+
+* Private (no anonymous access)
+
+---
+
+# Azure Blob Storage - II
+
+Access not permitted when trying to open the file:
+
+<img src="./assets_cloud_and_azure/azure_blob_storage_access_not_permitted.png" alt="Azure blob storage access not permitted">
+
+Here are the thing that can be done: 
+
+1. Enable Anonymous Public Read Access 
+
+2. Using Azure AD (Active Directory)
+
+3. Generate a Shared Access Signature (SAS) URL
+
+---
+
+# Shared Access Signature (SAS)
+
+There is a subfolder in this folder titled `generating_sas_token_azureblobstorage` in it you will find a code example in Node.js for how to generate a SAS token. 
+
+Read the README.md to see how. The instructions assume that `az` has been installed. 
+
+
+---
+
+# AWS S3 policies
+
+Policy Generator: 
+
+https://awspolicygen.s3.amazonaws.com/policygen.html
+
+---
+
+# Serverless computing
+
+<img src="./assets_cloud_and_azure/aws_lambda_vs._azure_functions.png" alt="AWS Lambda vs. Azure Functions" style="height: 30vh">
+
+
+---
+
+# Why serverless?
+
+Saves time. Easier to deploy.
+
+Scalable. 
+
+Saves money. (Azure Functions Different pricing plans.)
+
+
+---
+
+# Azure Functions - subscription models
+
+* **Consumption plan**: Pay for the time that your code runs.
+
+* **Premium plan**: You specify a number of pre-warmed instances that are always online. 
+
+* **App service plan**: Run as if they are web apps. Not serverless.
+
+---
+
+# Cold starts - A problem
+
+Cold start: The time it takes to allocate the function to a server and setup the runtime environment before your code can run.
+
+Functions are held warm for roughly 20 minutes according to below source.
+
+
+<img src="./assets_cloud_and_azure/cold_start.png" alt="Cold start" style="height: 30vh">
+
+
+
+(Source: https://azure.microsoft.com/en-us/blog/understanding-serverless-cold-start/)
+
+---
+
+# More cold start metrics
+
+<img src="./assets_cloud_and_azure/cold_start_per_language.png" alt="Cold start per language" style="height: 30vh">
+
+
+(Source: https://mikhail.io/serverless/coldstarts/azure/)
+
+---
+
+# Triggers and bindings
+
+https://learn.microsoft.com/en-us/azure/azure-functions/functions-triggers-bindings?tabs=isolated-process%2Cpython-v2&pivots=programming-language-csharp#supported-bindings
+
+---
+
+
+# Azure Key Vault
+
+A way to store values outside of the code such as environment variables. 
+
+Can be used to authenticate services. 
+Also useful for authorization. Access policies can limit usage.
+
+Example use case:
+Define the database connection string here. Functions can then get the connection string from the Key Vault. Now it’s removed from the code and can be changed in one place.
+
+
+
+
+
+---
+
+<div class="title-card">
+    <h1>More about SSH</h1>
+</div>
+
+
+---
+
+# SSH files
+
+```bash
+$ ls -la ~/.ssh
+```
+
+*What files do you see? What are their respective purposes?*
+
+---
+
+# Public private key pairs
+
+*Which is the public key? Which is the private key?*
+
+[Public-key cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography)
+
+---
+
+# Try to answer these questions in pairs
+
+1. *If a GitHub Action needs to SSH into a server, which key should be defined in the GitHub Action: public or private?*
+
+2. *If I have provisioned a server and I want to SSH into it from my local machine, which key do I use: public or private?*
+
+3. *If I have provisioned a server and want to configure it to allow SSH access from my other local machine with a different SSH key, which key do I save on the server: public or private?*
+
+Number 3 can be achieved by pasting your key in the `~/.ssh/authorized_keys` file on the server.
+
+---
+
+# SSH Config - A helpful tip
+
+So you don't have to remember or write keep the IP address close. 
+
+
+Here is how you define it. In the `~/.ssh/config` file. 
+
+Add something like this:
+
+```bash
+Host devopscourse
+    HostName 169.89.31.226
+    User admin
+```
+
+Now, instead of having to type `ssh admin@169.89.31.226` every time you can simply invoke it with:
+
+```bash
+$ ssh devopscourse
+```
+
+
+
+
+
+
+
+
+
+---
+
+<div class="title-card">
+    <h1>Running code in production</h1>
+</div>
+
+---
+
+# Node.js in production
+
+You probably already know `node` and `nodemon`. 
+
+But these are not suitable for production.
+
+
+**Why? What would be better?**
+
+---
+
+# PM2 - Running Node.js in production - Part I
+
+Install PM2:
+
+```bash 
+$ npm install pm2 -g
+```
+
+Start the application:
+
+```bash 
+$ pm2 start app.js
+```
+
+List All Running Applications:
+ 
+```bash
+$ pm2 list
+```
+
+---
+
+# PM2 - Running Node.js in production - Part II
+
+Stop the application: 
+
+```bash
+$ pm2 stop <app_name_or_id>
+```
+
+Delete an Application from PM2's List:
+
+```bash
+$ pm2 delete <app_name_or_id>
+```
+
+---
+
+# Python in production
+
+The same is true for Python. `gunicorn` is recommended for production. 
+
+Here is how to run the Flask application with 4 worker processes. 
+
+```bash
+$ gunicorn -w 4 -b 0.0.0.0:8000 app:app
+```
+
+Also in the server configuration in Flask remember to set `DEBUG=FALSE`.
+
+---
+
+# Course spoiler - Reverse proxies
+
+As the course progresses, you can start considering a reverse proxy like `nginx`.
+
+Using a reverse proxy is a good practice for production. 
+
+There are many benefits such as HTTP caching, load balancing etc. 
+
+We will explore them when we talk about security. 
+
+
+
+
+---
+
+<div class="title-card">
+    <h1>Deployment considerations</h1>
+</div>
+
+
+---
+
+# How can you deploy a new version of an application?
+
+*Suggestions?*
+
+---
+
+
+# How can you deploy a new version of a server?
+
+* File transfer via SCP/FTP -> manual restart
+
+* SSH -> git pull -> manual restart
+
+* Cron job on the server that keeps syncing with a git repo
+
+* Using build systems / CI/CD
+
+---
+
+# Push vs. Pull-based Deployment
+
+[![Push vs. Pull-based deployment](http://img.youtube.com/vi/f5EpcWp0THw/0.jpg)](https://youtu.be/f5EpcWp0THw?list=PLy7NrYWoggjxKDRWLqkd4Kbt84XEerHhB&t=418)
+
+For now pull-based deployment will do, but we are aiming for push-based deployment.
+
+---
+
+# Time to clean up - Delete the VM
+
+Do it by deleting the resource group. Make sure that it's gone.
+
+---
+
+# Next Week - Trial run
+
+Make sure that you have deployed and made a PR to `repositories.py` with the IP address.
+
+We will make a trial run of the simulation next week. 
+
+The real simulation starts in 2 weeks.
+</textarea>
+
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>
+    const slideshow = remark.create({
+        source: document.getElementById('source').value
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #1e1e1e; /* Dark background for the body */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Full-Width Slideshow Container */
+#slideshow {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+/* Full-Width and Dark Mode Slide Styles */
+.remark-slide-content {
+    color: #ddd; /* Light text color for readability */
+    background-color: #13151a; /* Dark background for slides */
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    padding-top: 0px;
+    box-sizing: border-box;
+}
+
+/* Headers */
+.remark-slide-content h1, .remark-slide-content h2 {
+    color: rgb(8, 107, 194); /* Bright color for headers */
+    margin-top: 5px;
+}
+
+.remark-slide-content h1 {
+    font-size: 2em;
+}
+
+.remark-slide-content h2 {
+    font-size: 1.2em;
+}
+
+/* Paragraphs */
+.remark-slide-content p {
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+/* Lists */
+.remark-slide-content ul, .remark-slide-content ol {
+    margin-left: 20px;
+    font-size: 1.2em;
+}
+
+/* Images */
+.remark-slide-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Links */
+a:link, a:visited {
+    color: green;
+}
+
+/* Code */
+.remark-slide-content pre {
+    background: #333; /* Dark background for code blocks */
+    border: 1px solid #444;
+    color: #eee; /* Light text for code */
+    padding: 8px;
+    overflow: auto;
+}
+
+.remark-slide-content code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #333;
+    padding: 2px 5px;
+    color: #eee;
+}
+
+
+table {
+    /* center */
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse; /* This ensures that the border styles are applied uniformly */
+}
+
+th {
+    color: darkgrey;
+}
+
+table, th, td {
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+}
+
+.title-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+}
+
+.title-card h1 {
+    color: cyan;
+}
+
+.exercise-card h1 {
+    color: green;
+}
+
+.fullscreen-video {
+    width: 40vw; 
+    height: 50vh;
+    border: none;
+}
+
+    </style>
+
+    <title>01._introduction || 02._devsecops || 03._docker_firewalls || 04._security_in_github || 05._security_in_cloud || 06_continuous_testing</title>
+</head>
+<body>
+    <!-- The Remark.js container -->
+<textarea id="source" style="display:none;">
+<div class="title-card">
+    <h1>Testing, Security</h1>
+</div>
+
+---
+
+# gh pr view example
+
+```bash
+$ gh pr view
+```
+
+---
+
+# New Github Copilot feature
+
+Add Copilot as a reviewer to your PRs and it will suggest code changes that can be accepted with a click.
+
+---
+
+# New Copilot feature integrated in Github Actions
+
+Explain Error:
+
+<img src="./assets_introduction/explain_error.png" alt="explain error github copilot feature">
+
+https://github.com/who-knows-inc/whoknows_variations/actions/runs/10325192454/job/28586272559
+
+
+
+---
+
+# Swarming the problem 
+
+Andon Cord is a concept from the Toyota Production System. 
+
+https://en.wikipedia.org/wiki/Andon_(manufacturing)
+
+It appears in DevOps literature. 
+
+https://devops.com/youre-not-devops-cant-pull-cord/
+
+The DevOps Handbook goes into detail of implementing the andon cord at Excella
+
+---
+
+# Definition: Cycle time
+
+*Does this sound familiar?*
+
+> Excella noticed during a team retrospective that their cycle times were beginning to rise. They had what Joshua Cohen described as a case of the “almost dones.” He noted, “During standup, our developers would give an update on the feature they were working on the previous day. They would say, ‘Hey, I made a lot of progress. I’m almost done.’ And the next morning they would say, ‘Hey, I ran into some issues but I worked through them. I just have a few more tests to run. I’m almost done.’”
+
+\- Ayers and Cohen, “Andon Cords in Development Teams.”
+
+> To measure their Andon cord experiment, the team decided to focus on reduction in cycle time as the key metric for success, as well as increasing the team’s collaboration and getting rid of the “almost dones” by talking about issues when they arose.
+
+---
+
+# Andon cord at Excella
+
+<img src="./assets_introduction/andon_cord_at_excella.png" alt="andon cord at excella" style="height: 60vh;">
+
+---
+
+# Psychological safety
+
+<img src="./assets_introduction/andon_cord_psychological_safety.png" alt="andon cord psychological safety" style="height: 60vh;">
+
+---
+
+# How they implemented it
+
+> Instead of a literal string or cord to pull, the team created a bot in Slack as a metaphorical Andon cord. When someone typed in andon, the bot would @here the team, notifying everyone in Slack. But they didn’t want to end it there. They also created an “if/this/then/that” integration in Slack that would turn on a rotating red light, string lights, and even a dancing “tube” man in the office.
+
+---
+
+# Weekly DevOps pep-talk!
+
+## DevSecOps
+
+*Secure by design, not as an afterthought.*
+
+
+
+
+---
+
+
+<div class="title-card">
+    <h1>DevSecOps</h1>
+</div>
+
+---
+
+# How is DevSecOps different from DevOps + Security?
+
+Security is automated and becomes part of every step of CI/CD.
+
+All developers become responsible of security.
+
+The security team becomes advisors rather than police.
+
+---
+
+# The Phoenix Project
+
+According to **The Unicorn Project**: The security team should work to help the DevOps mission of getting value to the customer faster in a secure way rather then strike paranoia.
+
+<img src="./assets_devsecops/the_phoenix_project.png" alt="the phoenix project cover">
+
+---
+
+# Motivation: why automate tests? - Shifting security left
+
+> [...] This shortage is even worse in Infosec - the ratio of engineers in Development, Operations and Infosec in a typical technology organization is 100:10:1. When Infosec is that outnumbered, without automation and integrating information security into the daily work of Dev and Ops, Infosec can only do compliance checking, which is the opposite of security engineering - and besides, it also makes everyone hate us.
+
+\- James Wicket (Creator of the Gauntlt security tool and organaizer of DevOpsDays Austin and Lonestar Application Security conference)
+
+---
+
+# DevSecOps Figure 8
+
+<img src="./assets_devsecops/devsecops_figure8.png" alt="devsecops figure 8 figure8">
+
+
+---
+
+# DevSecOps Figure 8 - Version 2
+
+<img src="./assets_devsecops/devsecops_figure8_2.png" alt="devsecops figure 8 figure8">
+
+[Source](https://www.mend.io/blog/sast-static-application-security-testing/)
+
+---
+
+# SAST vs. DAST - And tools
+
+## SAST: Static Application Security Testing
+
+Also called white-box testing.
+
+SonarQube, Checkmarx, Fortify, Veracode, etc.
+
+## DAST: Dynamic Application Security Testing
+
+Also called black-box testing.
+
+OWASP ZAP, Burp Suite, etc.
+
+---
+
+# Security Gates in CI/CD
+
+- Pre-commit (static analysis, dependency scanning)
+
+- Pre-merge (code review)
+
+- Pre-deployment (testing)
+
+- Post-deployment (monitoring)
+
+---
+
+# Tool that delivers security in CI/CD: Jfrog Xray
+
+End-to-end security and compliance for your software supply chain.
+
+https://jfrog.com/xray/
+
+---
+
+# Monitor
+
+In a professional setting where security matters, you should monitor the following:
+
+- traffic
+
+- access
+
+- file changes
+
+etc. 
+
+Dashboard tool: Zabbix.
+
+---
+
+# Red-Team vs Blue-Team
+
+Red team:
+
+- Attackers
+
+Blue team:
+
+- Defenders
+
+---
+
+# Be prepared for a breach
+
+Automate back-ups. 
+
+Data is probably your most precious asset; don't lose it.
+
+*What should you do if there is a breach?*
+
+---
+
+# GDPR
+
+Inform the affected parties (users). Inform the authorities.
+
+In the simulation, I do not expect you to adhere to GDPR if there is a data leak. Please don't contact datatilsynet.
+
+
+
+
+
+
+
+
+
+---
+
+<div class="title-card">
+    <h1>Docker Security and Firewalls</h1>
+</div>
+
+---
+
+# Introduction: Firewalls
+
+A firewall is a network security device that monitors and controls incoming and outgoing network traffic based on predetermined security rules. 
+
+Firewalls can be either on hardware or software level.  
+
+## Types of Firewalls
+
+- Packet-filtering Firewalls
+
+- Stateful Firewalls
+
+- Proxy Firewalls
+
+- Next-generation Firewalls (NGFW)
+
+---
+
+# Firewalls in Linux
+
+*Try to run the two commands on your server*
+
+## iptables
+
+`iptables` is low-level and highly flexible, providing granular control over traffic.
+
+```bash
+$ sudo iptables -L
+```
+
+## ufw
+
+`ufw` (Uncomplicated Firewall) is a higher-level interface for `iptables`, designed to simplify firewall management.
+
+
+```bash
+$ sudo ufw status
+```
+
+---
+
+# iptables examples
+
+*Do not run these commands on your production server unless you intend to do so*
+
+Allow incoming HTTP traffic on port `80`:
+
+```bash
+$ sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+```
+
+Block a specific IP address:
+
+```bash
+$ sudo iptables -A INPUT -s 192.168.1.100 -j DROP
+```
+
+Allow SSH (port 22) from a specific IP address:
+
+```bash
+$ sudo iptables -A INPUT -p tcp -s 192.168.1.101 --dport 22 -j ACCEPT
+```
+
+Allowing ssh with `ufw`:
+
+```bash
+$ sudo ufw allow ssh
+```
+
+---
+
+# Docker and firewalls
+
+Docker circumvents the UFW firewall and alters iptables directly when you instruct it about ports
+
+Mapping the ports with -p 9200:9200 (or in docker-compose) maps the port to the host but also opens it to the world! (bug report from '19)
+
+> Publishing ports produce a firewall rule that binds a container port to a port on the Docker host, ensuring the ports are accessible to any client that can communicate with the host.
+
+[Issue](https://github.com/docker/for-linux/issues/690)
+
+---
+
+
+# Docker tip: Create a non-root user
+
+Always provided the least privileges possible:
+
+```Dockerfile
+# Base image
+FROM ubuntu:latest
+
+# Install packages (**as root**)
+RUN apt-get update && apt-get install -y curl
+
+# Create a non-root user
+RUN useradd -m myuser
+
+# Switch to the non-root user
+USER myuser
+
+# Set the working directory
+WORKDIR /home/myuser
+
+# ... continue with other instructions ...
+```
+
+
+---
+
+
+<div class="title-card">
+    <h1>Security in GitHub</h1>
+</div>
+
+
+---
+
+# Hash-pinning
+
+https://docs.github.com/en/actions/security-for-github-actions/security-guides/security-hardening-for-github-actions#using-third-party-actions
+
+---
+
+# SAST and DAST - whoknows_variations example
+
+https://github.com/who-knows-inc/whoknows_variations/tree/security_testing
+
+
+---
+
+# Dependency scanning - Keep proper update hygiene
+
+The 2020 State of the Octoverse report shows that keeping your software current is the best way to secure your codebase. 
+
+https://octoverse.github.com/2020/#securing-software
+
+---
+
+
+# Dependabot
+
+https://github.com/who-knows-inc/whoknows_variations/security/dependabot
+
+---
+
+# Enable Dependabot alerts and security updates
+
+1. Navigate to the **Settings** tab.
+
+2. Display the settings for **Code security and analysis**.
+
+3. **Enable** Dependabot alerts. **Enable** Dependabot security updates.
+
+4. **Wait about 60 seconds for Dependabot to check for alerts.**
+
+5. Navigate to the **Security** tab.
+
+6. Under "Vulnerability alerts" in the side bar, select **Dependabot** to view a list of the Dependabot alerts for the default branch.
+
+https://github.com/skills/secure-repository-supply-chain
+
+---
+
+# Enable and trigger Dependabot version updates
+
+1. Navigate to the **Settings** tab and select **Code security**.
+
+2. Locate "Dependabot version updates" and click **Configure** to open a new file editor with pre-poplulated contents. The file is called `dependabot.yml`.
+
+Change `"monthly"` to `"weekly"`. This will run on Mondays by default. 
+
+https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file#scheduleday
+
+
+
+---
+
+<div class="title-card">
+    <h1>Security in cloud</h1>
+</div>
+
+---
+
+# Course requirement
+
+You are not expecting to implement advanced cloud security measures such as VPCs, NACLs, and security groups.
+
+These slides serve to inform.
+
+---
+
+# Resource: Learn about Security Groups in Azure
+
+[![Security Groups](http://img.youtube.com/vi/w8H5fWBHddA/0.jpg)](https://www.youtube.com/watch?v=w8H5fWBHddA)
+
+
+---
+
+# VPC / VNET
+
+VPC: Virtual Private Cloud (often associated with AWS)
+VNET: Virtual Network (Azure's term)
+I will use the generic term VPC in class.
+
+A VPC is an isolated cloud network within a public cloud environment.
+Allows cloud services in the same data center to communicate securely without going through the public internet. 
+Provides control over IP address ranges, subnets, network gateways, and security settings.
+
+---
+
+# VPC security (NACL)
+
+NACL (Network Access Control Layer):
+
+- NACL
+
+- SG (Security Groups)
+
+- Firewall
+
+---
+
+# Subnets
+
+Private subnets
+
+Public subnets
+
+---
+
+# Gateways
+
+IG (internet gateway)
+
+VPC Peering (connect multiple VPCs)
+
+NAT (allows devices in the VPC to connect to the internet)
+
+---
+
+# Application Layer
+
+NLB (Network Load Balancer)
+
+ALB (Application Load Balancer)
+
+---
+
+# Example of a pro setup
+
+<img src="./assets_security_in_cloud/example_vpc_vnet_setup.png" alt="VPC VNET example setup">
+
+
+---
+
+<div class="title-card">
+    <h1>fail2ban</h1>
+</div>
+
+---
+
+# Let's look at the auth logs
+
+On your server, try running this command:
+
+```bash
+$ cat /var/log/auth.log
+```
+
+*What do you see?*
+
+---
+
+# The solution => Fail2Ban
+
+Since 2004, Fail2Ban has been protecting servers from brute-force attacks.
+
+https://en.wikipedia.org/wiki/Fail2ban
+
+
+---
+
+
+<div class="title-card">
+    <h1>SSL / TLS, Reverse Proxy</h1>
+</div>
+
+---
+
+# SSL / TLS
+
+*What is the difference?*
+
+---
+
+# CA (Certificate Authority)
+
+---
+
+# Certbot
+
+https://certbot.eff.org/
+
+---
+
+# Reverse proxy
+
+Example: Nginx, Apache, HAProxy, Traefik
+
+<img src="./assets_security_in_cloud/reverse_proxy.png" alt="reverse proxy" style="height: 40vh;">
+
+[Source](https://medium.com/zrp-tech/reverse-proxy-deployment-aws-cloudfront-encryption-caching-performance-5e48f931a4c3)
+
+*Why have a reverse proxy?*
+
+---
+
+# Why have a reverse proxy?
+
+* security
+
+* protecting ports done in a centralized manner
+
+* TLS deployed only once
+
+* load balancing
+
+* caching
+
+
+
+
+---
+
+
+<div class="title-card">
+    <h1>Continuous Testing</h1>
+</div>
+
+---
+
+# What type of tests fit into CI/CD?
+
+*Can you think of tests to run during*:
+
+- Continuous Integration (CI)
+
+- Continuous Delivery (CD) (During the staging phase)
+
+- Continuous Deployment (CD) (Production)
+
+---
+
+# Test View
+
+**Continuous Integration (CI):**
+- Unit-level tests
+- Linting
+
+**Continuous Delivery (CD) (Staging phase):**
+- System-level tests
+- Integration tests
+- Smoke tests
+
+**Continuous Development (CD):**
+- Production tests
+- Monitoring
+
+Result is: **Continuous Testing**
+
+---
+
+# Let me start with a sincere apology
+
+We should've started with tests in week 2 or 3. 
+
+At that time there were so many topics and tasks and I had to neglect testing. 
+
+This often happens in companies too. 
+
+Today we try remedy this and moving forward we strive for test-driven development (TDD). 
+
+You are not expected to write all the types of tests mentioned in the previous slide because there isn't enough time. This mirrors the real world. 
+
+---
+
+# Shift left vs. Shift right
+
+<img src="./assets_testing/shift_left_vs._shift_right.png" alt="shift left vs. shift right">
+
+[Source](https://www.dynatrace.com/news/blog/what-is-shift-left-and-what-is-shift-right/)
+
+I **highly** recommend reading the source article.
+
+---
+
+# History - Manual testing
+
+**Developer testing**:
+
+The Developer themselves print out and verify that it works to the best of their ability. 
+
+**UI testing**: 
+
+Sending it to a sales or QA team to click around, type things and verify that everything still works. Sometimes this was done during their 
+
+**Exploratory testing**: 
+
+No predefined test cases. The tester learns about the system as they go along. 
+
+---
+
+# Testing and DevOps
+
+**DevOps goal**: get immediate and reliable feedback. 
+
+Solution: **automated testing**. 
+
+**DevOps goal**: Catch errors early. 
+
+Solution: **run automated tests in parallel**.
+
+> If all the tests were run sequentially, Sussman states that “the 7,000 trunk tests would take about half an hour to execute. So we split these tests up into subsets, and distribute those onto the 10 machines in our Jenkins [CI] cluster... Spliting up our test suite and running many tests in parallel, gives us the desired 11 minute runtime.
+
+\- Noah Sussman, Test architect at Etsy
+
+---
+
+# Quality gate
+
+It is not enough to test. 
+
+Tests must act like a **quality gate**. If they do not pass, then stop delivery and deployment. 
+
+Worst case scenario (happens too often): 
+
+1. someone checks in code that breaks the test and it isn't rolledback or fixed immediately
+
+2. more people check in code
+
+3. tests are broken, never fixed and then just ignored
+
+---
+
+# Great quote regarding fixing things at Google
+
+> **We prioritize the team goals over individual goals — whenever we help someone move their work forward, we help the entire team. This applies whether we’re helping someone fix the build or an automated test, or even performing a code review for them**. And of course, we know that they’ll do the same for us, when we need help. This system worked without a lot of formality or policy—everyone knew that **our job was not just “write code,” but it  was to “run a service.”**  This is why we prioritized all quality issues, especially those related to reliability and scaling, at the highest level, treating them as Priority 0 “show-stopper” problems. From a systems perspective, these practices keep us from slipping backwards.
+
+\- Randy Shoup, former engineering director for Google App Engine
+
+---
+
+# Test big and small
+
+> The simplest test is defined by:
+
+> * A single behavior you are testing, usually a method or API that you are calling
+
+> * A specific input, some value that you pass to the API
+
+> * An observable output or behavior
+
+> * A controlled environment such as a single isolated process
+
+\- [T. Winters et al. Software Engineering at Google](https://research.google/pubs/software-engineering-at-google/)
+
+---
+
+# How to test
+
+Positive / Negative tests
+
+Boundary tests: Upper bound, lower bound, edge cases
+
+Special characters: especially in Denmark where we have letters like æ, ø, å.
+
+---
+
+# Happy paths vs sad paths
+
+https://en.wikipedia.org/wiki/Happy_path
+
+Remember to test for both.
+
+Security testing, for example, is often about testing the sad paths.
+
+---
+
+<div class="title-card">
+    <h1>Types of testing</h1>
+</div>
+
+---
+
+# The Test Pyramid
+
+<img src="./assets_testing/test_pyramid.png" alt="test pyramid" style="height: 50vh;">
+
+[Source: Twillio](https://www.twilio.com/en-us/blog/unit-integration-end-to-end-testing-difference)
+
+---
+
+# Unit testing
+
+*Have you written unit tests for any of your classes?*
+
+*What frameworks have you used?*
+
+---
+
+# Unit testing example: Whoknows Variations
+
+https://github.com/who-knows-inc/whoknows_variations/blob/main/src/backend/app_tests.py
+
+---
+
+# Integration tests
+
+<img src="https://twilio-cms-prod.s3.amazonaws.com/images/MyR86UeunZJcErQJmlEoEwWpAt56uIH2k2mHFqfsA95S2R.width-500_NbXJ1BV.png" style="height: 30vh;">
+
+> In contrast to unit tests, integration tests:
+>
+> * Use the actual components that the app uses in production.
+> * Require more code and data processing.
+> * Takes longer to run.
+
+
+[Source: Aspnet Core](https://learn.microsoft.com/en-us/aspnet/core/test/integration-tests?view=aspnetcore-6.0)
+
+---
+
+# End-to-end testing
+
+We will do it hands-on with Playwright in a bit. 
+
+For now know that there are multiple tools for end-to-end testing such as: 
+
+* Sellenium
+
+* Cypresss
+
+* Capybara 
+
+* Pupeteer
+
+* Playwright
+
+
+---
+
+# Test coverage
+
+[Istanbul](https://istanbul.js.org/), Jest, etc.
+
+---
+
+# Performance testing / Load testing
+
+[JMeter](https://jmeter.apache.org/)
+
+[Gatling](https://gatling.io/)
+
+---
+
+# A/B testing
+
+First example of a *shift-right* test so far. 
+
+How to approach A/B testing (based on a real-life case from to The DevOps Handbook):
+
+* **We believe** increasing the size of hotel images on the booking page
+
+* **Will result** in improved customer engagement and conversion
+
+* **We will have confidence to proceed when** we see a 5% increase in customers who review hotel images who then proceed to book in forty-eight hours.​
+
+
+---
+
+
+<div class="title-card">
+    <h1>Hands-on with Playwright</h1>
+</div>
+
+---
+
+# Hands-on with Playwright
+
+Let's follow the tutorial. 
+
+https://playwright.dev/docs/intro
+
+Install:
+
+```bash
+$ npm init playwright@latest
+```
+
+Run tests:
+
+```bash
+$ npx playwright test
+```
+
+---
+
+# Make it work for your project
+
+In `playwright.config.js`:
+
+```javascript
+import { defineConfig } from '@playwright/test';
+
+export default defineConfig({
+  testDir: './tests',
+  use: {
+    baseURL: 'http://localhost:8080',
+  },
+});
+```
+
+---
+
+# Recording tests
+
+```bash
+$ npx playwright codegen
+```
+
+---
+
+# Example of a search test
+
+```javascript
+const { test, expect } = require('@playwright/test');
+
+test('can search', async ({ page }) => {
+    await page.goto('http://localhost:8080/');
+    
+    await page.getByPlaceholder('Search...').fill('this is a search test');
+    await page.getByRole('button', { name: 'Search' }).click();
+    
+    expect(page.url()).toBe('http://localhost:8080/?q=this+is+a+search+test');
+});
+```
+
+---
+
+# Headed mode = browser visible
+
+Play the text in headed mode:
+
+```bash
+$ npx playwright test --headed --project=chromium
+```
+
+Play the test in `inspector` mode:
+
+```bash
+$ PWDEBUG=1 npx playwright test --project=chromium
+```
+
+---
+
+<div class="title-card">
+    <h1>Continuous Integration for Node.js</h1>
+</div>
+
+---
+
+# A simple Node project
+
+Let's create a new repository for creating out first GitHub Action. 
+
+Create a Node.js project. 
+
+```bash 
+$ npm init -y
+```
+
+Define these scripts in package.json:
+
+```json
+"scripts": { 
+    "build": "echo Building...", 
+    "test": "echo Running tests..." 
+}
+```
+
+Test it out! 
+
+---
+
+# GitHub Actions for Node.js - Part I
+
+```yaml
+
+This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+
+```yaml
+name: Node.js CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+```
+
+---
+
+# GitHub Actions for Node.js - Part II
+
+```yaml
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x, 18.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm ci
+    - run: npm run build --if-present
+    - run: npm test
+```
+
+
+
+</textarea>
+
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>
+    const slideshow = remark.create({
+        source: document.getElementById('source').value
+    });
+</script>
+</body>
+</html>

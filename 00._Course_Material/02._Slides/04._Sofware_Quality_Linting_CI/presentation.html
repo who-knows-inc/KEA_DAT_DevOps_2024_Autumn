@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #1e1e1e; /* Dark background for the body */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Full-Width Slideshow Container */
+#slideshow {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+/* Full-Width and Dark Mode Slide Styles */
+.remark-slide-content {
+    color: #ddd; /* Light text color for readability */
+    background-color: #13151a; /* Dark background for slides */
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    padding-top: 0px;
+    box-sizing: border-box;
+}
+
+/* Headers */
+.remark-slide-content h1, .remark-slide-content h2 {
+    color: rgb(8, 107, 194); /* Bright color for headers */
+    margin-top: 5px;
+}
+
+.remark-slide-content h1 {
+    font-size: 2em;
+}
+
+.remark-slide-content h2 {
+    font-size: 1.2em;
+}
+
+/* Paragraphs */
+.remark-slide-content p {
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+/* Lists */
+.remark-slide-content ul, .remark-slide-content ol {
+    margin-left: 20px;
+    font-size: 1.2em;
+}
+
+/* Images */
+.remark-slide-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Links */
+a:link, a:visited {
+    color: green;
+}
+
+/* Code */
+.remark-slide-content pre {
+    background: #333; /* Dark background for code blocks */
+    border: 1px solid #444;
+    color: #eee; /* Light text for code */
+    padding: 8px;
+    overflow: auto;
+}
+
+.remark-slide-content code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #333;
+    padding: 2px 5px;
+    color: #eee;
+}
+
+
+table {
+    /* center */
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse; /* This ensures that the border styles are applied uniformly */
+}
+
+th {
+    color: darkgrey;
+}
+
+table, th, td {
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+}
+
+.title-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+}
+
+.title-card h1 {
+    color: cyan;
+}
+
+.exercise-card h1 {
+    color: green;
+}
+
+.fullscreen-video {
+    width: 40vw; 
+    height: 50vh;
+    border: none;
+}
+
+    </style>
+
+    <title>01._introduction || 02._software_quality || 03._ci_cd || 04._linting || 05._branching_strategies</title>
+</head>
+<body>
+    <!-- The Remark.js container -->
+<textarea id="source" style="display:none;">
+<div class="title-card">
+    <h1>Software Quality, Linting, CI</h1>
+</div>
+
+
+
+---
+
+# Weekly commit activity
+
+<iframe src="./assets_introduction/commit_activity_weekly.svg" style="height: 50vh; width: 100%;" frameborder="0"></iframe>
+
+---
+
+# Daily commit activity
+
+<iframe src="./assets_introduction/commit_activity_daily.svg" style="height: 50vh; width: 100%;" frameborder="0"></iframe>
+
+
+---
+
+
+# Weekly DevOps pep-talk!
+
+DevOps principle:
+
+**Fail fast, recover fast**
+
+---
+
+# PR competition reminder
+
+Remember to criticially engage with the course material. 
+
+This should be easier once you get the `whoknow_variations` assignments. 
+
+But currently only 3 non-obligatory PRs have been made by 3 students.
+
+---
+
+# Mandatory I
+
+[Mandatory I](https://github.com/who-knows-inc/KEA_DAT_DevOps_2024_Autumn/blob/main/00._Course_Material/01._Assignments/00._Mandatories/mandatory_I.md)
+
+
+
+---
+
+<div class="title-card">
+    <h1>Software Quality</h1>
+</div>
+
+---
+
+# Software quality
+
+Are your systems any good?
+
+How good/bad are they?
+
+What can be done to improve them? 
+
+Our goal is to quantify and answer these questions?
+
+---
+
+# What is software quality? - I
+
+The definition is pretty uniform and standardized. 
+
+> "[...] *the totality of characteristics of an entity that bear on its ability to satisfy stated and implied needs.*
+
+\- [ISO 8402:1994, Quality management and quality assurance – Vocabulary](https://www.iso.org/standard/20115.html)
+
+> *capability of a software product to satisfy stated and implied needs when used under specified conditions*
+  
+\- [_Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Guide to
+SQuaRE_, International Organization for Standardization, Geneva, CH, Standard, May 2015](https://www.iso.org/obp/ui/#iso:std:64764:en)
+
+
+
+---
+
+# What is software quality? - II
+
+More definitions:
+
+> *degree to which a software product satisfies stated and implied needs when used under specified conditions*
+
+\- [_Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models_, International Organization for Standardization, Geneva, CH, Standard, May 2015](https://www.iso.org/obp/ui/#iso:std:iso-iec:25010:ed-1:v1:en)
+
+> *degree to which a software product meets established requirements*
+
+\- [_IEEE 730-2014 IEEE Standard for Software Quality Assurance Processes_](https://standards.ieee.org/standard/730-2014.html)
+
+> *Good software should deliver the required functionality and performance to the user and should be maintainable, dependable, and usable.*
+
+\- [I. Sommerville, _Software Engineering_, 9th ed. USA: Addison-Wesley Publishing Company, 2010.](https://www.pearson.com/us/higher-education/product/Sommerville-Software-Engineering-9th-Edition/9780137035151.html)
+
+
+---
+
+# Why call it "Software Quality" instead of "Code Quality"?
+
+> [...] software is not just the programs themselves but also all associated documentation and configuration data that is required to make these programs operate correctly.
+
+\- Sommerville _"Software Engineering"_ (9th Ed.)
+
+Also check out: 
+
+https://en.wikipedia.org/wiki/Software_quality
+
+---
+
+<div class="title-card">
+    <h1>DevOps vs. Software Quality</h1>
+</div>
+
+
+---
+
+# DevOps vs. Software Quality
+
+**Value Stream**:
+
+> A value stream is the set of actions that take place to add value to a customer from the initial request through realization of value by the customer.
+
+DevOps is hyperfocused on delivering value to the customer. During development you should ask:
+
+* What is the value of this feature to the customer?
+
+* How can we accellerate when the feature starts generating value?
+
+But this seems at odds with software quality?
+
+---
+
+# The value stream vs. The `ilities`
+
+Industry-wide recommendation is that at least 20% should be reserved for Non-Functional Requirements of the type `ilities` such as:
+
+* maintainability
+
+* manageability
+
+* scalability
+
+* reliability
+
+* testability
+
+* deployability
+
+* security
+
+---
+
+# Bringing value to the customer vs. DX
+
+DevOps does not exclude **D**eveloper E**x**perience. 
+
+There are things that don't directly bring value to the customer, but are valuable to the organization. 
+
+---
+
+# Pull-requests
+
+*Question: What is the value in making PRs?*
+
+---
+
+# Pull-request - Value
+
+  - Ensuring code quality
+
+  - Avoiding the addition of technical debt
+
+  - Knowledge sharing and opportunity for learning and improvement
+
+  - Sharing insight into new features
+
+
+---
+
+# Practices for Software Quality: Code reviews - I
+
+> At a cost of 1-2% of the project, a 40% decrease in the number of issues was found.
+
+\- R.A. Baker Jr [_"Code reviews enhance software quality"_](https://dl.acm.org/doi/pdf/10.1145/253228.253461)
+
+> Findings  show  that  unreviewed  commits  (i.e., commits  that did  not  undergo  a  review  process)  have  over  two  times  more chances of introducing bugs than reviewed commits (i.e., commits that  underwent  a  review  process).  In  addition,  code  committed after  review  has  a  substantially  higher  readability  with  respect to  unreviewed  code.
+
+\- G. Bavota et al. [_"Four eyes are better than two: On the impact of code reviews on software quality"_](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.709.2980&rep=rep1&type=pdf)
+
+---
+
+# Practices for Software Quality: Code reviews - II
+
+> we ﬁnd that both code review coverage and participation share a significant link with software quality. Low code review coverage and participation are estimated to produce components with up to two and five additional post-release defects respectively. Our results empirically confirm the intuition that poorly reviewed code has a negative impact on software quality [...]
+
+\- S. McIntosh [_"The impact of code review coverage and code review participation on software quality: a case study of the Qt, VTK, and ITK projects"_](https://dl.acm.org/doi/abs/10.1145/2597073.2597076)
+
+
+---
+
+<div class="title-card">
+    <h1>Technical debt</h1>
+</div>
+
+---
+
+# Technical Debt
+
+A metaphor to financial debt:
+
+> *The longer you wait to pay it off, the more expensive it becomes. Cost of Change (CoC).*
+
+When prototyping, you will make take technical shortcuts in order to move fast. This is not neccessarily bad, but you need to be aware of the debt you accrue. 
+
+---
+
+# Motivations for technical debt
+
+<img src="./assets_software_quality/motivations_for_technical_debt.png" alt="motivations technical debt">
+
+[Source](https://18f.gsa.gov/2015/09/04/what-is-technical-debt/)
+
+---
+
+# [Types of technical debt](https://blog.logrocket.com/product-management/what-is-technical-debt-examples-prioritize-avoid/#types-of-technical-debt)
+
+* **Code debt**: Poorly written code that is hard to understand, maintain, and extend.
+
+* **Design debt**: Poorly designed code that is hard to understand, maintain, and extend.
+
+* **Infrastructure debt**: Outdated infrastructure that is hard to maintain and scale.
+
+* **Testing debt**: Lack of automated tests, or poorly written tests.
+
+* **Documentation debt**: Lack of documentation or poorly written documentation.
+
+* **People debt**: Lack of skilled people or unmotivated people. 
+
+---
+
+# Avoiding technical debt
+
+<img src="./assets_software_quality/causes_of_technical_debt.png" alt="technical debt causes" style="height: 45vh; background: white;">
+
+The [Source](https://www.sonarsource.com/learn/technical-debt/) goes further into how to avoid technical debt.
+
+Great [list on how to avoid technical debt](https://www.digitalocean.com/resources/article/what-is-technical-debt#10-ways-to-manage-and-reduce-technical-debt).
+
+---
+
+# The SQALE method for evaluating technical debt
+
+The model proposes a: 
+
+  - Technical Debt Index (TDI) that is a measure of the amount of technical debt in a software system.
+
+  - Quality Model: SQALE divides quality requirements into multiple layers, such as reliability, maintainability, and efficiency, each containing specific quality rules.
+
+\- [Letouzey _"The SQALE method for evaluating technical debt"_](https://www.researchgate.net/profile/Jean_Louis_Letouzey/publication/239763591_The_SQALE_method_for_evaluating_Technical_Debt/links/0c9605357748774a21000000/The-SQALE-method-for-evaluating-Technical-Debt.pdf)
+
+---
+
+# Concept - Code smells
+
+> a code smell is any characteristic in the source code of a program that possibly indicates a deeper problem.
+
+https://en.wikipedia.org/w/index.php?title=Code_smell&oldid=932717947#Common_code_smells
+
+The blog post that coined the term:
+
+https://martinfowler.com/bliki/CodeSmell.html
+
+
+---
+
+<div class="title-card">
+    <h1>Software Quality tools</h1>
+</div>
+
+
+---
+
+# Software Quality tools
+
+**SonarQube**: Provides a maintainability and Technical Debt measure/index
+
+<img src="./assets_software_quality/sonarqube_logo.png" alt="sonarqube logo" style="height: 15vh;">
+
+**Code Climate**: Provides a maintainability index
+
+<img src="./assets_software_quality/codeclimate_logo.png" alt="codeclimate logo" style="height: 15vh;">
+
+**Beware** that tools will always give an opionated view of quality. Be critical and ask yourself along with your group members:
+
+> *Do we agree with the tool's assessment?*
+
+
+
+
+
+---
+
+<!-- CI/CD/CD -->
+
+<div class="title-card">
+    <h1>CI/CD/CD</h1>
+</div>
+
+---
+
+# CI/CD/CD
+
+* Continuous Integration
+
+Pushing code to a Version Control System (VCS such as git etc.).
+
+* Continuous Delivery
+
+Packaging your code (We will create Docker images).
+
+* Continuous Deployment
+
+Deploy to a server.
+
+We will look differently at continuous delivery vs. deployment in this course, but we will call it CI/CD. 
+
+---
+
+# Overview of CI/CD/CD
+
+Goal: automation. 
+Term: Pipelines
+
+![CI/CD](./assets_ci_cd/ci_cd_cd.png)
+
+---
+
+# Continuous Integration (CI)
+
+  - Developers frequently merge code changes into a central repository
+
+  - Automatically builds and tests merged code
+
+  - Detects integration issues early on
+
+  - Goal: Resolve problems early and quickly
+
+---
+
+# Continuous Delivery (CD)
+
+  - Ensures merged and tested code is always in a releasable state
+
+  - Automated build process
+
+  - Goal: To have code ready for release
+
+---
+
+# Continuous Deployment (CD)
+
+  - Approach that emphasizes continuously delivering new features and improvements
+
+  - Integrates feedback from users and stakeholders
+
+  - Iterates on the product
+
+  - Continuously deploys updates
+
+  - Provides value at a faster pace
+
+---
+
+# Continuous Delivery vs. Continuous Deployment
+
+There are many different interpretations of the two terms.
+
+Historically, the continuous delivery was the first term to exist. Contiuous deployment is a more recent term.
+
+For some the two terms are interchangeable. 
+
+For others, continuous delivery has been superseded by the term continuous deployment.
+
+One interpretation is that continuous delivery requires a manual step to deploy to production, while continuous deployment is fully automated (hands-off deployments).
+
+---
+
+# This course's interpretation of Continuous Delivery vs. Continuous Deployment
+
+**Continuous Delivery**: Deliver build artifacts. In our case we will build Docker images and publish them to a container registry.
+
+**Continuous Deployment**: Deploy to production. In our case we will deploy the Docker images to a server and run them.
+
+You don't have to agree with this interpretation, but we use it to make a clear distinction between delivering artifacts and deploying to production.
+
+Beware that you might end up in a job that uses the terms differently.
+
+---
+
+# In the DevOps 8, which part relate to CI, CD, CD and CF?
+
+CF = Continuous Feedback. 
+
+*Discuss in pairs*
+
+<div>
+    <img src="./assets_ci_cd/möbius_strip.png" alt="Dev Ops Möbius strip"/>
+</div>
+
+---
+
+# DevOps 8, CI, CD, CD, CF
+
+<div>
+    <img src="./assets_ci_cd/devops_8.png" alt="DevOps 8"/>
+</div>
+
+[Source](https://www.atlassian.com/devops/what-is-devops/devops-best-practices)
+
+
+---
+
+# A 5 minute video on CI/CD
+
+[![CI/CD](http://img.youtube.com/vi/42UP1fxi2SY/0.jpg)](https://www.youtube.com/watch?v=42UP1fxi2SY)
+
+
+---
+
+# CI/CD solutions
+
+There are many CI/CD solutions. In our following example we will have a closer look to GitHub Actions.
+
+However, you might consider an alternative technology.
+
+The following lists should link you to some commonly used products.
+
+---
+
+# CI/CD solutions - Self-hosted
+
+[Jenkins](https://jenkins.io/index.html)  
+
+[Bamboo](https://www.atlassian.com/software/bamboo)  
+
+[TeamCity](https://www.jetbrains.com/teamcity/)  
+
+[Concourse](https://concourse.ci)  
+
+[Azure DevOps Server](https://azure.microsoft.com/en-us/services/devops/server/)  
+
+[Drone](https://www.drone.io/)
+
+---
+
+# CI/CD solutions - CI/CD as a service
+
+[Travis CI](https://travis-ci.org/)  
+
+[CircleCI](https://circleci.com)  
+
+[GitHub Actions](https://github.com/features/actions)  
+
+[GitLab CI](https://docs.gitlab.com/ee/topics/build_your_application.html)  
+
+[GoCD](https://www.gocd.org/)  
+
+[AWS CodePipeline](https://aws.amazon.com/codepipeline/)
+
+[Azure DevOps Services](https://azure.microsoft.com/en-us/services/devops/)
+
+
+
+---
+
+<div class="title-card">
+    <h1>Linting</h1>
+</div>
+
+---
+
+# We have already used a linting tool
+
+*Can you think of it?*
+
+---
+
+# Answer: ShellCheck
+
+*What did it do?*
+
+<details> 
+  <summary>The command</summary>
+
+        $ shellcheck run_forever.sh 
+</details>
+
+
+---
+
+# Why lint?
+
+Definition: Linters are a [static code analysis tool used to flag programming errors, bugs, stylistic errors and suspicious constructs](https://en.wikipedia.org/wiki/Lint_%28software%29).
+
+Give some reasons for why you should lint your code.
+
+*Discuss in pairs*
+
+---
+
+# What can you lint for?
+
+**Automated Code Analysis**: Linters perform static analysis on the code without executing it.
+
+**Error Detection**: Identifies programming errors, such as syntax errors or type mismatches.
+
+**Code Quality and Consistency**: Checks for adherence to coding standards and conventions, ensuring consistency across the codebase.
+
+**Improving Readability**: Helps in formatting code in a readable and maintainable way.
+
+**Finding Potential Bugs**: Detects code patterns that are likely to be errors or could lead to bugs in the future.
+
+**Security**: Identifies security vulnerabilities and insecure coding practices.
+
+**Performance**: Identifies code that could be optimized for better performance. [Interesting example: Million](https://million.dev/)
+
+---
+
+# Popular linters
+
+| Programming Language | Popular Linters                 |
+|----------------------|---------------------------------|
+| JavaScript           | ESLint, JSHint, JSLint, Standard|
+| Python               | Pylint, flake8, Pyflakes, Black |
+| Java                 | Checkstyle, PMD, FindBugs       |
+| C/C++                | Clang-Tidy, CPPLint, GCC        |
+| Ruby                 | RuboCop, Reek                   |
+| PHP                  | PHP_CodeSniffer, PHPMD          |
+| CSS                  | Stylelint, CSSLint              |
+| TypeScript           | TSLint, ESLint                  |
+| Go                   | Golint, Gofmt, Go Vet           |
+| Swift                | SwiftLint                       |
+| Kotlin               | Ktlint, Detekt                  |
+| Rust                 | Clippy                          |
+
+
+
+
+---
+
+# When and where to lint?
+
+**Locally before pushing to version control.**
+
+vs.
+
+**CI/CD pipelines.** 
+
+*Let's do some hands-on first and consider the pros and cons of each.*
+
+---
+
+
+<div class="title-card">
+    <h1>Git hooks - Hands-on</h1>
+</div>
+
+
+
+---
+
+# Let's lint a Node.js project using standard
+
+1. Let's make a Node.js project with intentional code style mistakes. 
+
+2. Run locally: `npx standard --fix` 
+
+We don't want to run --fix in the CI pipeline since it modifies code and the code in the CI pipeline does not update the code in version control.
+
+---
+
+# Git Hooks
+
+The goal in DevOps is always to catch problems as early as possible. 
+
+We can disallow developers from pushing if their code isn't up to standard. 
+
+Downside: Git Hooks must be manually configured on every machine. There is no way to push them into version control. 
+
+---
+
+# Git Hooks - Our first hook
+
+Let's first try to create a `hello world` git hook.
+
+First initialize a git repository. 
+
+In the `.git/hooks` folder, create a file called `pre-commit`. You can copy the sample for inspiration (assuming you are in the hooks folder):
+
+```bash
+$ mv pre-commit.sample pre-commit
+```
+
+Add an echo statement to the file:
+
+```bash
+$ echo "Hello, world!" > pre-commit
+```
+
+Now try to commit and see the result. 
+ 
+---
+
+# Linting with `Standard`
+
+Create a Javscript file with some intentional errors.
+
+You can run [Standard](https://www.npmjs.com/package/standard#is-there-a-git-pre-commit-hook) in the project to lint the code
+
+```bash
+$ npx standard
+```
+
+Or to fix it:
+
+```bash
+$ npx standard --fix
+```
+
+---
+
+# Git Hooks - Adding `Standard` to a hook (*nix and Git Bash)
+
+In the `pre-commit` file replace the content with the following. 
+
+https://www.npmjs.com/package/standard#is-there-a-git-pre-commit-hook
+
+It requires you to have Standard installed. The above script will work if you install it globally:
+
+```bash
+$ npm install -g standard
+```
+
+Or you could modify the script to use the `npx` command:
+
+```bash
+xargs_r -E '' -t npx standard
+```
+
+
+You could also install it locally in the project with (`npm install standard`) and modify the script like this:
+
+```bash
+xargs_r -E '' -t ./node_modules/.bin/standard
+```
+
+---
+
+# Git Hooks - Adding `Standard` to a hook (Powershell)
+
+```powershell
+# Ensure all JavaScript files staged for commit pass standard code style
+function xargs-r {
+    param (
+        [ScriptBlock]$Command
+    )
+
+    $paths = git diff --name-only --cached --relative | Select-String -Pattern '\.jsx?$' | ForEach-Object { $_.Line }
+
+    if ($paths) {
+        $paths | ForEach-Object {
+            &$Command $_
+        }
+    }
+}
+
+$xargsCommand = { param ($path) standard $path }
+
+xargs-r $xargsCommand
+
+if ($LASTEXITCODE -ne 0) {
+    Write-Host 'JavaScript Standard Style errors were detected. Aborting commit.'
+    exit 1
+}
+```
+
+---
+
+# pre-commit library
+
+Tip: There is a library called `pre-commit` that can be used to manage and easily install git hooks.
+
+https://pre-commit.com/
+
+
+---
+
+# Git hooks pros and cons?
+
+*Let's discuss*
+
+---
+
+# Git hooks pros and cons
+
+**Pros**
+
+  - Early Error Detection / Immediate Feedback
+
+  - Prevents bad commits from eveing being checked in to version control
+
+**Cons**
+
+  - Local Only
+
+  - Manual Configuration
+
+  - Bypassable (with the `--no-verify` flag)
+
+  - Cross-Platform Issues (bash scripts could cause problems on Windows)
+
+
+---
+
+<div class="title-card">
+    <h1>Linting in Github Actions</h1>
+</div>
+
+---
+
+# CI - Linting example in lint.yaml
+
+This is to give you an idea of how to set up a linter in a CI pipeline.
+
+Look into other linters for Node.js such as ESLint and JSHint.
+
+The previous slides use Standard because it requires no configuration. 
+
+```yaml
+lint:
+    name: 'Run linter'
+    defaults:
+        run:
+        shell: bash
+        # Defines the working directory for all run steps in the workflow
+        working-directory: ./web
+    runs-on: ubuntu-latest
+    steps:    
+    - uses: actions/checkout@v2
+        name: 'Checkout repository'
+    
+    - name: 'Install Dependencies'
+        run: npm install
+
+    - name: 'Run Linter'
+        run: npx standard -v
+```
+
+
+---
+
+# Superlinter
+
+
+https://github.com/marketplace/actions/super-linter
+
+---
+
+# hadolint
+
+Once we start working with Docker, we can use `hadolint` to lint our Dockerfiles.
+
+
+
+
+---
+
+
+<div class="title-card">
+    <h1>Branching strategies</h1>
+</div>
+
+---
+
+# Branching strategies
+
+Why? To allow agile teams to collaborate. Branching strategies is an agreement on how agile teams collaborate and create production-ready releases.
+
+**Note**: The past couple of years there has been an influx of new and shiny branching strategies that everyone suddenly *must* follow. This should give a clue that branching is a problem with no perfect solution. 
+
+---
+
+# Branching strategies 
+
+- **Feature Branching**: Each feature is developed in a separate branch.
+
+- **Trunk-based Development**: All developers merge their changes to the trunk multiple times a day.  
+
+- **Release Branching**: A branch is created for each release.
+
+- **Gitflow**: A branching model that uses master, develop, feature, release, and hotfix branches.
+
+- **GitHub Flow**: Adds the concept of Pull Requests and Github Discussions before merging with main.
+
+---
+
+# Merge vs. Rebase
+
+[![Merge vs. Rebase](http://img.youtube.com/vi/zOnwgxiC0OA/0.jpg)](https://youtu.be/zOnwgxiC0OA?t=180)
+</textarea>
+
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>
+    const slideshow = remark.create({
+        source: document.getElementById('source').value
+    });
+</script>
+</body>
+</html>

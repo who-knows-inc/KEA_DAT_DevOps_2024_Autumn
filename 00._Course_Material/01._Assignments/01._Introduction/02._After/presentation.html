@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #1e1e1e; /* Dark background for the body */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Full-Width Slideshow Container */
+#slideshow {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+/* Full-Width and Dark Mode Slide Styles */
+.remark-slide-content {
+    color: #ddd; /* Light text color for readability */
+    background-color: #13151a; /* Dark background for slides */
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    padding-top: 0px;
+    box-sizing: border-box;
+}
+
+/* Headers */
+.remark-slide-content h1, .remark-slide-content h2 {
+    color: rgb(8, 107, 194); /* Bright color for headers */
+    margin-top: 5px;
+}
+
+.remark-slide-content h1 {
+    font-size: 2em;
+}
+
+.remark-slide-content h2 {
+    font-size: 1.2em;
+}
+
+/* Paragraphs */
+.remark-slide-content p {
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+/* Lists */
+.remark-slide-content ul, .remark-slide-content ol {
+    margin-left: 20px;
+    font-size: 1.2em;
+}
+
+/* Images */
+.remark-slide-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Links */
+a:link, a:visited {
+    color: green;
+}
+
+/* Code */
+.remark-slide-content pre {
+    background: #333; /* Dark background for code blocks */
+    border: 1px solid #444;
+    color: #eee; /* Light text for code */
+    padding: 8px;
+    overflow: auto;
+}
+
+.remark-slide-content code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #333;
+    padding: 2px 5px;
+    color: #eee;
+}
+
+
+table {
+    /* center */
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse; /* This ensures that the border styles are applied uniformly */
+}
+
+th {
+    color: darkgrey;
+}
+
+table, th, td {
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+}
+
+.title-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+}
+
+.title-card h1 {
+    color: cyan;
+}
+
+.exercise-card h1 {
+    color: green;
+}
+
+.fullscreen-video {
+    width: 40vw; 
+    height: 50vh;
+    border: none;
+}
+
+    </style>
+
+    <title>create_a_dependency_graph || create_a_pr_to_repositories_py || git_release || github_started || problems_with_the_codebase || upgrade_the_application</title>
+</head>
+<body>
+    <!-- The Remark.js container -->
+<textarea id="source" style="display:none;"># Create a dependency graph (Digraph) for the legacy system
+
+**Type**: Group work
+
+**Submission**: Save the graph as a SVG or image and store it somewhere where the entire group has quick access to it.
+
+**Motivation**: Helps you understand the dependencies between different parts of the application. Seeing how everything is coupled could help you understand how it could be deocoupled later on for easier maintance and fault tolerance. 
+
+**Part of mandatory I.** 
+
+---
+
+## What is a dependency graph?
+
+A [Dependency Graph](https://en.wikipedia.org/wiki/Dependency_graph) is part of [Graph Theory](https://en.wikipedia.org/wiki/Graph_theory) and consists of [Nodes/Vertices and Edges](https://en.wikipedia.org/wiki/Vertex_(graph_theory)#/media/File:Small_Network.png).
+
+---
+
+## How to create a dependency graph?
+
+There are many great tools for it. Here is an [online Graphviz Tool](https://dreampuf.github.io/GraphvizOnline/).
+
+Try replacing their default example with the snippet below.
+
+
+```dot
+digraph G {
+
+    a -> b
+    b -> c
+    b -> d
+
+}
+```
+
+Try replace `a` with `Flask`. Remember that it's not just for the `Flask` server and its dependencies but the entire system. 
+
+
+---
+
+# Create a PR to repositories.py
+
+Add your group to [repositories.py](/repositories.py) which is in the root of the semester repository. 
+
+**Type**: Group work
+
+**Deadline**: 1 day before the next lecture
+
+**Hard Deadline**: By week 2 lecture
+
+
+## `repositories.py`
+
+The file may look like this before other groups update it:
+
+```python
+GROUP_REPOS = [
+        {
+            "name": "Example Group",
+            "gitLinks": ["https://<git_link>"],
+            "backend": "http(s)://<IP_DOMAIN>/<APIURL>",
+            "frontend": "http(s)://<IP_DOMAIN>/<FrontEndURL>",
+            "monitoring": "http(s)://<IP_DOMAIN>/<MonitoringURL>",
+            "stack": ["Flask", "Svelte", "CouchDB", "Redis"],
+            "documentation": ["link to documentation", "another link if it applies", "et cetera"],
+            "sla": "link to sla",
+        }
+]
+``` 
+
+1. Create a new `dict` and add the template:
+
+`dict` is the data structure in Python which looks similar to JSON. 
+
+Paste the following template in the `GROUP_REPOS` list variable:
+
+```python
+{
+    "name": "",
+    "gitLinks": [""],
+    "backend": "",
+    "frontend": "",
+    "monitoring": "",
+    "stack": [],
+    "documentation": [],
+    "sla": "",
+}
+```
+
+2. By next week you must fill the values for the following keys: 
+
+- `name`: The name of your group.
+
+- `gitLinks`: The link(s) to your repositories.
+
+
+3. Validate the syntax: 
+
+Remember commas after the last dict when you add a new one.
+
+To validate the file before making a PR, you can use the following command:
+
+```bash
+$ python -m py_compile repositories.py
+```
+
+4. **IMPORTANT** Get the latest changes. 
+
+Just before you push your changes, make sure you have the latest changes from the repository. See [Pulling from the Original Repository into your fork](#pulling-from-the-original-repository-into-your-fork) for more information.
+
+
+If you do not do this then merge conflicts will occur. 
+
+5. Make a PR.
+
+Here are some resources to help you get started:
+
+[![How to make a PR](http://img.youtube.com/vi/8lGpZkjnkt4/0.jpg)](https://www.youtube.com/watch?v=8lGpZkjnkt4)
+
+https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests
+
+https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project
+
+
+4. Make sure to update this file with the correct information throughout the course. Let me know if you've made a pull request later on and I miss it.
+
+
+## Pulling from the original repository into your fork
+
+It is **crucial** that you do this before you push changes and make a PR. Otherwise, you might encounter merge conflicts with other groups. 
+
+1. Add the original repository as a remote:
+
+```bash
+$ git remote add upstream <original-repo-url>
+```
+
+2. Fetch the latest changes from the original repository:
+
+```bash
+$ git fetch upstream
+```
+
+3. Merge the changes into your local branch:
+
+```bash
+$ git merge upstream/main
+```
+
+4. Push the merged changes to your forked repository (Adding origin and branch name is optional):
+
+```bash
+$ git push <origin main>
+```
+
+
+
+---
+
+# Git Tagging and Release
+
+Create your first release. 
+
+**Type**: Group work
+
+Feel free to create multiple releases this week. One for checking in the legacy code and one after working on it. 
+
+You are encouraged to create new releases moving forward for every major milestone in your development.
+
+
+## Create a release on GitHub
+
+It is very easy to create a [release in GitHub](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). 
+
+1. Click on `Create a new release` on the right side of your repository. This is also where you releases will be accessible.
+
+<img src="./github_release/github_release_1.png" alt="github release">
+
+2. First you must `+ Create new tag`. You are encouraged to use [semantic versioning](https://semver.org/) for tagging. `v.0.1.0` would be a good start.
+
+<img src="./github_release/github_release_2.png" alt="github release">
+
+
+3. Click on the “Generate release notes”. 
+
+Release notes can be [automatically generated by GitHub](https://docs.github.com/en/repositories/releasing-projects-on-github/automatically-generated-release-notes
+). It uses a mixture of PRs, issues, commit messages, tags, contributors and labels. This is why you should always have clear commit messages that explain what has happened.
+
+4. Click on `Publish release` and you are done.
+
+
+## Tag using git
+
+In the above example the tag is created using GitHub's interface. It's also possible to create a tag using git: 
+
+
+```bash
+$ git add -A
+$ git commit -m "Created the first release"
+$ git push
+
+$ git tag v0.1.0
+$ git push origin v0.1.0
+```
+
+---
+
+# GitHub started
+
+**Type**: Group work
+
+---
+
+## Alternatives to GitHub
+
+Using GitHub is not mandatory in this course. Both Gitlab and Bitbucket offer services similar to GitHub Actions. Or you could even host your own git server and setup CI/CD manually.
+
+The course resources will assume that your group went with GitHub and tutorials will all focus on GitHub.
+
+---
+
+## [Group] GitHub organisations
+
+With your designated semester groups create a new [organisation](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch). 
+
+1. Create an organisation.
+
+2. Add each other as collaborators on the organisation level. Give everyone admin rights. 
+
+3. [Optional] Create a `test` repository in the organisation.
+
+4. [Optional]  Clone the repository and push a change on the main branch. 
+
+Do not fork the repository. Forking it creates a new repository. 
+
+Now that you are collaborators you can work on the same repository. 
+
+5. [Optional]  Delete the `test` repository. 
+
+6. Create (a) joint repositor(y/ies) as you see fit. 
+
+---
+
+## Naming 
+
+You are free to name the repositories and the search engine whatever your like. 
+
+You are not required to go with the WhoKnows branding.
+
+---
+
+## Make the main code repositories public
+
+The course aims to teach you techniques on how to never push sensitive information 
+
+---
+
+## License
+
+Because of the previous point, it is important that you consider the [license types](https://en.wikipedia.org/wiki/Software_license#Software_copyright) for your repositories.
+
+If you use a permissive license, you will allow other groups to reuse your code. 
+
+Unlike popular belief, no license does not entail free for all. Having no license is the most restrictive type and will legally disallow other groups from using your work. 
+
+[Source](https://choosealicense.com/no-permission/)
+
+
+---
+
+# Problems with the codebase
+
+Idenfity all the problematic parts of the legacy code. 
+
+**Type**: Group work
+
+**Part of mandatory I**
+
+**Motivation**: This task is an excellent opportunity for everyone to study the code base and become familiar with the functionality, components and Flask which is likely new for you.
+
+---
+
+## What to do
+
+Create a document that lists all the problems in the provided codebase. The list should be sorted after priority. The most critical problems should appear first. 
+
+While the problems of the legacy code doesn’t relate to your final product, it is still a topic of interest during the exam to see how you mitigated these problems. 
+
+
+
+---
+
+# Upgrade the application
+
+Upgrade the server code from Python 2.0 to Python 3.x.x. Get a feel for the server. 
+
+**Type**: Group work
+
+
+**Motivation**: The goal is for everyone to study the code base and get familiar with the functionalities.
+
+
+# The application
+
+In case you missed it, the application can be found here:
+
+https://github.com/who-knows-inc/whoknows_variations
+
+The main branch is the same as what we copied from the server. 
+
+## Converting from Python 2 -> 3.  
+
+There are multiple ways to achieve this. One is to install and use the `2to3` tool.
+
+
+#### Usage
+
+Check installation and find some useful flags here.
+
+```bash
+$ 2to3 --help
+```
+
+You can run it on the server file like this:
+
+```bash
+$ 2to3 app.py
+```
+
+<!-- #### Check the result
+
+In cause you use 2to3 to auto-fix it then save it to a different file and compare these two before you push the changes. 
+
+For *nix systems, use the `diff` command to compare the files: 
+
+```bash
+$ diff app.py app.py3
+```
+
+For Windows use the FC (File Compare) command:
+
+```powershell
+$ FC app.py app.py3
+``` -->
+
+
+
+## Fix the shell script: `run_forever.sh`
+
+In the `src` directory you can find `run_forever.sh` script. Use `shellcheck` to fix potential problems. 
+
+#### Installation
+
+MacOS:
+
+```bash
+$ brew install shellcheck
+```
+
+Windows:
+
+```bash
+$ choco install shellcheck
+```
+
+#### Usage
+
+Assuming that you are in the `src` directory:
+
+```bash
+$ shellcheck run_forever.sh
+```
+</textarea>
+
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>
+    const slideshow = remark.create({
+        source: document.getElementById('source').value
+    });
+</script>
+</body>
+</html>

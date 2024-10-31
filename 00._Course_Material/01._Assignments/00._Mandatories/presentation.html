@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #1e1e1e; /* Dark background for the body */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Full-Width Slideshow Container */
+#slideshow {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+/* Full-Width and Dark Mode Slide Styles */
+.remark-slide-content {
+    color: #ddd; /* Light text color for readability */
+    background-color: #13151a; /* Dark background for slides */
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    padding-top: 0px;
+    box-sizing: border-box;
+}
+
+/* Headers */
+.remark-slide-content h1, .remark-slide-content h2 {
+    color: rgb(8, 107, 194); /* Bright color for headers */
+    margin-top: 5px;
+}
+
+.remark-slide-content h1 {
+    font-size: 2em;
+}
+
+.remark-slide-content h2 {
+    font-size: 1.2em;
+}
+
+/* Paragraphs */
+.remark-slide-content p {
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+/* Lists */
+.remark-slide-content ul, .remark-slide-content ol {
+    margin-left: 20px;
+    font-size: 1.2em;
+}
+
+/* Images */
+.remark-slide-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Links */
+a:link, a:visited {
+    color: green;
+}
+
+/* Code */
+.remark-slide-content pre {
+    background: #333; /* Dark background for code blocks */
+    border: 1px solid #444;
+    color: #eee; /* Light text for code */
+    padding: 8px;
+    overflow: auto;
+}
+
+.remark-slide-content code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #333;
+    padding: 2px 5px;
+    color: #eee;
+}
+
+
+table {
+    /* center */
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse; /* This ensures that the border styles are applied uniformly */
+}
+
+th {
+    color: darkgrey;
+}
+
+table, th, td {
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+}
+
+.title-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+}
+
+.title-card h1 {
+    color: cyan;
+}
+
+.exercise-card h1 {
+    color: green;
+}
+
+.fullscreen-video {
+    width: 40vw; 
+    height: 50vh;
+    border: none;
+}
+
+    </style>
+
+    <title>mandatory_I || mandatory_II</title>
+</head>
+<body>
+    <!-- The Remark.js container -->
+<textarea id="source" style="display:none;"># Mandatory I
+
+**Type**: The assignments are group work but you must hand in individually
+
+**Deadline**: Check Teams for the deadline. You hand in in Teams under assignments. If you miss the deadline you must upload the documents in the assignments channel in Teams. 
+
+**Motivation**: You must hand in both mandatories individually to be eligible for the exam. 
+
+---
+
+## Requirements
+
+You will be expected to be able to quickly pull out these documents during the exam. 
+
+You are free to choose any (reasonable) format for the documents.
+
+You are not allowed to hand in anything in private repositories.
+
+---
+
+## The assignments
+
+[Create a dependency graph](../01._Introduction/02._After/create_a_dependency_graph.md)
+
+[Problems with the codebase](../01._Introduction/02._After/problems_with_the_codebase.md)
+
+[Generate your own OpenAPI specification](../02._Conventions_OpenAPI_DotEnv/02._After/generate_openapi_specification.md)
+
+[Choose a branching strategy](../04._Sofware_Quality_Linting_CI/02._After/choose_a_git_branching_strategy.md)
+
+
+
+
+---
+
+# Mandatory II 
+
+**Type**: The assignments are group work but you must hand in individually
+
+**Deadline**: Check Teams for the deadline. You hand in in Teams under assignments. If you miss the deadline you must upload the documents in the assignments channel in Teams. 
+
+**Motivation**: You must hand in both mandatories individually to be eligible for the exam. 
+
+---
+
+## Requirements
+
+You will be expected to be able to quickly pull out these documents during the exam. 
+
+You are free to choose any (reasonable) format for the documents.
+
+You are not allowed to hand in anything in private repositories.
+
+---
+
+## The assignments
+
+Reflect on how your group uses version control. Inspired by [Branching Strategy](../04._Sofware_Quality_Linting_CI/02._After/choose_a_git_branching_strategy.md) and other Git / Github related assignments. 
+
+[How are you DevOps?](../07._Guest_Lecture/02._After/how_are_you_devops.md)
+
+[Software Quality](../04._Sofware_Quality_Linting_CI/02._After/software_quality.md)
+
+[Security Assessment](../09._Testing_Security/02._After/security_assessment.md)
+
+[Monitoring Realization](../11._Searching_Logging_Monitoring/02._After/monitoring_realization.md)
+
+---
+
+### [Optional] Postmortem
+
+Create a summary of an incident postmortem you've made. You are encouraged to create multiple postmortems but focus on only one of your choosing. 
+</textarea>
+
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>
+    const slideshow = remark.create({
+        source: document.getElementById('source').value
+    });
+</script>
+</body>
+</html>
