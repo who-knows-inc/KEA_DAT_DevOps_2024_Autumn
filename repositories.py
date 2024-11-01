@@ -2,8 +2,8 @@ GROUP_REPOS = [
     {
         "name": "Team AB",
         "gitLinks": ["https://github.com/Team-AB-DevOps/ab-dev-ops"],
-        "backend": "http://67.207.73.30:8081",
-        "frontend": "http://67.207.73.30:8080",
+        "backend": "https://abdevops.dk",
+        "frontend": "https://abdevops.dk",
         "monitoring": "",
         "stack": ["React TSX", "C# .NET"],
         "documentation": [],
