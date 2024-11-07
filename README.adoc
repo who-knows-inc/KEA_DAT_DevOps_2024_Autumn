@@ -431,15 +431,19 @@ Can explain shift-left vs. shift-right testing. Can bring up examples of tests i
 a|
 link:00._Course_Material/02._Slides/10._Databases_ORM_Data_scraping_Web_crawling/01._introduction.md[Introduction]
 
-link:00._Course_Material/02._Slides/10._Databases_ORM_Data_scraping_Web_crawling/02._databases_orm_migration.md[Databases / ORM / Migration]
+link:00._Course_Material/02._Slides/10._Databases_ORM_Data_scraping_Web_crawling/02._databases_orm.md[Databases ORM]
 
-link:00._Course_Material/02._Slides/10._Databases_ORM_Data_scraping_Web_crawling/03._web_scraping_web_crawling.md[Web Scraping / Web Crawling]
+link:00._Course_Material/02._Slides/10._Databases_ORM_Data_scraping_Web_crawling/03._migrations.md[Migrations]
 
-link:00._Course_Material/02._Slides/10._Databases_ORM_Data_scraping_Web_crawling/04._cheerio.md[Cheerio]
+link:00._Course_Material/02._Slides/10._Databases_ORM_Data_scraping_Web_crawling/04._web_scraping_web_crawling.md[Web scraping / Web crawling]
 
-link:00._Course_Material/02._Slides/10._Databases_ORM_Data_scraping_Web_crawling/05._beautifulsoup4.md[BeautifulSoup4]
+link:00._Course_Material/02._Slides/10._Databases_ORM_Data_scraping_Web_crawling/05._cheerio.md[Cheerio]
 
-link:00._Course_Material/02._Slides/10._Databases_ORM_Data_scraping_Web_crawling/06._scrapy.md[Scrapy]
+link:00._Course_Material/02._Slides/10._Databases_ORM_Data_scraping_Web_crawling/06._beautifulsoup4.md[Beautifulsoup4]
+
+link:00._Course_Material/02._Slides/10._Databases_ORM_Data_scraping_Web_crawling/07._scrapy.md[Scrapy]
+
+link:00._Course_Material/02._Slides/10._Databases_ORM_Data_scraping_Web_crawling/08._web_crawling_architectural_decisions.md[Web Crawling - Architectural Decisions]
 a|
 link:00._Course_Material/01._Assignments/10._Databases_ORM_Data_scraping_Web_crawling/01._Before/whoknows_variations_database.md[Whoknows Variations - Database]
 
@@ -447,10 +451,14 @@ a|
 link:00._Course_Material/01._Assignments/10._Databases_ORM_Data_scraping_Web_crawling/02._After/indexing.md[Indexing]
 
 link:00._Course_Material/01._Assignments/10._Databases_ORM_Data_scraping_Web_crawling/02._After/upgrade_the_database.md[Upgrade the database]
+
+link:00._Course_Material/01._Assignments/10._Databases_ORM_Data_scraping_Web_crawling/02._After/let_them_search.md[Let them search]
 a|
 Understand choosing a database setup based on the application's needs. Knows when not to use an ORM.
 
 Can argue why MySQL is a problematic choice for a database and can list additional features that other databases offer.
+
+Can give examples to illustrate the difference between migrations and seeding and recall how we did it in Knex.js.
 
 Knows about the difference between web scraping and web crawling. Has an overall idea of different ways to implement it with different tools / libraries / frameworks.
 
@@ -465,17 +473,38 @@ Follows good web scraping / web crawling practices such as legality and politene
 | 11
 | Nov. 14th
 a|
-Searching
+link:00._Course_Material/02._Slides/11._Searching_Logging_Monitoring/01._introduction.md[Introduction]
 
-Logging
+link:00._Course_Material/02._Slides/11._Searching_Logging_Monitoring/02._searching.md[Searching]
 
-Monitoring
+link:00._Course_Material/02._Slides/11._Searching_Logging_Monitoring/03._logging.md[Logging]
+
+link:00._Course_Material/02._Slides/11._Searching_Logging_Monitoring/04._monitoring.md[Monitoring]
 a|
-Before class
+link:00._Course_Material/01._Assignments/11._Searching_Logging_Monitoring/01._Before/kpi.md[KPI]
+
+link:00._Course_Material/01._Assignments/11._Searching_Logging_Monitoring/01._Before/server_telemtry.md[Server Telemtry]
+
+link:00._Course_Material/01._Assignments/11._Searching_Logging_Monitoring/01._Before/whoknows_variations_monitoring.md[Whoknows variations - Monitoring]
 a|
-After class
+link:00._Course_Material/01._Assignments/11._Searching_Logging_Monitoring/02._After/monitoring.md[Monitoring]
+
+link:00._Course_Material/01._Assignments/11._Searching_Logging_Monitoring/02._After/monitoring_PR.md[Monitoring PR]
+
+link:00._Course_Material/01._Assignments/11._Searching_Logging_Monitoring/02._After/monitoring_realization.md[Monitoring realization]
+
+link:00._Course_Material/01._Assignments/11._Searching_Logging_Monitoring/02._After/try_elk_logging.md[Try ELK logging]
 a|
-Learning Goals
+Understands the difference between logging and monitoring. Can argue for the importance of both and give exact use cases for why one would do it.
+
+Can argue the importance of logging and monitoring in a DevOps setup and give examples in relation to the DevOps 8.
+
+Can implement logging in a programming language. 
+
+Is familiar with a monitoring setup. Knows the difference between push and pull-based monitoring. 
+
+Can argue why a monitoring setup should not run on the same server as the application.
+
 
 
 // ------------------------------------------------------------------------------------------------------------------------------------------------
