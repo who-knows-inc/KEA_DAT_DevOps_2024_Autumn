@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <style>
+            h1 {
+                text-align: center;
+            }
+            
+            table, th, td {
+                border: 1px solid black;
+            }
+    
+            main {
+                min-height: calc(100vh - 40px);
+                margin: 0 4em 0 4em;
+            }
+    
+            table {
+                width: 100%;
+            }
+    
+            footer {
+                color: grey;
+                font-size: 0.8em;
+            }
+        </style>
+        <title>classicmodels - Docs</title>
+    </head>
+    <body>
+        <main>
+            <h1>classicmodels</h1>
+    
+            <div class="database-table">
+        <h2 class="database-table-name">customers</h2>
+        <table class="database-table-body">
+            <tr>
+                <th>field</th><th>type</th><th>null</th><th>key</th><th>typeJS</th><th>keyTo</th>                 
+            </tr>
+    
+        </tr>
+        </thead>
+        <tbody>
+    
+            
+                <tr>
+                    <td>customerNumber</td><td>int</td><td>NO</td><td>PRI</td><td>Number</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>customerName</td><td>varchar(50)</td><td>NO</td><td></td><td>String</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>contactLastName</td><td>varchar(50)</td><td>NO</td><td></td><td>String</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>contactFirstName</td><td>varchar(50)</td><td>NO</td><td></td><td>String</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>phone</td><td>varchar(50)</td><td>NO</td><td></td><td>String</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>addressLine1</td><td>varchar(50)</td><td>NO</td><td></td><td>String</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>addressLine2</td><td>varchar(50)</td><td>YES</td><td></td><td>String</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>city</td><td>varchar(50)</td><td>NO</td><td></td><td>String</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>state</td><td>varchar(50)</td><td>YES</td><td></td><td>String</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>postalCode</td><td>varchar(15)</td><td>YES</td><td></td><td>String</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>country</td><td>varchar(50)</td><td>NO</td><td></td><td>String</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>salesRepEmployeeNumber</td><td>int</td><td>YES</td><td>MUL</td><td>Number</td><td>employees.employeeNumber</td>
+                </tr>
+                
+                <tr>
+                    <td>creditLimit</td><td>decimal(10,2)</td><td>YES</td><td></td><td>String</td><td></td>
+                </tr>
+                
+    
+        </tbody>
+        </table>
+    
+        <h2 class="database-table-name">employees</h2>
+        <table class="database-table-body">
+            <tr>
+                <th>field</th><th>type</th><th>null</th><th>key</th><th>typeJS</th><th>keyTo</th>                 
+            </tr>
+    
+        </tr>
+        </thead>
+        <tbody>
+    
+            
+                <tr>
+                    <td>employeeNumber</td><td>int</td><td>NO</td><td>PRI</td><td>Number</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>lastName</td><td>varchar(50)</td><td>NO</td><td></td><td>String</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>firstName</td><td>varchar(50)</td><td>NO</td><td></td><td>String</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>extension</td><td>varchar(10)</td><td>NO</td><td></td><td>String</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>email</td><td>varchar(100)</td><td>NO</td><td></td><td>String</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>officeCode</td><td>varchar(10)</td><td>NO</td><td>MUL</td><td>String</td><td>offices.officeCode</td>
+                </tr>
+                
+                <tr>
+                    <td>reportsTo</td><td>int</td><td>YES</td><td>MUL</td><td>Number</td><td>employees.employeeNumber</td>
+                </tr>
+                
+                <tr>
+                    <td>jobTitle</td><td>varchar(50)</td><td>NO</td><td></td><td>String</td><td></td>
+                </tr>
+                
+    
+        </tbody>
+        </table>
+    
+        <h2 class="database-table-name">offices</h2>
+        <table class="database-table-body">
+            <tr>
+                <th>field</th><th>type</th><th>null</th><th>key</th><th>typeJS</th><th>keyTo</th>                 
+            </tr>
+    
+        </tr>
+        </thead>
+        <tbody>
+    
+            
+                <tr>
+                    <td>officeCode</td><td>varchar(10)</td><td>NO</td><td>PRI</td><td>String</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>city</td><td>varchar(50)</td><td>NO</td><td></td><td>String</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>phone</td><td>varchar(50)</td><td>NO</td><td></td><td>String</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>addressLine1</td><td>varchar(50)</td><td>NO</td><td></td><td>String</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>addressLine2</td><td>varchar(50)</td><td>YES</td><td></td><td>String</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>state</td><td>varchar(50)</td><td>YES</td><td></td><td>String</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>country</td><td>varchar(50)</td><td>NO</td><td></td><td>String</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>postalCode</td><td>varchar(15)</td><td>NO</td><td></td><td>String</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>territory</td><td>varchar(10)</td><td>NO</td><td></td><td>String</td><td></td>
+                </tr>
+                
+    
+        </tbody>
+        </table>
+    
+        <h2 class="database-table-name">orderdetails</h2>
+        <table class="database-table-body">
+            <tr>
+                <th>field</th><th>type</th><th>null</th><th>key</th><th>typeJS</th><th>keyTo</th>                 
+            </tr>
+    
+        </tr>
+        </thead>
+        <tbody>
+    
+            
+                <tr>
+                    <td>orderNumber</td><td>int</td><td>NO</td><td>PRI</td><td>Number</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>productCode</td><td>varchar(15)</td><td>NO</td><td>PRI</td><td>String</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>quantityOrdered</td><td>int</td><td>NO</td><td></td><td>Number</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>priceEach</td><td>decimal(10,2)</td><td>NO</td><td></td><td>String</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>orderLineNumber</td><td>smallint</td><td>NO</td><td></td><td>Number</td><td></td>
+                </tr>
+                
+    
+        </tbody>
+        </table>
+    
+        <h2 class="database-table-name">orders</h2>
+        <table class="database-table-body">
+            <tr>
+                <th>field</th><th>type</th><th>null</th><th>key</th><th>typeJS</th><th>keyTo</th>                 
+            </tr>
+    
+        </tr>
+        </thead>
+        <tbody>
+    
+            
+                <tr>
+                    <td>orderNumber</td><td>int</td><td>NO</td><td>PRI</td><td>Number</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>orderDate</td><td>date</td><td>NO</td><td></td><td>Date</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>requiredDate</td><td>date</td><td>NO</td><td></td><td>Date</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>shippedDate</td><td>date</td><td>YES</td><td></td><td>Date</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>status</td><td>varchar(15)</td><td>NO</td><td></td><td>String</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>comments</td><td>text</td><td>YES</td><td></td><td>String</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>customerNumber</td><td>int</td><td>NO</td><td>MUL</td><td>Number</td><td>customers.customerNumber</td>
+                </tr>
+                
+    
+        </tbody>
+        </table>
+    
+        <h2 class="database-table-name">payments</h2>
+        <table class="database-table-body">
+            <tr>
+                <th>field</th><th>type</th><th>null</th><th>key</th><th>typeJS</th><th>keyTo</th>                 
+            </tr>
+    
+        </tr>
+        </thead>
+        <tbody>
+    
+            
+                <tr>
+                    <td>customerNumber</td><td>int</td><td>NO</td><td>PRI</td><td>Number</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>checkNumber</td><td>varchar(50)</td><td>NO</td><td>PRI</td><td>String</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>paymentDate</td><td>date</td><td>NO</td><td></td><td>Date</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>amount</td><td>decimal(10,2)</td><td>NO</td><td></td><td>String</td><td></td>
+                </tr>
+                
+    
+        </tbody>
+        </table>
+    
+        <h2 class="database-table-name">productlines</h2>
+        <table class="database-table-body">
+            <tr>
+                <th>field</th><th>type</th><th>null</th><th>key</th><th>typeJS</th><th>keyTo</th>                 
+            </tr>
+    
+        </tr>
+        </thead>
+        <tbody>
+    
+            
+                <tr>
+                    <td>productLine</td><td>varchar(50)</td><td>NO</td><td>PRI</td><td>String</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>textDescription</td><td>varchar(4000)</td><td>YES</td><td></td><td>String</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>htmlDescription</td><td>mediumtext</td><td>YES</td><td></td><td>String</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>image</td><td>mediumblob</td><td>YES</td><td></td><td>Buffer</td><td></td>
+                </tr>
+                
+    
+        </tbody>
+        </table>
+    
+        <h2 class="database-table-name">products</h2>
+        <table class="database-table-body">
+            <tr>
+                <th>field</th><th>type</th><th>null</th><th>key</th><th>typeJS</th><th>keyTo</th>                 
+            </tr>
+    
+        </tr>
+        </thead>
+        <tbody>
+    
+            
+                <tr>
+                    <td>productCode</td><td>varchar(15)</td><td>NO</td><td>PRI</td><td>String</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>productName</td><td>varchar(70)</td><td>NO</td><td></td><td>String</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>productLine</td><td>varchar(50)</td><td>NO</td><td>MUL</td><td>String</td><td>productlines.productLine</td>
+                </tr>
+                
+                <tr>
+                    <td>productScale</td><td>varchar(10)</td><td>NO</td><td></td><td>String</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>productVendor</td><td>varchar(50)</td><td>NO</td><td></td><td>String</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>productDescription</td><td>text</td><td>NO</td><td></td><td>String</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>quantityInStock</td><td>smallint</td><td>NO</td><td></td><td>Number</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>buyPrice</td><td>decimal(10,2)</td><td>NO</td><td></td><td>String</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td>MSRP</td><td>decimal(10,2)</td><td>NO</td><td></td><td>String</td><td></td>
+                </tr>
+                
+    
+        </tbody>
+        </table>
+    </div>
+            </main> 
+            <br><br>
+            <footer>Powered by MRO</footer>
+        </body>
+        </html>

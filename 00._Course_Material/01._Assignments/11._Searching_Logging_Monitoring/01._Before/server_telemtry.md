@@ -1,4 +1,4 @@
-### Gather telemetry about the server via the terminal
+# Gather telemetry about the server via the terminal
 
 **Type**: Group work
 
