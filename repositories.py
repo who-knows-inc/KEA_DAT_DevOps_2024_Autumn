@@ -12,8 +12,8 @@ GROUP_REPOS = [
     {
         "name": "CEM",
         "gitLinks": ["https://github.com/CEM-KEA/whoknows"],
-        "backend": "http://52.169.32.176:8080",
-        "frontend": "http://52.169.32.176",
+        "backend": "https://cemdev.dk",
+        "frontend": "https://cemdev.dk",
         "monitoring": "",
         "stack": ["Go with Gorilla/mux", "React"],
         "documentation": [],
