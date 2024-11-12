@@ -477,9 +477,11 @@ link:00._Course_Material/02._Slides/11._Searching_Logging_Monitoring/01._introdu
 
 link:00._Course_Material/02._Slides/11._Searching_Logging_Monitoring/02._searching.md[Searching]
 
-link:00._Course_Material/02._Slides/11._Searching_Logging_Monitoring/03._logging.md[Logging]
+link:00._Course_Material/02._Slides/11._Searching_Logging_Monitoring/03._hands-on_elasticsearch.md[Hands-on ElasticSearch]
 
-link:00._Course_Material/02._Slides/11._Searching_Logging_Monitoring/04._monitoring.md[Monitoring]
+link:00._Course_Material/02._Slides/11._Searching_Logging_Monitoring/04._logging.md[Logging]
+
+link:00._Course_Material/02._Slides/11._Searching_Logging_Monitoring/05._monitoring.md[Monitoring]
 a|
 link:00._Course_Material/01._Assignments/11._Searching_Logging_Monitoring/01._Before/kpi.md[KPI]
 
@@ -495,6 +497,8 @@ link:00._Course_Material/01._Assignments/11._Searching_Logging_Monitoring/02._Af
 
 link:00._Course_Material/01._Assignments/11._Searching_Logging_Monitoring/02._After/try_elk_logging.md[Try ELK logging]
 a|
+Knows how search indexing differs from linear search. Can bring up different things to consider when constructing a ranking algorithm. 
+
 Understands the difference between logging and monitoring. Can argue for the importance of both and give exact use cases for why one would do it.
 
 Can argue the importance of logging and monitoring in a DevOps setup and give examples in relation to the DevOps 8.
@@ -515,11 +519,17 @@ Can argue why a monitoring setup should not run on the same server as the applic
 a|
 Infrastructure As Code
 a|
-Before class
+link:00._Course_Material/01._Assignments/12._Infrastructure_as_Code/01._Before/improve_accessibility.md[Improve Accessibility]
 a|
-After class
+link:00._Course_Material/01._Assignments/12._Infrastructure_as_Code/02._After/kea_learn_terraform.md[KEA Learn Terraform]
+
+link:00._Course_Material/01._Assignments/12._Infrastructure_as_Code/02._After/software_maintenance.md[Software Maintenance]
 a|
-Learning Goals
+Understands the problems that Infrastructure as Code solves.
+
+Knows about the different tools that can be used for Infrastructure as Code.
+
+Can run basic commands in Terraform to provision infrastructure.
 
 // ------------------------------------------------------------------------------------------------------------------------------------------------
 
