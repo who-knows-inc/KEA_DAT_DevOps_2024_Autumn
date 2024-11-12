@@ -2,8 +2,8 @@ GROUP_REPOS = [
     {
         "name": "Team AB",
         "gitLinks": ["https://github.com/Team-AB-DevOps/ab-dev-ops"],
-        "backend": "http://67.207.73.30:8081",
-        "frontend": "http://67.207.73.30:8080",
+        "backend": "https://abdevops.dk",
+        "frontend": "https://abdevops.dk",
         "monitoring": "",
         "stack": ["React TSX", "C# .NET"],
         "documentation": [],
@@ -12,8 +12,8 @@ GROUP_REPOS = [
     {
         "name": "CEM",
         "gitLinks": ["https://github.com/CEM-KEA/whoknows"],
-        "backend": "http://52.169.32.176:8080",
-        "frontend": "http://52.169.32.176",
+        "backend": "https://cemdev.dk",
+        "frontend": "https://cemdev.dk",
         "monitoring": "",
         "stack": ["Go with Gorilla/mux", "React"],
         "documentation": [],
@@ -22,8 +22,8 @@ GROUP_REPOS = [
     {
         "name": "Ukendt Gruppe",
         "gitLinks": ["https://github.com/ukendt-gruppe/whoKnows"],
-        "backend": "http://52.169.19.77:8080",
-        "frontend": "http://52.169.19.77:8080",
+        "backend": "https://monkbusiness.dk",
+        "frontend": "https://monkbusiness.dk",
         "monitoring": "",
         "stack": ["Go w. Gorilla"],
         "documentation": [],
