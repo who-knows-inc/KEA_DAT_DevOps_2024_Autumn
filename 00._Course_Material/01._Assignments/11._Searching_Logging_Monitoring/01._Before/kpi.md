@@ -16,7 +16,7 @@ They have requested a basic report on the KPIs of your application.
 
 * Total amount of users.
 
-* Cost of the infrastructure (monthly and/or total so far).
+* Cost of the infrastructure / complete setup (monthly and/or total so far).
 
 * [Optional] Total amount of active users.
 
