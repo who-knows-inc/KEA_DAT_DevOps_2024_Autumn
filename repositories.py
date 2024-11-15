@@ -4,7 +4,7 @@ GROUP_REPOS = [
         "gitLinks": ["https://github.com/Team-AB-DevOps/ab-dev-ops"],
         "backend": "https://abdevops.dk",
         "frontend": "https://abdevops.dk",
-        "monitoring": "",
+        "monitoring": "https://monitoring.abdevops.dk",
         "stack": ["React TSX", "C# .NET"],
         "documentation": [],
         "sla": "",
