@@ -8,7 +8,7 @@ link:00._Course_Material/00._Meta_Course_Material/about_the_exam.md[About the ex
 
 link:00._Course_Material/00._Meta_Course_Material/exam_requirements.md[Exam Requirements]
 
-link:00._Course_Material/00._Meta_Course_Material/exam_requirements_report.md[Exam Requirements Report]
+link:00._Course_Material/00._Meta_Course_Material/exam_requirements_report.md[Exam Report Requirements]
 
 
 == Mandatories
@@ -444,6 +444,9 @@ link:00._Course_Material/02._Slides/10._Databases_ORM_Data_scraping_Web_crawling
 link:00._Course_Material/02._Slides/10._Databases_ORM_Data_scraping_Web_crawling/07._scrapy.md[Scrapy]
 
 link:00._Course_Material/02._Slides/10._Databases_ORM_Data_scraping_Web_crawling/08._web_crawling_architectural_decisions.md[Web Crawling - Architectural Decisions]
+
+link:00._Course_Material/02._Slides/10._Databases_ORM_Data_scraping_Web_crawling/09._serverless_functions.md[[Optional\] Serverless Functions]
+
 a|
 link:00._Course_Material/01._Assignments/10._Databases_ORM_Data_scraping_Web_crawling/01._Before/whoknows_variations_database.md[Whoknows Variations - Database]
 
@@ -536,6 +539,9 @@ Can run basic commands in Terraform to provision infrastructure.
 | 13
 | Nov. 28th
 a|
+link:https://intellioptima.com[IntelliOptima]
+
+
 Orchestration
 
 Deployment Strategies
