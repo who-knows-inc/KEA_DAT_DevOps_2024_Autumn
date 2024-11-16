@@ -52,8 +52,8 @@ GROUP_REPOS = [
     {
         "name": "MadeInChina-DevOps",
         "gitLinks": ["https://github.com/MadeInChina-DevOps/whoknows_nooneknows"],
-        "backend": "http://49.13.163.245/",
-        "frontend": "http://49.13.163.245/",
+        "backend": "https://whoknowssearch.com",
+        "frontend": "https://whoknowssearch.com",
         "monitoring": "",
         "stack": ["Rust", "Rocket", "PostgreSQL"],
         "documentation": [],
