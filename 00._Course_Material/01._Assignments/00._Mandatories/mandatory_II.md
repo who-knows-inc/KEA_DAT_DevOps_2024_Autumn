@@ -26,8 +26,6 @@ Reflect on how your group uses version control. Inspired by [Branching Strategy]
 
 [Software Quality](../04._Sofware_Quality_Linting_CI/02._After/software_quality.md)
 
-[Security Assessment](../09._Testing_Security/02._After/security_assessment.md)
-
 [Monitoring Realization](../11._Searching_Logging_Monitoring/02._After/monitoring_realization.md)
 
 ---

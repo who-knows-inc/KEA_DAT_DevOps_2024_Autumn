@@ -526,6 +526,8 @@ link:00._Course_Material/01._Assignments/12._Infrastructure_as_Code/01._Before/i
 a|
 link:00._Course_Material/01._Assignments/12._Infrastructure_as_Code/02._After/kea_learn_terraform.md[KEA Learn Terraform]
 
+link:00._Course_Material/01._Assignments/12._Infrastructure_as_Code/02._After/your_infrastructure_as_code.md[Your Infrastructure as Code]
+
 link:00._Course_Material/01._Assignments/12._Infrastructure_as_Code/02._After/software_maintenance.md[Software Maintenance]
 a|
 Understands the problems that Infrastructure as Code solves.

@@ -17,7 +17,9 @@ Dear Webmaster,
 
 We are from AAAAA!. 
 
-We recently reviewed your website and identified several accessibility issues that could impact users with disabilities. To assist you in addressing these issues, we recommend the following resources:
+We recently reviewed your website and identified several accessibility issues that could impact users with disabilities.
+
+To assist you in addressing these issues, we recommend the following resources:
 
 	•	https://wave.webaim.org/
 	•	https://www.whocanuse.com/
