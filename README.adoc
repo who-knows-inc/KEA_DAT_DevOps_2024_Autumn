@@ -520,9 +520,23 @@ Can argue why a monitoring setup should not run on the same server as the applic
 | 12
 | Nov. 21st
 a|
-Infrastructure As Code
+link:00._Course_Material/02._Slides/12._Infrastructure_as_Code/01._introduction.md[Introduction]
+
+link:00._Course_Material/02._Slides/12._Infrastructure_as_Code/02._why_infrastructure_as_code.md[Why Infrastructure as Code]
+
+link:00._Course_Material/02._Slides/12._Infrastructure_as_Code/03._iac_configuration_management_tools.md[IaC / Configuration Management Tools]
+
+link:00._Course_Material/02._Slides/12._Infrastructure_as_Code/04._imperative_vs_declarative.md[Imperative vs Declarative]
+
+link:00._Course_Material/02._Slides/12._Infrastructure_as_Code/05._terraform_get_started.md[Terraform - Get Started]
+
+link:00._Course_Material/02._Slides/12._Infrastructure_as_Code/06._terraform_hands-on.md[Terraform - Hands-on]
+
+link:00._Course_Material/02._Slides/12._Infrastructure_as_Code/07._terraform_limitations_problems.md[Terraform: Limitations / Problems]
+
 a|
 link:00._Course_Material/01._Assignments/12._Infrastructure_as_Code/01._Before/improve_accessibility.md[Improve Accessibility]
+
 a|
 link:00._Course_Material/01._Assignments/12._Infrastructure_as_Code/02._After/kea_learn_terraform.md[KEA Learn Terraform]
 
@@ -532,7 +546,7 @@ link:00._Course_Material/01._Assignments/12._Infrastructure_as_Code/02._After/so
 a|
 Understands the problems that Infrastructure as Code solves.
 
-Knows about the different tools that can be used for Infrastructure as Code.
+Knows about how we define Infrastructure as Code and knows how they differ from Configuration Management.
 
 Can run basic commands in Terraform to provision infrastructure.
 
@@ -541,14 +555,15 @@ Can run basic commands in Terraform to provision infrastructure.
 | 13
 | Nov. 28th
 a|
-link:https://intellioptima.com[IntelliOptima]
-
-
 Orchestration
 
 Deployment Strategies
 
 Maintenance
+
+Course Conclusion
+
+link:https://intellioptima.com[IntelliOptima]
 a|
 Before class
 a|

@@ -1,22 +1,32 @@
 # Exam report requirements
 
-The exam report is written by the group and will be read by me and the censor. 
+**Motivation**: The exam report is written by the group and will be read by me and the censor. 
 
 ---
 
 ## Requirements
 
-**Deadline**: Since hand-in is over Wiseflow, check there to see when the deadline has been set. I do not control this.
+**Deadline**: Check the deadline on WiseFlow.
+
+**Language**: Danish/English
 
 **Length**: Max 8 pages
 
-**Language**: Danish/English
+Rules per the study curriculum:
+
+- A page is defined as 2400 characters (including spaces).
+
+- Images are counted as much as the space that they take up. If you make the images too small to be read without digitally zooming in, then it will be considered as imcomprehensible.
+
+Please add the necessary images and diagrams instead of writing 8 pages of text.
+
+If you exceed the limit, then anything above the limit will not count towards the grade.
 
 ## Report formalities
 
 Include: 
 
-- Group name and student names with kea mail
+- Group name (as per `repositories.py`) and student names with KEA mail and GitHub usernames (if applicable).
 
 - Page numbers
 
@@ -26,7 +36,9 @@ https://www.youtube.com/watch?v=cGExqD1PIFE
 
 https://www.youtube.com/watch?v=5CUF3bgazCE&themeRefresh=1
 
-Justifying text helps readability and gives the report a professional look. 
+Justifying text helps readability and gives the report a professional look.
+
+You will be docked if you do not do this.
 
 ---
 
