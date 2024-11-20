@@ -64,7 +64,7 @@ GROUP_REPOS = [
         "gitLinks": ["https://github.com/UpsDev42069/BM_Search_Engine"],
         "backend": "https://whonose.dk",
         "frontend": "https://whonose.dk",
-        "monitoring": "",
+        "monitoring": "https://whonose.dk/api/metrics",
         "stack": ["Go", "Gorilla/mux", "PostgreSQL", "Svelte"],
         "documentation": [],
         "sla": "",
