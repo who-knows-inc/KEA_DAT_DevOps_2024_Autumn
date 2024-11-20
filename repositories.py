@@ -14,7 +14,7 @@ GROUP_REPOS = [
         "gitLinks": ["https://github.com/CEM-KEA/whoknows"],
         "backend": "https://cemdev.dk",
         "frontend": "https://cemdev.dk",
-        "monitoring": "",
+        "monitoring": "https://monitor.cemdev.dk/grafana/",
         "stack": ["Go with Gorilla/mux", "React"],
         "documentation": [],
         "sla": "",
