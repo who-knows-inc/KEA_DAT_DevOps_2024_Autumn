@@ -44,7 +44,7 @@ GROUP_REPOS = [
         "gitLinks": ["https://github.com/OBS-DevOps24/whoknows-legacy"],
         "backend": "https://devobs.dk/",
         "frontend": "https://devobs.dk/",
-        "monitoring": "",
+        "monitoring": "http://20.234.170.235:3001",
         "stack": ["React, typescript", "C# .NET"],
         "documentation": [],
         "sla": "",
