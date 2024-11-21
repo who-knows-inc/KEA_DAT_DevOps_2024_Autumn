@@ -565,7 +565,7 @@ Course Conclusion
 
 link:https://intellioptima.com[IntelliOptima]
 a|
-link:00._Course_Material/01._Assignments/13._Orchestration_Deployment_Strategies_Maintenance/01._Before/create_.github_for_your_organisation.md[Create .github for your Organisation]
+link:00._Course_Material/01._Assignments/13._Orchestration_Deployment_Strategies_Maintenance/01._Before/create_a_dot_github_repository_for_your_organisation.md[Create .github for your Organisation]
 
 link:00._Course_Material/01._Assignments/13._Orchestration_Deployment_Strategies_Maintenance/01._Before/docker_swarm_tutorial.md[Docker Swarm Tutorial]
 
@@ -576,7 +576,14 @@ link:00._Course_Material/01._Assignments/13._Orchestration_Deployment_Strategies
 
 **The simulation is taken down**
 a|
-Learning Goals
+Know different deployment strategies and how they work.
+
+Understand the concept of orchestration and can argue for the importance of it.
+
+Knows the very basic concepts of Kubernetes. 
+
+Understands the importance of resilience in systems and the idea of applying chaos engineering to improve it.
+
 
 // ------------------------------------------------------------------------------------------------------------------------------------------------
 
