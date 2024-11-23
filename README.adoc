@@ -83,7 +83,7 @@ link:00._Course_Material/02._Slides/02._Conventions_OpenAPI_DotEnv/02._conventio
 
 link:00._Course_Material/02._Slides/02._Conventions_OpenAPI_DotEnv/03._openapi.md[OpenAPI]
 
-link:00._Course_Material/02._Slides/02._Conventions_OpenAPI_DotEnv/04._monolith_vs_multirepo.md[Monolith vs. Multirepo]
+link:00._Course_Material/02._Slides/02._Conventions_OpenAPI_DotEnv/04._monolith_multirepo.md[Monolith / Multirepo]
 
 link:00._Course_Material/02._Slides/02._Conventions_OpenAPI_DotEnv/05._environment_variables.md[Environment variables]
 
@@ -565,14 +565,14 @@ Course Conclusion
 
 link:https://intellioptima.com[IntelliOptima]
 a|
-link:00._Course_Material/01._Assignments/13._Orchestration_Deployment_Strategies_Maintenance/01._Before/create_a_dot_github_repository_for_your_organisation.md[Create .github for your Organisation]
+link:00._Course_Material/01._Assignments/13._Deployment_Strategies_Orchestration_Maintenance/01._Before/create_a_dot_github_repository_for_your_organisation.md[Create .github for your Organisation]
 
-link:00._Course_Material/01._Assignments/13._Orchestration_Deployment_Strategies_Maintenance/01._Before/docker_swarm_tutorial.md[Docker Swarm Tutorial]
+link:00._Course_Material/01._Assignments/13._Deployment_Strategies_Orchestration_Maintenance/01._Before/docker_swarm_tutorial.md[Docker Swarm Tutorial]
 
 a|
-link:00._Course_Material/01._Assignments/13._Orchestration_Deployment_Strategies_Maintenance/02._After/service_level_agreement.md[Service Level Agreement]
+link:00._Course_Material/01._Assignments/13._Deployment_Strategies_Orchestration_Maintenance/02._After/service_level_agreement.md[Service Level Agreement]
 
-link:00._Course_Material/01._Assignments/13._Orchestration_Deployment_Strategies_Maintenance/02._After/take_down_your_system.md[Take Down Your System]
+link:00._Course_Material/01._Assignments/13._Deployment_Strategies_Orchestration_Maintenance/02._After/take_down_your_system.md[Take Down Your System]
 
 **The simulation is taken down**
 a|
