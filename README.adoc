@@ -555,9 +555,9 @@ Can run basic commands in Terraform to provision infrastructure.
 | 13
 | Nov. 28th
 a|
-Orchestration
-
 Deployment Strategies
+
+Orchestration
 
 Maintenance
 
