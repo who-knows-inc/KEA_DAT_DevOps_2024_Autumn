@@ -54,7 +54,7 @@ GROUP_REPOS = [
         "gitLinks": ["https://github.com/MadeInChina-DevOps/whoknowssearch"],
         "backend": "https://whoknowssearch.com",
         "frontend": "https://whoknowssearch.com",
-        "monitoring": "",
+        "monitoring": "https://monitor.whoknowssearch.com/",
         "stack": ["Rust", "Rocket", "PostgreSQL"],
         "documentation": [],
         "sla": "",
