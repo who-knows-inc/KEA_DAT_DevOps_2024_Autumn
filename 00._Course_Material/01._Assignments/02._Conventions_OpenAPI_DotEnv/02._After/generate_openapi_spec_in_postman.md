@@ -1,4 +1,4 @@
-# [Optional] Generate an OpenAPI spec in Postman
+ # [Optional] Generate an OpenAPI spec in Postman
 
 **Type**: Individual
 

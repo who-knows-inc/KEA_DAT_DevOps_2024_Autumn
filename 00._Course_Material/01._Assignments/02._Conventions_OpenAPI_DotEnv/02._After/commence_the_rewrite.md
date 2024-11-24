@@ -30,7 +30,7 @@ The goal is not to have a ground up working version for the application. It’s 
 
 Do not do the big rewrite! In real-world software development, follow Gall's Law. Here is an abridged version:
 
-> if you want a complex system to work, build a simpler system first, then improve over time.
+> "*if you want a complex system to work, build a simpler system first, then improve over time.*"
 
 [Full version](http://principles-wiki.net/principles:gall_s_law)
 

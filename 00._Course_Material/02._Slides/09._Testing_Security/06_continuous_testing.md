@@ -86,7 +86,7 @@ Solution: **automated testing**.
 
 Solution: **run automated tests in parallel**.
 
-> If all the tests were run sequentially, Sussman states that “the 7,000 trunk tests would take about half an hour to execute. So we split these tests up into subsets, and distribute those onto the 10 machines in our Jenkins [CI] cluster... Spliting up our test suite and running many tests in parallel, gives us the desired 11 minute runtime.
+> "If all the tests were run sequentially, Sussman states that “the 7,000 trunk tests would take about half an hour to execute. So we split these tests up into subsets, and distribute those onto the 10 machines in our Jenkins [CI] cluster... Spliting up our test suite and running many tests in parallel, gives us the desired 11 minute runtime."
 
 \- Noah Sussman, Test architect at Etsy
 
@@ -110,7 +110,7 @@ Worst case scenario (happens too often):
 
 # Great quote regarding fixing things at Google
 
-> **We prioritize the team goals over individual goals — whenever we help someone move their work forward, we help the entire team. This applies whether we’re helping someone fix the build or an automated test, or even performing a code review for them**. And of course, we know that they’ll do the same for us, when we need help. This system worked without a lot of formality or policy—everyone knew that **our job was not just “write code,” but it  was to “run a service.”**  This is why we prioritized all quality issues, especially those related to reliability and scaling, at the highest level, treating them as Priority 0 “show-stopper” problems. From a systems perspective, these practices keep us from slipping backwards.
+> "**We prioritize the team goals over individual goals — whenever we help someone move their work forward, we help the entire team. This applies whether we’re helping someone fix the build or an automated test, or even performing a code review for them**. And of course, we know that they’ll do the same for us, when we need help. This system worked without a lot of formality or policy—everyone knew that **our job was not just “write code,” but it  was to “run a service.”**  This is why we prioritized all quality issues, especially those related to reliability and scaling, at the highest level, treating them as Priority 0 “show-stopper” problems. From a systems perspective, these practices keep us from slipping backwards."
 
 \- Randy Shoup, former engineering director for Google App Engine
 
@@ -118,7 +118,7 @@ Worst case scenario (happens too often):
 
 # Test big and small
 
-> The simplest test is defined by:
+> "The simplest test is defined by:
 
 > * A single behavior you are testing, usually a method or API that you are calling
 
@@ -126,7 +126,7 @@ Worst case scenario (happens too often):
 
 > * An observable output or behavior
 
-> * A controlled environment such as a single isolated process
+> * A controlled environment such as a single isolated process"
 
 \- [T. Winters et al. Software Engineering at Google](https://research.google/pubs/software-engineering-at-google/)
 
@@ -184,11 +184,11 @@ https://github.com/who-knows-inc/whoknows_variations/blob/main/src/backend/app_t
 
 <img src="https://twilio-cms-prod.s3.amazonaws.com/images/MyR86UeunZJcErQJmlEoEwWpAt56uIH2k2mHFqfsA95S2R.width-500_NbXJ1BV.png" style="height: 30vh;">
 
-> In contrast to unit tests, integration tests:
+> "In contrast to unit tests, integration tests:
 >
 > * Use the actual components that the app uses in production.
 > * Require more code and data processing.
-> * Takes longer to run.
+> * Takes longer to run."
 
 
 [Source: Aspnet Core](https://learn.microsoft.com/en-us/aspnet/core/test/integration-tests?view=aspnetcore-6.0)
