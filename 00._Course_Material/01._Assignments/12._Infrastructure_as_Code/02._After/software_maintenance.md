@@ -23,3 +23,9 @@ Prioritize tasks for software maintenance in the short remaining time.
 - **Backup/Restore**: Ensuring data integrity and availability.
 
 - **Implement remaning features**: Reprioritize the backlog and implement the remaining crucial features.
+
+---
+
+## A Final Release
+
+It would make sense to release a final version of your system before the end of the project.

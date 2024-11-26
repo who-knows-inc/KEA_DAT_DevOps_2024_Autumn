@@ -555,13 +555,23 @@ Can run basic commands in Terraform to provision infrastructure.
 | 13
 | Nov. 28th
 a|
-Deployment Strategies
+link:00._Course_Material/02._Slides/13._Deployment_Strategies_Orchestration_Maintenance/01._introduction.md[Introduction]
 
-Orchestration
+link:00._Course_Material/02._Slides/13._Deployment_Strategies_Orchestration_Maintenance/02._deploying_infrastructure_configuration_managment.md[Deploying Infrastructure / Configuration Managment]
 
-Maintenance
+link:00._Course_Material/02._Slides/13._Deployment_Strategies_Orchestration_Maintenance/03._deployment_strategies.md[Deployment Strategies]
 
-Course Conclusion
+link:00._Course_Material/02._Slides/13._Deployment_Strategies_Orchestration_Maintenance/04._orchestration.md[Orchestration]
+
+link:00._Course_Material/02._Slides/13._Deployment_Strategies_Orchestration_Maintenance/05._kubernetes.md[Kubernetes]
+
+link:00._Course_Material/02._Slides/13._Deployment_Strategies_Orchestration_Maintenance/06._kubernetes_hands_on.md[Kubernetes - Hands on]
+
+link:00._Course_Material/02._Slides/13._Deployment_Strategies_Orchestration_Maintenance/07._resilience.md[Resilience]
+
+link:00._Course_Material/02._Slides/13._Deployment_Strategies_Orchestration_Maintenance/08._maintenance.md[Maintenance]
+
+link:00._Course_Material/02._Slides/13._Deployment_Strategies_Orchestration_Maintenance/09._course_conclusion.md[Course Conclusion]
 
 link:https://intellioptima.com[IntelliOptima]
 a|
