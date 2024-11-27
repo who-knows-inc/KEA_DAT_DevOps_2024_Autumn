@@ -32,10 +32,10 @@ GROUP_REPOS = [
     {
         "name": "LAWNE-KEA",
         "gitLinks": ["https://github.com/LAWNE-KEA/WhoKnows-Backend", "https://github.com/LAWNE-KEA/WhoKnows-Frontend"],
-        "backend": "http://100.25.126.145:8080",
-        "frontend": "http://100.25.126.145:8080",
+        "backend": "https://www.lawne.dk",
+        "frontend": "http://www.lawne.dk",
         "monitoring": "",
-        "stack": [],
+        "stack": [Go w. gorm/gorilla],
         "documentation": [],
         "sla": "",
     },
