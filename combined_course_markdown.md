@@ -8797,13 +8797,11 @@ Query smart, query fast.
 
 ---
 
-# Big Bang Deployment
+# Goal: Deploying with zero downtime
 
-Deploying the entire application at once.
+Discuss in pairs/groups.
 
-*Why do you think it's called that?*
-
-*What problems could occur with this approach?*
+*How would you achieve it?*
 
 ---
 
@@ -8825,13 +8823,17 @@ Deploying the entire application at once.
 
 - **Cost efficiency**
 
+
 ---
 
-# Goal: Deploying with zero downtime
+# Big Bang Deployment
 
-Discuss in pairs/groups.
+Deploying the entire application at once.
 
-*How would you achieve it?*
+*Why do you think it's called that?*
+
+*What problems could occur with this approach?*
+
 
 ---
 
@@ -8855,7 +8857,7 @@ Once all tests in staging pass, you can switch the traffic to green.
 
 This additionally makes it much easier to roll back if something goes wrong.
 
-<img src="./assets_deployment_strategies/blue-green_deployment.gif" alt="blue-green deployment" style="height: 35vh; background-color: white;">
+<img src="./assets_deployment_strategies/blue-green_deployment.gif" alt="blue-green deployment" style="height: 30vh; background-color: white;">
 
 
 ---
@@ -9018,10 +9020,6 @@ https://github.com/who-knows-inc/KEA_DAT_DevOps_2024_Autumn/graphs/contributors
 https://github.com/who-knows-inc/KEA_DAT_DevOps_2024_Autumn/network
 
 ---
-
-meetings
-
-
 
 # PR Competition
 
@@ -9187,11 +9185,11 @@ DevOps is not a goal. It's about continuous improvement. I hope you can use this
 
 ---
 
-# Installing kubectl and Minikube
+# Installing kubectl and minikube
 
-**Kubectl**: the command line tool for interacting with Kubernetes.
+**kubectl**: the command line tool for interacting with Kubernetes.
 
-**Minikube**: creates a single-node Kubernetes cluster on your local machine (only for local development and testing).
+**minikube**: creates a single-node Kubernetes cluster on your local machine (only for local development and testing).
 
 
 ```bash
@@ -9203,7 +9201,7 @@ $ choco install kubernetes-cli minikube
 ```
 ---
 
-# Starting Minikube
+# Starting minikube
 
 You have to sepcify the driver.
 
@@ -9267,9 +9265,9 @@ You will recognize these services from the previous graph.
 
 ---
 
-# Using `kubectl` to interact with Minikube
+# Using `kubectl` to interact with minikube
 
-`kubectl` is a command line tool, external to Minikube, which allows us to interact with Kubernetes clusters.
+`kubectl` is a command line tool, external to minikube, which allows us to interact with Kubernetes clusters.
 
 ```bash
 $ kubectl cluster-info
@@ -9381,7 +9379,7 @@ There are multiple ways to expose the pod:
 
 ---
 
-# Exposing the pod using 
+# Exposing the pod using
 
 First delete the existing service:
 
@@ -9601,6 +9599,18 @@ $ kubectl delete -f deployment.yaml -f service.yaml
 
 ---
 
+
+
+# Cleaning up
+
+Delete the deployment and service:
+
+```bash
+$ kubectl delete -f deployment.yaml -f service.yaml
+```
+
+---
+
 # Combine the two files
 
 It is standard to combine a deployment and a service into one file. We will call it `deployment_service.yaml`.
@@ -9614,25 +9624,8 @@ It is standard to combine a deployment and a service into one file. We will call
 
 This makes it easier to apply.
 
----
 
-# Cleaning up
-
-Delete the deployment and service:
-
-```bash
-$ kubectl delete -f deployment.yaml -f service.yaml
-```
-
----
-
-# Combining the two files
-
-You can combine the two files into one by pasting the content and separating them with `---`.
-
-A generic name could be `deployment_service.yaml`. It can also be named after the app.
-
-*Cam you apply the new file, open the URL in the browser and then delete it all?*
+*Can you apply the new file, open the URL in the browser and then delete it all?*
 
 ---
 
@@ -9646,7 +9639,7 @@ $ kubectl delete -f deployment_service.yaml
 
 ---
 
-`deployment_service.yaml`:
+# `deployment_service.yaml`
 
 ```yaml
 apiVersion: apps/v1
@@ -9854,11 +9847,6 @@ There is no right answer. Each group might come up with their own definition.
 
 
 
-# File: aks_hands-on.md
-
-
-
-
 # File: 02._deploying_infrastructure_configuration_managment.md
 
 <div class="title-card">
@@ -9888,7 +9876,22 @@ Create platforms that enable developers to create their own environments by the 
 
 ---
 
-# Avoid configuration drift
+# Watch me kill my baby
+
+```bash
+scp the_simulator:/var/log/the_simulation/plot_server_error.log .
+scp the_simulator:/var/log/the_simulation/simulator_error.log .
+scp the_simulator:/var/log/the_simulation/simulator.db .
+```
++
+
+```bash
+$ terraform destroy
+```
+
+---
+
+# Problem: Avoid configuration drift
 
 > *The 2014 - 2019 State of DevOps Reports led by co-author Dr. Nicole Forsgren show that use of version control for all production artifacts was a higher predictor for software delivery performance*[...]
 
@@ -9898,20 +9901,15 @@ Create platforms that enable developers to create their own environments by the 
 
 ---
 
-# Solution: Immutable infrastructure
+# Possible solution: Immutable infrastructure
 
 Example. Wanting to update an nginx server. Two ways to do it:
 
-<img src="./assets_deployment_strategies/mutable_immutable_architecture.png" alt="mutable immutable architecture">
+<img src="./assets_deployment_strategies/mutable_immutable_architecture.png" alt="mutable immutable architecture" style="height: 40vh;">
 
 [Source](https://www.opsramp.com/guides/why-kubernetes/infrastructure-as-code/)
 
----
-
-# Site-Reliability Engineering (SRE)
-
-At the big companies they have dedicated SRE (site-reliability engineering) teams that are responsible for the uptime of the systems.
-
+**Next topic**: *How do can we achieve this without downtime?*
 
 
 
@@ -9993,6 +9991,10 @@ Another pouplar setup is [HAProxy with Keepalived](https://kifarunix.com/configu
     <h1>Resilience</h1>
 </div>
 
+
+---
+
+# KEA's Resilience Research
 
 ---
 
@@ -10108,15 +10110,20 @@ Our little test basically tests Kubernetes' self-healing capabilities.
 
 If our infrastructure was more complex and pods depended on each other, we would gain more insight into how our system behaves under stress.
 
+Remember to introduce real world events such as:
+
+* server crashes
+* network failures
+* power outages
+* hard-drive malfunction
+
 ---
 
 # Game days
 
 A game day is a practice where a team simulates a failure on a system to test its resilience. It happens in a predetermined time and all hands are on deck to solve problems that arise.
 
-Game days in actual companies end up resulting in a handful of suprising failure that no one was able to predict. 
-
-It's all about uncovering these failure points.
+It is important to clearly define the **blast radius** in advance.
 
 ---
 
@@ -10133,15 +10140,18 @@ Amazon is known for its game days.
 
 # Game days are scary but they provide us unexpected lessons ahead of disaster
 
-Example:
+Game days in actual companies end up resulting in a handful of suprising failure that no one was able to predict. It's all about uncovering these failure points.
+
+Examples at **DiRT** teaches us that:
+
+* "*It's just about how to solve problems. Sometimes it's about knowing who to call.*"
+
+...
 
 > "*When the data centers ran out of diesel for the backup generators, no one knew the procedures for making emergency purchases through the supplier, resulting in someone using a personal credit card to purchase $50,000 worth of diesel.*"
 
-\- Kripa Krishnan, Google's Disaster Recovery Program (DiRT). 
+\- Kripa Krishnan, Google's **Di**saster **R**ecovery **T**esting (DiRT). 
 
-Other examples at DiRT teaches us that:
-
-* "*It's just about how to solve problems. Sometimes it's about knowing who to call.*" 
 
 
 ---
@@ -10277,11 +10287,13 @@ A pod shares the same volume, namespace, and network (IP address).
 
 # [Optional] AKS hands-on
 
+AKS is included in Azure `Free Services`. That means that the cluster management is free, but you will still be charged for VM, storage and networking usage etc.
+
 Recommended video on how to get started with AKS.
 
-[![AKS hands-on](http://img.youtube.com/vi/RUoejLILgyA/0.jpg)](https://www.youtube.com/watch?v=RUoejLILgyA)
+The timestamped part contains the most elegang explanation of the propogation from `Kubectl` -> `Control Plane` -> `Node`. 
 
-AKS is included in Azure `Free Services`.
+[![AKS hands-on](http://img.youtube.com/vi/RUoejLILgyA/0.jpg)](https://youtu.be/RUoejLILgyA?t=144)
 
 ---
 
@@ -10351,9 +10363,22 @@ Challenges of Kubernetes:
 
 ---
 
+# The Final Total Graph of the Simulation
+
+<iframe src="./assets_introduction/errors_total_by_group.svg" style="height: 50vh; width: 100%;" frameborder="0"></iframe>
+
+
+---
+
+# The Final Weekly Graph of the Simulation
+
+<iframe src="./assets_introduction/errors_past_week_by_group.svg" style="height: 50vh; width: 100%;" frameborder="0"></iframe>
+
+---
+
 # Let's have a look at your monitors
 
-
+---
 
 
 
@@ -15102,6 +15127,20 @@ It creates a dependency graph of all resources and the order that they must be c
 
 ---
 
+# Visualizing the Dependency Graph
+
+Combining Terraform and GraphViz, you can actually visualize the graph:
+
+```bash
+$ terraform graph | dot -Tpng > graph.png
+```
+
+Resulting in a graph like this:
+
+<img src="./assets_terraform_get_started/terraform_dependency_graph.png" alt="terraform dependency graph">
+
+---
+
 # Terraform commands - overview
 
 | Command                | Description                                          |
@@ -15425,7 +15464,6 @@ They can be found as links at the top of the semester plan.
 
 # File: 01._introduction.md
 
-it 
 <div class="title-card">
     <h1>Infrastructure as Code</h1>
 </div>
