@@ -565,7 +565,7 @@ link:00._Course_Material/02._Slides/13._Deployment_Strategies_Orchestration_Main
 
 link:00._Course_Material/02._Slides/13._Deployment_Strategies_Orchestration_Maintenance/05._kubernetes.md[Kubernetes]
 
-link:00._Course_Material/02._Slides/13._Deployment_Strategies_Orchestration_Maintenance/06._kubernetes_hands_on.md[Kubernetes - Hands on]
+link:00._Course_Material/02._Slides/13._Deployment_Strategies_Orchestration_Maintenance/06._kubernetes_hands-on.md[Kubernetes - Hands-on]
 
 link:00._Course_Material/02._Slides/13._Deployment_Strategies_Orchestration_Maintenance/07._resilience.md[Resilience]
 
