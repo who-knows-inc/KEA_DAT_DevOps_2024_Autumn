@@ -50,9 +50,6 @@ Install homebrew: https://brew.sh/
 Video guide on how to download for Macbook M1 or newer: https://youtu.be/Qvfvj-UCJuQ?t=55
 
 
-
-
-
 ---
 
 ## Can do later
@@ -101,6 +98,8 @@ There are benefits to getting a GitHub Pro account.
 Set up or renew your Azure for students account. Look into Azure for Students where you will get free credit.
 
 https://azure.microsoft.com/en-us/free/students/
+
+[Guide with screenshots](./how_to_renew_azure_for_students/how_to_renew_azure_for_students.md)
 
 
 ---
