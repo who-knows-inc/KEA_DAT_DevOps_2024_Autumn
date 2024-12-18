@@ -8,6 +8,8 @@
 
 **Deadline**: Check the deadline on WiseFlow. Remember to create groups yourselves when you submit the report. The exam plan will be created based on the groups you create.
 
+You are allowed to work on the project after handing in the report.
+
 **Language**: Danish/English
 
 **Length**: Max 8 pages
