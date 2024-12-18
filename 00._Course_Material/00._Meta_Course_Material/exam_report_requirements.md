@@ -6,7 +6,7 @@
 
 ## Requirements
 
-**Deadline**: Check the deadline on WiseFlow.
+**Deadline**: Check the deadline on WiseFlow. Remember to create groups yourselves when you submit the report. The exam plan will be created based on the groups you create.
 
 **Language**: Danish/English
 
