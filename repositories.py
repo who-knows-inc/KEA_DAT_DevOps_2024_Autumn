@@ -7,7 +7,7 @@ GROUP_REPOS = [
         "monitoring": "https://monitoring.abdevops.dk",
         "stack": ["React TSX", "C# .NET"],
         "documentation": [],
-        "sla": "",
+        "sla": "https://github.com/Team-AB-DevOps/ab-dev-ops/blob/main/documents/sla.md",
     },
     {
         "name": "CEM",
