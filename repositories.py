@@ -37,7 +37,7 @@ GROUP_REPOS = [
         "monitoring": "http://13.48.209.87:3000",
         "stack": ["Go w. Gorilla/gorm"],
         "documentation": [],
-        "sla": "",
+        "sla": "https://github.com/LAWNE-KEA/WhoKnows-Backend/blob/main/SLA.md",
     },
     {
         "name": "OBS",
