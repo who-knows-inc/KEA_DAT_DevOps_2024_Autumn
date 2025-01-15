@@ -47,7 +47,7 @@ GROUP_REPOS = [
         "monitoring": "http://20.234.170.235:3001",
         "stack": ["React, typescript", "C# .NET"],
         "documentation": [],
-        "sla": "",
+        "sla": "https://github.com/OBS-DevOps24/whoknows-legacy/blob/master/docs/SLA.md",
     },
     {
         "name": "MadeInChina-DevOps",
