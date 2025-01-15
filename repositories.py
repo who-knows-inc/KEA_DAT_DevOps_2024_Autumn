@@ -89,15 +89,15 @@ GROUP_REPOS = [
         "documentation": [],
         "sla": "",
     },
-   {
+    {
         "name": "Team-Dood",
         "gitLinks": ["https://github.com/Team-DooD/Whoknows", "https://github.com/Team-DooD/WhoKnows-backend"],
         "backend": "https://teamdood.dk/api",
         "frontend": "https://teamdood.dk/",
         "monitoring": "http://20.82.185.154:3000/",
-        "stack": ["Balzor", "C# .Net", "MySQL"],
+        "stack": ["Blazor", "C# .Net", "MySQL"],
         "documentation": [],
-        "sla": "",
+        "sla": "https://www.teamdood.dk/sla",
     },
     {
         "name": "Team2-NM",
